@@ -1,0 +1,2791 @@
+{
+  "schemaVersion": 1,
+  "database": "fps_conditions.sqlite",
+  "tables": {
+    "cpu_game_ceiling": {
+      "rowCount": 177514,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "game_id",
+          "type": "INTEGER",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 1,
+          "hidden": 0
+        },
+        {
+          "cid": 1,
+          "name": "cpu_id",
+          "type": "INTEGER",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 2,
+          "hidden": 0
+        },
+        {
+          "cid": 2,
+          "name": "cpu_ceiling_raw",
+          "type": "REAL",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 3,
+          "name": "cpu_ceiling",
+          "type": "INTEGER",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        }
+      ],
+      "foreignKeys": [
+        {
+          "id": 0,
+          "seq": 0,
+          "table": "cpus",
+          "from": "cpu_id",
+          "to": "id",
+          "on_update": "NO ACTION",
+          "on_delete": "CASCADE",
+          "match": "NONE"
+        },
+        {
+          "id": 1,
+          "seq": 0,
+          "table": "games",
+          "from": "game_id",
+          "to": "id",
+          "on_update": "NO ACTION",
+          "on_delete": "CASCADE",
+          "match": "NONE"
+        }
+      ],
+      "indexes": [
+        {
+          "seq": 0,
+          "name": "idx_cpu_ceiling_cpu_game",
+          "unique": 0,
+          "origin": "c",
+          "partial": 0,
+          "columns": [
+            {
+              "seqno": 0,
+              "cid": 1,
+              "name": "cpu_id",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 1,
+              "cid": 0,
+              "name": "game_id",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            }
+          ]
+        },
+        {
+          "seq": 1,
+          "name": "sqlite_autoindex_cpu_game_ceiling_1",
+          "unique": 1,
+          "origin": "pk",
+          "partial": 0,
+          "columns": [
+            {
+              "seqno": 0,
+              "cid": 0,
+              "name": "game_id",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 1,
+              "cid": 1,
+              "name": "cpu_id",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 2,
+              "cid": 2,
+              "name": "cpu_ceiling_raw",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            },
+            {
+              "seqno": 3,
+              "cid": 3,
+              "name": "cpu_ceiling",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            }
+          ]
+        }
+      ],
+      "sql": "CREATE TABLE cpu_game_ceiling (\n      game_id INTEGER NOT NULL,\n      cpu_id INTEGER NOT NULL,\n      cpu_ceiling_raw REAL NOT NULL CHECK (cpu_ceiling_raw >= 0),\n      cpu_ceiling INTEGER NOT NULL CHECK (cpu_ceiling >= 0),\n      PRIMARY KEY (game_id, cpu_id),\n      FOREIGN KEY (game_id) REFERENCES games(id) ON DELETE CASCADE,\n      FOREIGN KEY (cpu_id) REFERENCES cpus(id) ON DELETE CASCADE\n    ) WITHOUT ROWID"
+    },
+    "cpus": {
+      "rowCount": 454,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "id",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 1,
+          "hidden": 0
+        },
+        {
+          "cid": 1,
+          "name": "slug",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 2,
+          "name": "name",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 3,
+          "name": "score",
+          "type": "INTEGER",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 4,
+          "name": "group_name",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 5,
+          "name": "source_index",
+          "type": "INTEGER",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        }
+      ],
+      "foreignKeys": [],
+      "indexes": [
+        {
+          "seq": 0,
+          "name": "sqlite_autoindex_cpus_2",
+          "unique": 1,
+          "origin": "u",
+          "partial": 0,
+          "columns": [
+            {
+              "seqno": 0,
+              "cid": 5,
+              "name": "source_index",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 1,
+              "cid": -1,
+              "name": null,
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            }
+          ]
+        },
+        {
+          "seq": 1,
+          "name": "sqlite_autoindex_cpus_1",
+          "unique": 1,
+          "origin": "u",
+          "partial": 0,
+          "columns": [
+            {
+              "seqno": 0,
+              "cid": 1,
+              "name": "slug",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 1,
+              "cid": -1,
+              "name": null,
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            }
+          ]
+        }
+      ],
+      "sql": "CREATE TABLE cpus (\n      id INTEGER PRIMARY KEY,\n      slug TEXT NOT NULL UNIQUE,\n      name TEXT NOT NULL,\n      score INTEGER NOT NULL,\n      group_name TEXT,\n      source_index INTEGER NOT NULL UNIQUE\n    )"
+    },
+    "fps_game_availability_exclusions": {
+      "rowCount": 2,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "game_slug",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 1,
+          "hidden": 0
+        },
+        {
+          "cid": 1,
+          "name": "reason",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 2,
+          "name": "provenance_id",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        }
+      ],
+      "foreignKeys": [],
+      "indexes": [
+        {
+          "seq": 0,
+          "name": "sqlite_autoindex_fps_game_availability_exclusions_1",
+          "unique": 1,
+          "origin": "pk",
+          "partial": 0,
+          "columns": [
+            {
+              "seqno": 0,
+              "cid": 0,
+              "name": "game_slug",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 1,
+              "cid": 1,
+              "name": "reason",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            },
+            {
+              "seqno": 2,
+              "cid": 2,
+              "name": "provenance_id",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            }
+          ]
+        }
+      ],
+      "sql": "CREATE TABLE fps_game_availability_exclusions (\n      game_slug TEXT PRIMARY KEY, reason TEXT NOT NULL, provenance_id TEXT NOT NULL) WITHOUT ROWID"
+    },
+    "fps_game_hardware_requirements": {
+      "rowCount": 2,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "game_slug",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 1,
+          "hidden": 0
+        },
+        {
+          "cid": 1,
+          "name": "provenance_id",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        }
+      ],
+      "foreignKeys": [],
+      "indexes": [
+        {
+          "seq": 0,
+          "name": "sqlite_autoindex_fps_game_hardware_requirements_1",
+          "unique": 1,
+          "origin": "pk",
+          "partial": 0,
+          "columns": [
+            {
+              "seqno": 0,
+              "cid": 0,
+              "name": "game_slug",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 1,
+              "cid": 1,
+              "name": "provenance_id",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            }
+          ]
+        }
+      ],
+      "sql": "CREATE TABLE fps_game_hardware_requirements (\n      game_slug TEXT PRIMARY KEY, provenance_id TEXT NOT NULL) WITHOUT ROWID"
+    },
+    "fps_native_cpu_calibration_profiles": {
+      "rowCount": 479,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "game_slug",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 1,
+          "hidden": 0
+        },
+        {
+          "cid": 1,
+          "name": "hardware_slug",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 2,
+          "hidden": 0
+        },
+        {
+          "cid": 2,
+          "name": "base_fps",
+          "type": "REAL",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 3,
+          "name": "setting_multipliers",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 4,
+          "name": "provenance_id",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        }
+      ],
+      "foreignKeys": [],
+      "indexes": [
+        {
+          "seq": 0,
+          "name": "sqlite_autoindex_fps_native_cpu_calibration_profiles_1",
+          "unique": 1,
+          "origin": "pk",
+          "partial": 0,
+          "columns": [
+            {
+              "seqno": 0,
+              "cid": 0,
+              "name": "game_slug",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 1,
+              "cid": 1,
+              "name": "hardware_slug",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 2,
+              "cid": 2,
+              "name": "base_fps",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            },
+            {
+              "seqno": 3,
+              "cid": 3,
+              "name": "setting_multipliers",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            },
+            {
+              "seqno": 4,
+              "cid": 4,
+              "name": "provenance_id",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            }
+          ]
+        }
+      ],
+      "sql": "CREATE TABLE fps_native_cpu_calibration_profiles (\n      game_slug TEXT NOT NULL, hardware_slug TEXT NOT NULL, base_fps REAL NOT NULL CHECK(base_fps > 0),\n      setting_multipliers TEXT NOT NULL, provenance_id TEXT NOT NULL,\n      PRIMARY KEY(game_slug,hardware_slug)) WITHOUT ROWID"
+    },
+    "fps_native_gpu_calibration_profiles": {
+      "rowCount": 780,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "game_slug",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 1,
+          "hidden": 0
+        },
+        {
+          "cid": 1,
+          "name": "resolution_key",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 2,
+          "hidden": 0
+        },
+        {
+          "cid": 2,
+          "name": "hardware_slug",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 3,
+          "hidden": 0
+        },
+        {
+          "cid": 3,
+          "name": "multiplier",
+          "type": "REAL",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 4,
+          "name": "provenance_id",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        }
+      ],
+      "foreignKeys": [],
+      "indexes": [
+        {
+          "seq": 0,
+          "name": "sqlite_autoindex_fps_native_gpu_calibration_profiles_1",
+          "unique": 1,
+          "origin": "pk",
+          "partial": 0,
+          "columns": [
+            {
+              "seqno": 0,
+              "cid": 0,
+              "name": "game_slug",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 1,
+              "cid": 1,
+              "name": "resolution_key",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 2,
+              "cid": 2,
+              "name": "hardware_slug",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 3,
+              "cid": 3,
+              "name": "multiplier",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            },
+            {
+              "seqno": 4,
+              "cid": 4,
+              "name": "provenance_id",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            }
+          ]
+        }
+      ],
+      "sql": "CREATE TABLE fps_native_gpu_calibration_profiles (\n      game_slug TEXT NOT NULL, resolution_key TEXT NOT NULL, hardware_slug TEXT NOT NULL,\n      multiplier REAL NOT NULL CHECK(multiplier > 0), provenance_id TEXT NOT NULL,\n      PRIMARY KEY(game_slug,resolution_key,hardware_slug)) WITHOUT ROWID"
+    },
+    "fps_native_preset_cpu_limits": {
+      "rowCount": 32,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "preset_id",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 1,
+          "hidden": 0
+        },
+        {
+          "cid": 1,
+          "name": "game_slug",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 2,
+          "hidden": 0
+        },
+        {
+          "cid": 2,
+          "name": "hardware_slug",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 3,
+          "hidden": 0
+        },
+        {
+          "cid": 3,
+          "name": "resolution_key",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 4,
+          "hidden": 0
+        },
+        {
+          "cid": 4,
+          "name": "fps",
+          "type": "REAL",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 5,
+          "name": "provenance_id",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        }
+      ],
+      "foreignKeys": [],
+      "indexes": [
+        {
+          "seq": 0,
+          "name": "sqlite_autoindex_fps_native_preset_cpu_limits_1",
+          "unique": 1,
+          "origin": "pk",
+          "partial": 0,
+          "columns": [
+            {
+              "seqno": 0,
+              "cid": 0,
+              "name": "preset_id",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 1,
+              "cid": 1,
+              "name": "game_slug",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 2,
+              "cid": 2,
+              "name": "hardware_slug",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 3,
+              "cid": 3,
+              "name": "resolution_key",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 4,
+              "cid": 4,
+              "name": "fps",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            },
+            {
+              "seqno": 5,
+              "cid": 5,
+              "name": "provenance_id",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            }
+          ]
+        }
+      ],
+      "sql": "CREATE TABLE fps_native_preset_cpu_limits (\n        preset_id TEXT NOT NULL, game_slug TEXT NOT NULL, hardware_slug TEXT NOT NULL,\n        resolution_key TEXT NOT NULL, fps REAL NOT NULL CHECK(fps > 0), provenance_id TEXT NOT NULL,\n        PRIMARY KEY(preset_id, game_slug, hardware_slug, resolution_key)) WITHOUT ROWID"
+    },
+    "fps_native_preset_gpu_limits": {
+      "rowCount": 5000,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "preset_id",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 1,
+          "hidden": 0
+        },
+        {
+          "cid": 1,
+          "name": "game_slug",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 2,
+          "hidden": 0
+        },
+        {
+          "cid": 2,
+          "name": "hardware_slug",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 3,
+          "hidden": 0
+        },
+        {
+          "cid": 3,
+          "name": "resolution_key",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 4,
+          "hidden": 0
+        },
+        {
+          "cid": 4,
+          "name": "fps",
+          "type": "REAL",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 5,
+          "name": "provenance_id",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        }
+      ],
+      "foreignKeys": [],
+      "indexes": [
+        {
+          "seq": 0,
+          "name": "sqlite_autoindex_fps_native_preset_gpu_limits_1",
+          "unique": 1,
+          "origin": "pk",
+          "partial": 0,
+          "columns": [
+            {
+              "seqno": 0,
+              "cid": 0,
+              "name": "preset_id",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 1,
+              "cid": 1,
+              "name": "game_slug",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 2,
+              "cid": 2,
+              "name": "hardware_slug",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 3,
+              "cid": 3,
+              "name": "resolution_key",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 4,
+              "cid": 4,
+              "name": "fps",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            },
+            {
+              "seqno": 5,
+              "cid": 5,
+              "name": "provenance_id",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            }
+          ]
+        }
+      ],
+      "sql": "CREATE TABLE fps_native_preset_gpu_limits (\n        preset_id TEXT NOT NULL, game_slug TEXT NOT NULL, hardware_slug TEXT NOT NULL,\n        resolution_key TEXT NOT NULL, fps REAL NOT NULL CHECK(fps > 0), provenance_id TEXT NOT NULL,\n        PRIMARY KEY(preset_id, game_slug, hardware_slug, resolution_key)) WITHOUT ROWID"
+    },
+    "fps_native_presets": {
+      "rowCount": 138,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "preset_id",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 1,
+          "hidden": 0
+        },
+        {
+          "cid": 1,
+          "name": "game_slug",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 2,
+          "name": "quality",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 3,
+          "name": "label",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 4,
+          "name": "controls_json",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 5,
+          "name": "provenance_id",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 6,
+          "name": "gpu_vendors_json",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 7,
+          "name": "requires_rtx",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 8,
+          "name": "rendering_json",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 9,
+          "name": "fps_cap",
+          "type": "REAL",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 10,
+          "name": "gpu_slugs_json",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        }
+      ],
+      "foreignKeys": [],
+      "indexes": [
+        {
+          "seq": 0,
+          "name": "sqlite_autoindex_fps_native_presets_1",
+          "unique": 1,
+          "origin": "pk",
+          "partial": 0,
+          "columns": [
+            {
+              "seqno": 0,
+              "cid": 0,
+              "name": "preset_id",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 1,
+              "cid": 1,
+              "name": "game_slug",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            },
+            {
+              "seqno": 2,
+              "cid": 2,
+              "name": "quality",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            },
+            {
+              "seqno": 3,
+              "cid": 3,
+              "name": "label",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            },
+            {
+              "seqno": 4,
+              "cid": 4,
+              "name": "controls_json",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            },
+            {
+              "seqno": 5,
+              "cid": 5,
+              "name": "provenance_id",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            },
+            {
+              "seqno": 6,
+              "cid": 6,
+              "name": "gpu_vendors_json",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            },
+            {
+              "seqno": 7,
+              "cid": 7,
+              "name": "requires_rtx",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            },
+            {
+              "seqno": 8,
+              "cid": 8,
+              "name": "rendering_json",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            },
+            {
+              "seqno": 9,
+              "cid": 9,
+              "name": "fps_cap",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            },
+            {
+              "seqno": 10,
+              "cid": 10,
+              "name": "gpu_slugs_json",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            }
+          ]
+        }
+      ],
+      "sql": "CREATE TABLE \"fps_native_presets\" (\n        preset_id TEXT PRIMARY KEY, game_slug TEXT NOT NULL, quality TEXT NOT NULL,\n        label TEXT NOT NULL, controls_json TEXT NOT NULL, provenance_id TEXT NOT NULL,\n        gpu_vendors_json TEXT, requires_rtx INTEGER, rendering_json TEXT, fps_cap REAL\n      , gpu_slugs_json TEXT) WITHOUT ROWID"
+    },
+    "fps_scenario_cpu_calibrations": {
+      "rowCount": 0,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "game_slug",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 1,
+          "hidden": 0
+        },
+        {
+          "cid": 1,
+          "name": "resolution_key",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 2,
+          "hidden": 0
+        },
+        {
+          "cid": 2,
+          "name": "setting_indexes",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 3,
+          "hidden": 0
+        },
+        {
+          "cid": 3,
+          "name": "hardware_slug",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 4,
+          "hidden": 0
+        },
+        {
+          "cid": 4,
+          "name": "fps",
+          "type": "REAL",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 5,
+          "name": "provenance_id",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        }
+      ],
+      "foreignKeys": [],
+      "indexes": [
+        {
+          "seq": 0,
+          "name": "sqlite_autoindex_fps_scenario_cpu_calibrations_1",
+          "unique": 1,
+          "origin": "pk",
+          "partial": 0,
+          "columns": [
+            {
+              "seqno": 0,
+              "cid": 0,
+              "name": "game_slug",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 1,
+              "cid": 1,
+              "name": "resolution_key",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 2,
+              "cid": 2,
+              "name": "setting_indexes",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 3,
+              "cid": 3,
+              "name": "hardware_slug",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 4,
+              "cid": 4,
+              "name": "fps",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            },
+            {
+              "seqno": 5,
+              "cid": 5,
+              "name": "provenance_id",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            }
+          ]
+        }
+      ],
+      "sql": "CREATE TABLE fps_scenario_cpu_calibrations (\n        game_slug TEXT NOT NULL, resolution_key TEXT NOT NULL, setting_indexes TEXT NOT NULL,\n        hardware_slug TEXT NOT NULL, fps REAL NOT NULL CHECK(fps > 0), provenance_id TEXT NOT NULL,\n        PRIMARY KEY(game_slug, resolution_key, setting_indexes, hardware_slug)) WITHOUT ROWID"
+    },
+    "fps_scenario_gpu_calibrations": {
+      "rowCount": 377,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "game_slug",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 1,
+          "hidden": 0
+        },
+        {
+          "cid": 1,
+          "name": "resolution_key",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 2,
+          "hidden": 0
+        },
+        {
+          "cid": 2,
+          "name": "setting_indexes",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 3,
+          "hidden": 0
+        },
+        {
+          "cid": 3,
+          "name": "hardware_slug",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 4,
+          "hidden": 0
+        },
+        {
+          "cid": 4,
+          "name": "fps",
+          "type": "REAL",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 5,
+          "name": "provenance_id",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        }
+      ],
+      "foreignKeys": [],
+      "indexes": [
+        {
+          "seq": 0,
+          "name": "sqlite_autoindex_fps_scenario_gpu_calibrations_1",
+          "unique": 1,
+          "origin": "pk",
+          "partial": 0,
+          "columns": [
+            {
+              "seqno": 0,
+              "cid": 0,
+              "name": "game_slug",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 1,
+              "cid": 1,
+              "name": "resolution_key",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 2,
+              "cid": 2,
+              "name": "setting_indexes",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 3,
+              "cid": 3,
+              "name": "hardware_slug",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 4,
+              "cid": 4,
+              "name": "fps",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            },
+            {
+              "seqno": 5,
+              "cid": 5,
+              "name": "provenance_id",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            }
+          ]
+        }
+      ],
+      "sql": "CREATE TABLE fps_scenario_gpu_calibrations (\n        game_slug TEXT NOT NULL, resolution_key TEXT NOT NULL, setting_indexes TEXT NOT NULL,\n        hardware_slug TEXT NOT NULL, fps REAL NOT NULL CHECK(fps > 0), provenance_id TEXT NOT NULL,\n        PRIMARY KEY(game_slug, resolution_key, setting_indexes, hardware_slug)) WITHOUT ROWID"
+    },
+    "game_setting_options": {
+      "rowCount": 6877,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "id",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 1,
+          "hidden": 0
+        },
+        {
+          "cid": 1,
+          "name": "setting_id",
+          "type": "INTEGER",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 2,
+          "name": "option_index",
+          "type": "INTEGER",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 3,
+          "name": "label",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 4,
+          "name": "multiplier",
+          "type": "REAL",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        }
+      ],
+      "foreignKeys": [
+        {
+          "id": 0,
+          "seq": 0,
+          "table": "game_settings",
+          "from": "setting_id",
+          "to": "id",
+          "on_update": "NO ACTION",
+          "on_delete": "CASCADE",
+          "match": "NONE"
+        }
+      ],
+      "indexes": [
+        {
+          "seq": 0,
+          "name": "idx_game_setting_options_lookup",
+          "unique": 0,
+          "origin": "c",
+          "partial": 0,
+          "columns": [
+            {
+              "seqno": 0,
+              "cid": 1,
+              "name": "setting_id",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 1,
+              "cid": 2,
+              "name": "option_index",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 2,
+              "cid": -1,
+              "name": null,
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            }
+          ]
+        },
+        {
+          "seq": 1,
+          "name": "sqlite_autoindex_game_setting_options_1",
+          "unique": 1,
+          "origin": "u",
+          "partial": 0,
+          "columns": [
+            {
+              "seqno": 0,
+              "cid": 1,
+              "name": "setting_id",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 1,
+              "cid": 2,
+              "name": "option_index",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 2,
+              "cid": -1,
+              "name": null,
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            }
+          ]
+        }
+      ],
+      "sql": "CREATE TABLE game_setting_options (\n      id INTEGER PRIMARY KEY,\n      setting_id INTEGER NOT NULL,\n      option_index INTEGER NOT NULL,\n      label TEXT NOT NULL,\n      multiplier REAL NOT NULL,\n      FOREIGN KEY (setting_id) REFERENCES game_settings(id) ON DELETE CASCADE,\n      UNIQUE(setting_id, option_index)\n    )"
+    },
+    "game_settings": {
+      "rowCount": 2017,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "id",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 1,
+          "hidden": 0
+        },
+        {
+          "cid": 1,
+          "name": "game_id",
+          "type": "INTEGER",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 2,
+          "name": "key",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 3,
+          "name": "name",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 4,
+          "name": "type",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 5,
+          "name": "setting_order",
+          "type": "INTEGER",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 6,
+          "name": "impact",
+          "type": "REAL",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 7,
+          "name": "visual",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 8,
+          "name": "high_index",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 9,
+          "name": "pin",
+          "type": "INTEGER",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 10,
+          "name": "tech",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 11,
+          "name": "why",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        }
+      ],
+      "foreignKeys": [
+        {
+          "id": 0,
+          "seq": 0,
+          "table": "games",
+          "from": "game_id",
+          "to": "id",
+          "on_update": "NO ACTION",
+          "on_delete": "CASCADE",
+          "match": "NONE"
+        }
+      ],
+      "indexes": [
+        {
+          "seq": 0,
+          "name": "idx_game_settings_key",
+          "unique": 0,
+          "origin": "c",
+          "partial": 0,
+          "columns": [
+            {
+              "seqno": 0,
+              "cid": 1,
+              "name": "game_id",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 1,
+              "cid": 2,
+              "name": "key",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 2,
+              "cid": -1,
+              "name": null,
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            }
+          ]
+        },
+        {
+          "seq": 1,
+          "name": "idx_game_settings_game",
+          "unique": 0,
+          "origin": "c",
+          "partial": 0,
+          "columns": [
+            {
+              "seqno": 0,
+              "cid": 1,
+              "name": "game_id",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 1,
+              "cid": 5,
+              "name": "setting_order",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 2,
+              "cid": -1,
+              "name": null,
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            }
+          ]
+        },
+        {
+          "seq": 2,
+          "name": "sqlite_autoindex_game_settings_1",
+          "unique": 1,
+          "origin": "u",
+          "partial": 0,
+          "columns": [
+            {
+              "seqno": 0,
+              "cid": 1,
+              "name": "game_id",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 1,
+              "cid": 5,
+              "name": "setting_order",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 2,
+              "cid": -1,
+              "name": null,
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            }
+          ]
+        }
+      ],
+      "sql": "CREATE TABLE game_settings (\n      id INTEGER PRIMARY KEY,\n      game_id INTEGER NOT NULL,\n      key TEXT NOT NULL,\n      name TEXT NOT NULL,\n      type TEXT NOT NULL,\n      setting_order INTEGER NOT NULL,\n      impact REAL,\n      visual INTEGER,\n      high_index INTEGER,\n      pin INTEGER NOT NULL CHECK (pin IN (0, 1)),\n      tech TEXT,\n      why TEXT,\n      FOREIGN KEY (game_id) REFERENCES games(id) ON DELETE CASCADE,\n      UNIQUE(game_id, setting_order)\n    )"
+    },
+    "game_state_spaces": {
+      "rowCount": 391,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "game_id",
+          "type": "INTEGER",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 1,
+          "hidden": 0
+        },
+        {
+          "cid": 1,
+          "name": "settings_count",
+          "type": "INTEGER",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 2,
+          "name": "state_count",
+          "type": "INTEGER",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 3,
+          "name": "option_radices_json",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 4,
+          "name": "option_strides_json",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 5,
+          "name": "settings_signature_hash",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 6,
+          "name": "has_upscale",
+          "type": "INTEGER",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 7,
+          "name": "has_rt",
+          "type": "INTEGER",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 8,
+          "name": "uses_default_settings",
+          "type": "INTEGER",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        }
+      ],
+      "foreignKeys": [
+        {
+          "id": 0,
+          "seq": 0,
+          "table": "games",
+          "from": "game_id",
+          "to": "id",
+          "on_update": "NO ACTION",
+          "on_delete": "CASCADE",
+          "match": "NONE"
+        }
+      ],
+      "indexes": [
+        {
+          "seq": 0,
+          "name": "sqlite_autoindex_game_state_spaces_1",
+          "unique": 1,
+          "origin": "pk",
+          "partial": 0,
+          "columns": [
+            {
+              "seqno": 0,
+              "cid": 0,
+              "name": "game_id",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 1,
+              "cid": 1,
+              "name": "settings_count",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            },
+            {
+              "seqno": 2,
+              "cid": 2,
+              "name": "state_count",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            },
+            {
+              "seqno": 3,
+              "cid": 3,
+              "name": "option_radices_json",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            },
+            {
+              "seqno": 4,
+              "cid": 4,
+              "name": "option_strides_json",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            },
+            {
+              "seqno": 5,
+              "cid": 5,
+              "name": "settings_signature_hash",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            },
+            {
+              "seqno": 6,
+              "cid": 6,
+              "name": "has_upscale",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            },
+            {
+              "seqno": 7,
+              "cid": 7,
+              "name": "has_rt",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            },
+            {
+              "seqno": 8,
+              "cid": 8,
+              "name": "uses_default_settings",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            }
+          ]
+        }
+      ],
+      "sql": "CREATE TABLE game_state_spaces (\n      game_id INTEGER PRIMARY KEY,\n      settings_count INTEGER NOT NULL CHECK (settings_count >= 1),\n      state_count INTEGER NOT NULL CHECK (state_count >= 1),\n      option_radices_json TEXT NOT NULL,\n      option_strides_json TEXT NOT NULL,\n      settings_signature_hash TEXT NOT NULL,\n      has_upscale INTEGER NOT NULL CHECK (has_upscale IN (0, 1)),\n      has_rt INTEGER NOT NULL CHECK (has_rt IN (0, 1)),\n      uses_default_settings INTEGER NOT NULL CHECK (uses_default_settings IN (0, 1)),\n      FOREIGN KEY (game_id) REFERENCES games(id) ON DELETE CASCADE\n    ) WITHOUT ROWID"
+    },
+    "games": {
+      "rowCount": 391,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "id",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 1,
+          "hidden": 0
+        },
+        {
+          "cid": 1,
+          "name": "slug",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 2,
+          "name": "name",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 3,
+          "name": "demand",
+          "type": "REAL",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 4,
+          "name": "category",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 5,
+          "name": "group_name",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 6,
+          "name": "fps_cap",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 7,
+          "name": "cpu_heavy",
+          "type": "INTEGER",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 8,
+          "name": "uses_default_settings",
+          "type": "INTEGER",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 9,
+          "name": "source_index",
+          "type": "INTEGER",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        }
+      ],
+      "foreignKeys": [],
+      "indexes": [
+        {
+          "seq": 0,
+          "name": "sqlite_autoindex_games_2",
+          "unique": 1,
+          "origin": "u",
+          "partial": 0,
+          "columns": [
+            {
+              "seqno": 0,
+              "cid": 9,
+              "name": "source_index",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 1,
+              "cid": -1,
+              "name": null,
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            }
+          ]
+        },
+        {
+          "seq": 1,
+          "name": "sqlite_autoindex_games_1",
+          "unique": 1,
+          "origin": "u",
+          "partial": 0,
+          "columns": [
+            {
+              "seqno": 0,
+              "cid": 1,
+              "name": "slug",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 1,
+              "cid": -1,
+              "name": null,
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            }
+          ]
+        }
+      ],
+      "sql": "CREATE TABLE games (\n      id INTEGER PRIMARY KEY,\n      slug TEXT NOT NULL UNIQUE,\n      name TEXT NOT NULL,\n      demand REAL NOT NULL,\n      category TEXT,\n      group_name TEXT,\n      fps_cap INTEGER,\n      cpu_heavy INTEGER NOT NULL CHECK (cpu_heavy IN (0, 1)),\n      uses_default_settings INTEGER NOT NULL CHECK (uses_default_settings IN (0, 1)),\n      source_index INTEGER NOT NULL UNIQUE\n    )"
+    },
+    "gpu_game_resolution_base": {
+      "rowCount": 405076,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "game_id",
+          "type": "INTEGER",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 1,
+          "hidden": 0
+        },
+        {
+          "cid": 1,
+          "name": "gpu_id",
+          "type": "INTEGER",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 2,
+          "hidden": 0
+        },
+        {
+          "cid": 2,
+          "name": "resolution_id",
+          "type": "INTEGER",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 3,
+          "hidden": 0
+        },
+        {
+          "cid": 3,
+          "name": "base_gpu_fps",
+          "type": "REAL",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 4,
+          "name": "base_gpu_fps_rounded",
+          "type": "INTEGER",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        }
+      ],
+      "foreignKeys": [
+        {
+          "id": 0,
+          "seq": 0,
+          "table": "resolutions",
+          "from": "resolution_id",
+          "to": "id",
+          "on_update": "NO ACTION",
+          "on_delete": "CASCADE",
+          "match": "NONE"
+        },
+        {
+          "id": 1,
+          "seq": 0,
+          "table": "gpus",
+          "from": "gpu_id",
+          "to": "id",
+          "on_update": "NO ACTION",
+          "on_delete": "CASCADE",
+          "match": "NONE"
+        },
+        {
+          "id": 2,
+          "seq": 0,
+          "table": "games",
+          "from": "game_id",
+          "to": "id",
+          "on_update": "NO ACTION",
+          "on_delete": "CASCADE",
+          "match": "NONE"
+        }
+      ],
+      "indexes": [
+        {
+          "seq": 0,
+          "name": "idx_gpu_base_hardware",
+          "unique": 0,
+          "origin": "c",
+          "partial": 0,
+          "columns": [
+            {
+              "seqno": 0,
+              "cid": 1,
+              "name": "gpu_id",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 1,
+              "cid": 0,
+              "name": "game_id",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 2,
+              "cid": 2,
+              "name": "resolution_id",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            }
+          ]
+        },
+        {
+          "seq": 1,
+          "name": "sqlite_autoindex_gpu_game_resolution_base_1",
+          "unique": 1,
+          "origin": "pk",
+          "partial": 0,
+          "columns": [
+            {
+              "seqno": 0,
+              "cid": 0,
+              "name": "game_id",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 1,
+              "cid": 1,
+              "name": "gpu_id",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 2,
+              "cid": 2,
+              "name": "resolution_id",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 3,
+              "cid": 3,
+              "name": "base_gpu_fps",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            },
+            {
+              "seqno": 4,
+              "cid": 4,
+              "name": "base_gpu_fps_rounded",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            }
+          ]
+        }
+      ],
+      "sql": "CREATE TABLE gpu_game_resolution_base (\n      game_id INTEGER NOT NULL,\n      gpu_id INTEGER NOT NULL,\n      resolution_id INTEGER NOT NULL,\n      base_gpu_fps REAL NOT NULL CHECK (base_gpu_fps >= 0),\n      base_gpu_fps_rounded INTEGER NOT NULL CHECK (base_gpu_fps_rounded >= 0),\n      PRIMARY KEY (game_id, gpu_id, resolution_id),\n      FOREIGN KEY (game_id) REFERENCES games(id) ON DELETE CASCADE,\n      FOREIGN KEY (gpu_id) REFERENCES gpus(id) ON DELETE CASCADE,\n      FOREIGN KEY (resolution_id) REFERENCES resolutions(id) ON DELETE CASCADE\n    ) WITHOUT ROWID"
+    },
+    "gpus": {
+      "rowCount": 259,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "id",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 1,
+          "hidden": 0
+        },
+        {
+          "cid": 1,
+          "name": "slug",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 2,
+          "name": "name",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 3,
+          "name": "vendor",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 4,
+          "name": "score",
+          "type": "INTEGER",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 5,
+          "name": "vram_gb",
+          "type": "REAL",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 6,
+          "name": "is_rtx",
+          "type": "INTEGER",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 7,
+          "name": "supports_rt",
+          "type": "INTEGER",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 8,
+          "name": "group_name",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 9,
+          "name": "source_index",
+          "type": "INTEGER",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        }
+      ],
+      "foreignKeys": [],
+      "indexes": [
+        {
+          "seq": 0,
+          "name": "sqlite_autoindex_gpus_2",
+          "unique": 1,
+          "origin": "u",
+          "partial": 0,
+          "columns": [
+            {
+              "seqno": 0,
+              "cid": 9,
+              "name": "source_index",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 1,
+              "cid": -1,
+              "name": null,
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            }
+          ]
+        },
+        {
+          "seq": 1,
+          "name": "sqlite_autoindex_gpus_1",
+          "unique": 1,
+          "origin": "u",
+          "partial": 0,
+          "columns": [
+            {
+              "seqno": 0,
+              "cid": 1,
+              "name": "slug",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 1,
+              "cid": -1,
+              "name": null,
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            }
+          ]
+        }
+      ],
+      "sql": "CREATE TABLE gpus (\n      id INTEGER PRIMARY KEY,\n      slug TEXT NOT NULL UNIQUE,\n      name TEXT NOT NULL,\n      vendor TEXT,\n      score INTEGER NOT NULL,\n      vram_gb REAL,\n      is_rtx INTEGER NOT NULL CHECK (is_rtx IN (0, 1)),\n      supports_rt INTEGER NOT NULL CHECK (supports_rt IN (0, 1)),\n      group_name TEXT,\n      source_index INTEGER NOT NULL UNIQUE\n    )"
+    },
+    "manual_fps_cache": {
+      "rowCount": 0,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "game_id",
+          "type": "INTEGER",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 1,
+          "hidden": 0
+        },
+        {
+          "cid": 1,
+          "name": "gpu_id",
+          "type": "INTEGER",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 2,
+          "hidden": 0
+        },
+        {
+          "cid": 2,
+          "name": "cpu_id",
+          "type": "INTEGER",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 3,
+          "hidden": 0
+        },
+        {
+          "cid": 3,
+          "name": "resolution_id",
+          "type": "INTEGER",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 4,
+          "hidden": 0
+        },
+        {
+          "cid": 4,
+          "name": "state_id",
+          "type": "INTEGER",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 5,
+          "hidden": 0
+        },
+        {
+          "cid": 5,
+          "name": "real_fps",
+          "type": "INTEGER",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 6,
+          "name": "gpu_fps",
+          "type": "INTEGER",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 7,
+          "name": "cpu_ceiling",
+          "type": "INTEGER",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 8,
+          "name": "cpu_bound",
+          "type": "INTEGER",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 9,
+          "name": "packed_options",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 10,
+          "name": "created_at",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        }
+      ],
+      "foreignKeys": [
+        {
+          "id": 0,
+          "seq": 0,
+          "table": "resolutions",
+          "from": "resolution_id",
+          "to": "id",
+          "on_update": "NO ACTION",
+          "on_delete": "CASCADE",
+          "match": "NONE"
+        },
+        {
+          "id": 1,
+          "seq": 0,
+          "table": "cpus",
+          "from": "cpu_id",
+          "to": "id",
+          "on_update": "NO ACTION",
+          "on_delete": "CASCADE",
+          "match": "NONE"
+        },
+        {
+          "id": 2,
+          "seq": 0,
+          "table": "gpus",
+          "from": "gpu_id",
+          "to": "id",
+          "on_update": "NO ACTION",
+          "on_delete": "CASCADE",
+          "match": "NONE"
+        },
+        {
+          "id": 3,
+          "seq": 0,
+          "table": "games",
+          "from": "game_id",
+          "to": "id",
+          "on_update": "NO ACTION",
+          "on_delete": "CASCADE",
+          "match": "NONE"
+        }
+      ],
+      "indexes": [
+        {
+          "seq": 0,
+          "name": "idx_manual_cache_hardware",
+          "unique": 0,
+          "origin": "c",
+          "partial": 0,
+          "columns": [
+            {
+              "seqno": 0,
+              "cid": 1,
+              "name": "gpu_id",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 1,
+              "cid": 2,
+              "name": "cpu_id",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 2,
+              "cid": 0,
+              "name": "game_id",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 3,
+              "cid": 3,
+              "name": "resolution_id",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 4,
+              "cid": 4,
+              "name": "state_id",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            }
+          ]
+        },
+        {
+          "seq": 1,
+          "name": "sqlite_autoindex_manual_fps_cache_1",
+          "unique": 1,
+          "origin": "pk",
+          "partial": 0,
+          "columns": [
+            {
+              "seqno": 0,
+              "cid": 0,
+              "name": "game_id",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 1,
+              "cid": 1,
+              "name": "gpu_id",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 2,
+              "cid": 2,
+              "name": "cpu_id",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 3,
+              "cid": 3,
+              "name": "resolution_id",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 4,
+              "cid": 4,
+              "name": "state_id",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 5,
+              "cid": 5,
+              "name": "real_fps",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            },
+            {
+              "seqno": 6,
+              "cid": 6,
+              "name": "gpu_fps",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            },
+            {
+              "seqno": 7,
+              "cid": 7,
+              "name": "cpu_ceiling",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            },
+            {
+              "seqno": 8,
+              "cid": 8,
+              "name": "cpu_bound",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            },
+            {
+              "seqno": 9,
+              "cid": 9,
+              "name": "packed_options",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            },
+            {
+              "seqno": 10,
+              "cid": 10,
+              "name": "created_at",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            }
+          ]
+        }
+      ],
+      "sql": "CREATE TABLE manual_fps_cache (\n      game_id INTEGER NOT NULL,\n      gpu_id INTEGER NOT NULL,\n      cpu_id INTEGER NOT NULL,\n      resolution_id INTEGER NOT NULL,\n      state_id INTEGER NOT NULL CHECK (state_id >= 0),\n      real_fps INTEGER NOT NULL CHECK (real_fps >= 0),\n      gpu_fps INTEGER NOT NULL CHECK (gpu_fps >= 0),\n      cpu_ceiling INTEGER NOT NULL CHECK (cpu_ceiling >= 0),\n      cpu_bound INTEGER NOT NULL CHECK (cpu_bound IN (0, 1)),\n      packed_options TEXT NOT NULL,\n      created_at TEXT NOT NULL,\n      PRIMARY KEY (game_id, gpu_id, cpu_id, resolution_id, state_id),\n      FOREIGN KEY (game_id) REFERENCES games(id) ON DELETE CASCADE,\n      FOREIGN KEY (gpu_id) REFERENCES gpus(id) ON DELETE CASCADE,\n      FOREIGN KEY (cpu_id) REFERENCES cpus(id) ON DELETE CASCADE,\n      FOREIGN KEY (resolution_id) REFERENCES resolutions(id) ON DELETE CASCADE\n    ) WITHOUT ROWID"
+    },
+    "meta": {
+      "rowCount": 34,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "key",
+          "type": "TEXT",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 1,
+          "hidden": 0
+        },
+        {
+          "cid": 1,
+          "name": "value",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        }
+      ],
+      "foreignKeys": [],
+      "indexes": [
+        {
+          "seq": 0,
+          "name": "sqlite_autoindex_meta_1",
+          "unique": 1,
+          "origin": "pk",
+          "partial": 0,
+          "columns": [
+            {
+              "seqno": 0,
+              "cid": 0,
+              "name": "key",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 1,
+              "cid": -1,
+              "name": null,
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            }
+          ]
+        }
+      ],
+      "sql": "CREATE TABLE meta (\n      key TEXT PRIMARY KEY,\n      value TEXT NOT NULL\n    )"
+    },
+    "resolutions": {
+      "rowCount": 4,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "id",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 1,
+          "hidden": 0
+        },
+        {
+          "cid": 1,
+          "name": "key",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 2,
+          "name": "label",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 3,
+          "name": "multiplier",
+          "type": "REAL",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        }
+      ],
+      "foreignKeys": [],
+      "indexes": [
+        {
+          "seq": 0,
+          "name": "sqlite_autoindex_resolutions_1",
+          "unique": 1,
+          "origin": "u",
+          "partial": 0,
+          "columns": [
+            {
+              "seqno": 0,
+              "cid": 1,
+              "name": "key",
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 1
+            },
+            {
+              "seqno": 1,
+              "cid": -1,
+              "name": null,
+              "desc": 0,
+              "coll": "BINARY",
+              "key": 0
+            }
+          ]
+        }
+      ],
+      "sql": "CREATE TABLE resolutions (\n      id INTEGER PRIMARY KEY,\n      key TEXT NOT NULL UNIQUE,\n      label TEXT NOT NULL,\n      multiplier REAL NOT NULL\n    )"
+    },
+    "source_snapshots": {
+      "rowCount": 1,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "id",
+          "type": "INTEGER",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 1,
+          "hidden": 0
+        },
+        {
+          "cid": 1,
+          "name": "source_url",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 2,
+          "name": "source_chunk_url",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 3,
+          "name": "source_hash",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 4,
+          "name": "extracted_at",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 5,
+          "name": "generated_at",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 6,
+          "name": "model_json",
+          "type": "TEXT",
+          "notnull": 1,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        }
+      ],
+      "foreignKeys": [],
+      "indexes": [],
+      "sql": "CREATE TABLE source_snapshots (\n      id INTEGER PRIMARY KEY,\n      source_url TEXT NOT NULL,\n      source_chunk_url TEXT NOT NULL,\n      source_hash TEXT NOT NULL,\n      extracted_at TEXT NOT NULL,\n      generated_at TEXT NOT NULL,\n      model_json TEXT NOT NULL\n    )"
+    },
+    "sqlite_stat1": {
+      "rowCount": 19,
+      "columns": [
+        {
+          "cid": 0,
+          "name": "tbl",
+          "type": "",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 1,
+          "name": "idx",
+          "type": "",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        },
+        {
+          "cid": 2,
+          "name": "stat",
+          "type": "",
+          "notnull": 0,
+          "dflt_value": null,
+          "pk": 0,
+          "hidden": 0
+        }
+      ],
+      "foreignKeys": [],
+      "indexes": [],
+      "sql": "CREATE TABLE sqlite_stat1(tbl,idx,stat)"
+    }
+  }
+}

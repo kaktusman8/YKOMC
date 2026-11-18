@@ -1,0 +1,707 @@
+{
+  "formatVersion": 1,
+  "cases": [
+    {
+      "id": "cs2-index-zero",
+      "label": "CS2: omitted selected means every index is zero",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "counter-strike-2",
+        "resolution": "1080p"
+      }
+    },
+    {
+      "id": "cs2-explicit-high",
+      "label": "CS2: explicit high_index vector",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "counter-strike-2",
+        "resolution": "1080p",
+        "selected": {
+          "@0": 0,
+          "@1": 2,
+          "@2": 2,
+          "@3": 1,
+          "@4": 2,
+          "@5": 2,
+          "@6": 2,
+          "@7": 2,
+          "@8": 3,
+          "@9": 2,
+          "@10": 1
+        }
+      }
+    },
+    {
+      "id": "cs2-high-1440",
+      "label": "CS2: same high settings at 1440p",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "counter-strike-2",
+        "resolution": "1440p",
+        "selected": {
+          "@0": 0,
+          "@1": 2,
+          "@2": 2,
+          "@3": 1,
+          "@4": 2,
+          "@5": 2,
+          "@6": 2,
+          "@7": 2,
+          "@8": 3,
+          "@9": 2,
+          "@10": 1
+        }
+      }
+    },
+    {
+      "id": "cs2-4k-zero",
+      "label": "CS2: index-zero settings at 4K",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "counter-strike-2",
+        "resolution": "2160p"
+      }
+    },
+    {
+      "id": "cs2-upscale",
+      "label": "CS2: quality upscaling with explicit high settings",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "counter-strike-2",
+        "resolution": "1080p",
+        "selected": {
+          "@0": 1,
+          "@1": 2,
+          "@2": 2,
+          "@3": 1,
+          "@4": 2,
+          "@5": 2,
+          "@6": 2,
+          "@7": 2,
+          "@8": 3,
+          "@9": 2,
+          "@10": 1
+        }
+      }
+    },
+    {
+      "id": "cs2-cpu-bound",
+      "label": "CS2: older CPU with RTX 4090",
+      "request": {
+        "cpu": "intel-i5-12400",
+        "gpu": "nvidia-rtx-4090",
+        "game": "counter-strike-2",
+        "resolution": "1080p"
+      }
+    },
+    {
+      "id": "valorant-zero",
+      "label": "Valorant: all index-zero settings",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "valorant",
+        "resolution": "1080p"
+      }
+    },
+    {
+      "id": "valorant-high",
+      "label": "Valorant: explicit high including both detail settings",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "valorant",
+        "resolution": "1080p",
+        "selected": {
+          "@0": 2,
+          "@1": 2,
+          "@2": 2,
+          "@3": 1,
+          "@4": 1,
+          "@5": 2,
+          "@6": 4,
+          "@7": 2,
+          "@8": 1,
+          "@9": 1
+        }
+      }
+    },
+    {
+      "id": "valorant-duplicate-orders",
+      "label": "Valorant: separate detail orders 2 and 7",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "valorant",
+        "resolution": "1080p",
+        "selected": {
+          "@2": 2,
+          "@7": 1
+        }
+      }
+    },
+    {
+      "id": "valorant-label-selectors",
+      "label": "Valorant: case-insensitive option labels",
+      "request": {
+        "cpu": "amd-ryzen-7-9800x3d",
+        "gpu": "amd-rx-7800-xt",
+        "game": "valorant",
+        "resolution": "1440p",
+        "selected": {
+          "@2": "HIGH",
+          "@7": "medium",
+          "aa": "MSAA 4x"
+        }
+      }
+    },
+    {
+      "id": "cyberpunk-zero",
+      "label": "Cyberpunk: index-zero settings",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "cyberpunk-2077",
+        "resolution": "1080p"
+      }
+    },
+    {
+      "id": "cyberpunk-high",
+      "label": "Cyberpunk: explicit high without RT/upscaling",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "cyberpunk-2077",
+        "resolution": "1080p",
+        "selected": {
+          "@0": 0,
+          "@1": 0,
+          "@2": 2,
+          "@3": 2,
+          "@4": 2,
+          "@5": 2,
+          "@6": 2,
+          "@7": 1,
+          "@8": 2,
+          "@9": 2,
+          "@10": 1,
+          "@11": 1,
+          "@12": 2,
+          "@13": 2,
+          "@14": 2,
+          "@15": 2,
+          "@16": 2,
+          "@17": 1,
+          "@18": 1,
+          "@19": 1,
+          "@20": 1
+        }
+      }
+    },
+    {
+      "id": "cyberpunk-upscale",
+      "label": "Cyberpunk: quality upscaling at 1440p",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "cyberpunk-2077",
+        "resolution": "1440p",
+        "selected": {
+          "@0": 1,
+          "@1": 0,
+          "@2": 2,
+          "@3": 2,
+          "@4": 2,
+          "@5": 2,
+          "@6": 2,
+          "@7": 1,
+          "@8": 2,
+          "@9": 2,
+          "@10": 1,
+          "@11": 1,
+          "@12": 2,
+          "@13": 2,
+          "@14": 2,
+          "@15": 2,
+          "@16": 2,
+          "@17": 1,
+          "@18": 1,
+          "@19": 1,
+          "@20": 1
+        }
+      }
+    },
+    {
+      "id": "cyberpunk-path-tracing",
+      "label": "Cyberpunk: path tracing with RTX 4090 at 4K",
+      "request": {
+        "cpu": "amd-ryzen-7-9800x3d",
+        "gpu": "nvidia-rtx-4090",
+        "game": "cyberpunk-2077",
+        "resolution": "2160p",
+        "selected": {
+          "@0": 0,
+          "@1": 3,
+          "@2": 2,
+          "@3": 2,
+          "@4": 2,
+          "@5": 2,
+          "@6": 2,
+          "@7": 1,
+          "@8": 2,
+          "@9": 2,
+          "@10": 1,
+          "@11": 1,
+          "@12": 2,
+          "@13": 2,
+          "@14": 2,
+          "@15": 2,
+          "@16": 2,
+          "@17": 1,
+          "@18": 1,
+          "@19": 1,
+          "@20": 1
+        }
+      }
+    },
+    {
+      "id": "cyberpunk-state-priority",
+      "label": "Cyberpunk: stateId takes priority over invalid selected keys",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "cyberpunk-2077",
+        "resolution": "1080p",
+        "stateId": "1",
+        "selected": {
+          "not-a-setting": 999
+        }
+      }
+    },
+    {
+      "id": "cyberpunk-ultrawide",
+      "label": "Cyberpunk: ultrawide 1440p",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "cyberpunk-2077",
+        "resolution": "uw1440",
+        "selected": {
+          "@0": 0,
+          "@1": 0,
+          "@2": 2,
+          "@3": 2,
+          "@4": 2,
+          "@5": 2,
+          "@6": 2,
+          "@7": 1,
+          "@8": 2,
+          "@9": 2,
+          "@10": 1,
+          "@11": 1,
+          "@12": 2,
+          "@13": 2,
+          "@14": 2,
+          "@15": 2,
+          "@16": 2,
+          "@17": 1,
+          "@18": 1,
+          "@19": 1,
+          "@20": 1
+        }
+      }
+    },
+    {
+      "id": "fortnite-zero",
+      "label": "Fortnite: index-zero settings",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "fortnite",
+        "resolution": "1080p"
+      }
+    },
+    {
+      "id": "fortnite-high",
+      "label": "Fortnite: explicit high settings",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "fortnite",
+        "resolution": "1080p",
+        "selected": {
+          "@0": 0,
+          "@1": 0,
+          "@2": 2,
+          "@3": 2,
+          "@4": 2,
+          "@5": 1,
+          "@6": 2,
+          "@7": 2,
+          "@8": 2,
+          "@9": 2,
+          "@10": 2,
+          "@11": 2,
+          "@12": 1,
+          "@13": 0
+        }
+      }
+    },
+    {
+      "id": "fortnite-rt",
+      "label": "Fortnite: Epic RT with quality upscaling",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-4090",
+        "game": "fortnite",
+        "resolution": "1440p",
+        "selected": {
+          "@0": 1,
+          "@1": 3,
+          "@2": 2,
+          "@3": 2,
+          "@4": 2,
+          "@5": 1,
+          "@6": 2,
+          "@7": 2,
+          "@8": 2,
+          "@9": 2,
+          "@10": 2,
+          "@11": 2,
+          "@12": 1,
+          "@13": 0
+        }
+      }
+    },
+    {
+      "id": "elden-ring-cap",
+      "label": "Elden Ring: 60 FPS cap",
+      "request": {
+        "cpu": "amd-ryzen-7-9800x3d",
+        "gpu": "nvidia-rtx-4090",
+        "game": "elden-ring",
+        "resolution": "1080p",
+        "selected": {
+          "@0": 0,
+          "@1": 2,
+          "@2": 2,
+          "@3": 2,
+          "@4": 2,
+          "@5": 2,
+          "@6": 2,
+          "@7": 2,
+          "@8": 2,
+          "@9": 2,
+          "@10": 2,
+          "@11": 2,
+          "@12": 2,
+          "@13": 1,
+          "@14": 0
+        }
+      }
+    },
+    {
+      "id": "elden-ring-gpu-limit",
+      "label": "Elden Ring: GTX 1060 at 4K",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-gtx-1060-6gb",
+        "game": "elden-ring",
+        "resolution": "2160p",
+        "selected": {
+          "@0": 0,
+          "@1": 2,
+          "@2": 2,
+          "@3": 2,
+          "@4": 2,
+          "@5": 2,
+          "@6": 2,
+          "@7": 2,
+          "@8": 2,
+          "@9": 2,
+          "@10": 2,
+          "@11": 2,
+          "@12": 2,
+          "@13": 1,
+          "@14": 0
+        }
+      }
+    },
+    {
+      "id": "cs2-state-zero",
+      "label": "CS2: explicit stateId zero",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "counter-strike-2",
+        "resolution": "1080p",
+        "stateId": 0
+      }
+    },
+    {
+      "id": "007-calibrated-scenario",
+      "label": "007 First Light: exact site calibration differs from educational baseline",
+      "request": {
+        "cpu": "amd-ryzen-7-9800x3d",
+        "gpu": "nvidia-rtx-5090",
+        "game": "007-first-light",
+        "resolution": "1440p",
+        "selected": {
+          "@0": 0,
+          "@1": 0,
+          "@2": 3,
+          "@3": 3,
+          "@4": 2,
+          "@5": 2,
+          "@6": 2,
+          "@7": 3,
+          "@8": 2,
+          "@9": 3,
+          "@10": 3
+        }
+      }
+    },
+    {
+      "id": "007-calibrated-native",
+      "label": "007 First Light: native GPU calibration profile",
+      "request": {
+        "cpu": "amd-ryzen-7-9800x3d",
+        "gpu": "nvidia-rtx-5090",
+        "game": "007-first-light",
+        "resolution": "1080p"
+      }
+    },
+    {
+      "id": "cs2-medium",
+      "label": "CS2: Medium visual preset with RT/upscaling off",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "counter-strike-2",
+        "resolution": "1080p",
+        "selected": {
+          "@0": 0,
+          "@1": 1,
+          "@2": 1,
+          "@3": 0,
+          "@4": 1,
+          "@5": 1,
+          "@6": 1,
+          "@7": 1,
+          "@8": 2,
+          "@9": 1,
+          "@10": 0
+        }
+      }
+    },
+    {
+      "id": "cyberpunk-medium",
+      "label": "Cyberpunk: Medium includes post Off via high_index fallback",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "cyberpunk-2077",
+        "resolution": "1080p",
+        "selected": {
+          "@0": 0,
+          "@1": 0,
+          "@2": 1,
+          "@3": 1,
+          "@4": 1,
+          "@5": 1,
+          "@6": 1,
+          "@7": 0,
+          "@8": 1,
+          "@9": 1,
+          "@10": 0,
+          "@11": 0,
+          "@12": 1,
+          "@13": 1,
+          "@14": 2,
+          "@15": 1,
+          "@16": 1,
+          "@17": 0,
+          "@18": 0,
+          "@19": 0,
+          "@20": 0
+        }
+      }
+    }
+  ],
+  "errorCases": [
+    {
+      "id": "unknown-cpu",
+      "label": "Unknown CPU slug",
+      "request": {
+        "cpu": "missing-cpu",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "counter-strike-2",
+        "resolution": "1080p"
+      }
+    },
+    {
+      "id": "unknown-gpu",
+      "label": "Unknown GPU slug",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "missing-gpu",
+        "game": "counter-strike-2",
+        "resolution": "1080p"
+      }
+    },
+    {
+      "id": "unknown-game",
+      "label": "Unknown game slug",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "missing-game",
+        "resolution": "1080p"
+      }
+    },
+    {
+      "id": "unknown-resolution",
+      "label": "Display label 4K is not resolution key",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "counter-strike-2",
+        "resolution": "4K"
+      }
+    },
+    {
+      "id": "ambiguous-detail",
+      "label": "Repeated Valorant detail key requires @order",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "valorant",
+        "resolution": "1080p",
+        "selected": {
+          "detail": 2
+        }
+      }
+    },
+    {
+      "id": "option-out-of-range",
+      "label": "Option index outside radix",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "counter-strike-2",
+        "resolution": "1080p",
+        "selected": {
+          "@1": 99
+        }
+      }
+    },
+    {
+      "id": "negative-option",
+      "label": "Negative option index",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "counter-strike-2",
+        "resolution": "1080p",
+        "selected": {
+          "@1": -1
+        }
+      }
+    },
+    {
+      "id": "unknown-order",
+      "label": "Unknown setting order",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "counter-strike-2",
+        "resolution": "1080p",
+        "selected": {
+          "@99": 0
+        }
+      }
+    },
+    {
+      "id": "unknown-key",
+      "label": "Unknown setting key",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "counter-strike-2",
+        "resolution": "1080p",
+        "selected": {
+          "bad-setting": 0
+        }
+      }
+    },
+    {
+      "id": "state-fractional",
+      "label": "Fractional stateId",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "counter-strike-2",
+        "resolution": "1080p",
+        "stateId": 1.5
+      }
+    },
+    {
+      "id": "state-negative",
+      "label": "Negative stateId",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "counter-strike-2",
+        "resolution": "1080p",
+        "stateId": -1
+      }
+    },
+    {
+      "id": "state-too-large",
+      "label": "stateId equals state_count",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "counter-strike-2",
+        "resolution": "1080p",
+        "stateId": "248832"
+      }
+    },
+    {
+      "id": "rt-hardware-required",
+      "label": "Game requires hardware RT: GTX GPU rejected",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-gtx-1060-6gb",
+        "game": "indiana-jones-and-the-great-circle",
+        "resolution": "1080p"
+      }
+    },
+    {
+      "id": "excluded-saros",
+      "label": "Explicitly excluded game",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "saros",
+        "resolution": "1080p"
+      }
+    },
+    {
+      "id": "excluded-days-gone",
+      "label": "Explicitly excluded remaster",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "days-gone-remastered",
+        "resolution": "1080p"
+      }
+    }
+  ]
+}

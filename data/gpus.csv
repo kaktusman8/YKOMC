@@ -1,0 +1,260 @@
+id,slug,name,vendor,score,vram_gb,is_rtx,supports_rt,group_name,source_index
+1,nvidia-rtx-5090,NVIDIA RTX 5090,NVIDIA,360,32.0,1,1,NVIDIA — RTX 50 Series,0
+2,nvidia-rtx-5080,NVIDIA RTX 5080,NVIDIA,265,16.0,1,1,NVIDIA — RTX 50 Series,1
+3,nvidia-rtx-5070-ti,NVIDIA RTX 5070 Ti,NVIDIA,228,16.0,1,1,NVIDIA — RTX 50 Series,2
+4,nvidia-rtx-5070,NVIDIA RTX 5070,NVIDIA,185,12.0,1,1,NVIDIA — RTX 50 Series,3
+5,nvidia-rtx-5060-ti-16gb,NVIDIA RTX 5060 Ti (16GB),NVIDIA,135,16.0,1,1,NVIDIA — RTX 50 Series,4
+6,nvidia-rtx-5060-ti-8gb,NVIDIA RTX 5060 Ti (8GB),NVIDIA,133,8.0,1,1,NVIDIA — RTX 50 Series,5
+7,nvidia-rtx-5060,NVIDIA RTX 5060,NVIDIA,118,8.0,1,1,NVIDIA — RTX 50 Series,6
+8,nvidia-rtx-5050,NVIDIA RTX 5050,NVIDIA,88,8.0,1,1,NVIDIA — RTX 50 Series,7
+9,nvidia-rtx-4090,NVIDIA RTX 4090,NVIDIA,285,24.0,1,1,NVIDIA — RTX 40 Series,8
+10,nvidia-rtx-4080-super,NVIDIA RTX 4080 Super,NVIDIA,240,16.0,1,1,NVIDIA — RTX 40 Series,9
+11,nvidia-rtx-4080,NVIDIA RTX 4080,NVIDIA,235,16.0,1,1,NVIDIA — RTX 40 Series,10
+12,nvidia-rtx-4070-ti-super,NVIDIA RTX 4070 Ti Super,NVIDIA,215,16.0,1,1,NVIDIA — RTX 40 Series,11
+13,nvidia-rtx-4070-ti,NVIDIA RTX 4070 Ti,NVIDIA,200,12.0,1,1,NVIDIA — RTX 40 Series,12
+14,nvidia-rtx-4070-super,NVIDIA RTX 4070 Super,NVIDIA,182,12.0,1,1,NVIDIA — RTX 40 Series,13
+15,nvidia-rtx-4070,NVIDIA RTX 4070,NVIDIA,162,12.0,1,1,NVIDIA — RTX 40 Series,14
+16,nvidia-rtx-4060-ti-16gb,NVIDIA RTX 4060 Ti (16GB),NVIDIA,130,16.0,1,1,NVIDIA — RTX 40 Series,15
+17,nvidia-rtx-4060-ti,NVIDIA RTX 4060 Ti,NVIDIA,128,8.0,1,1,NVIDIA — RTX 40 Series,16
+18,nvidia-rtx-4060,NVIDIA RTX 4060,NVIDIA,108,8.0,1,1,NVIDIA — RTX 40 Series,17
+19,nvidia-rtx-3090-ti,NVIDIA RTX 3090 Ti,NVIDIA,210,24.0,1,1,NVIDIA — RTX 30 Series,18
+20,nvidia-rtx-3090,NVIDIA RTX 3090,NVIDIA,195,24.0,1,1,NVIDIA — RTX 30 Series,19
+21,nvidia-rtx-3080-ti,NVIDIA RTX 3080 Ti,NVIDIA,192,12.0,1,1,NVIDIA — RTX 30 Series,20
+22,nvidia-rtx-3080-12gb,NVIDIA RTX 3080 (12GB),NVIDIA,182,12.0,1,1,NVIDIA — RTX 30 Series,21
+23,nvidia-rtx-3080-10gb,NVIDIA RTX 3080 (10GB),NVIDIA,178,10.0,1,1,NVIDIA — RTX 30 Series,22
+24,nvidia-rtx-3070-ti,NVIDIA RTX 3070 Ti,NVIDIA,155,8.0,1,1,NVIDIA — RTX 30 Series,23
+25,nvidia-rtx-3070,NVIDIA RTX 3070,NVIDIA,145,8.0,1,1,NVIDIA — RTX 30 Series,24
+26,nvidia-rtx-3060-ti,NVIDIA RTX 3060 Ti,NVIDIA,125,8.0,1,1,NVIDIA — RTX 30 Series,25
+27,nvidia-rtx-3060-12gb,NVIDIA RTX 3060 (12GB),NVIDIA,92,12.0,1,1,NVIDIA — RTX 30 Series,26
+28,nvidia-rtx-3060-8gb,NVIDIA RTX 3060 (8GB),NVIDIA,88,8.0,1,1,NVIDIA — RTX 30 Series,27
+29,nvidia-rtx-3050,NVIDIA RTX 3050,NVIDIA,66,8.0,1,1,NVIDIA — RTX 30 Series,28
+30,nvidia-rtx-3050-6gb,NVIDIA RTX 3050 (6GB),NVIDIA,52,6.0,1,1,NVIDIA — RTX 30 Series,29
+31,nvidia-rtx-2080-ti,NVIDIA RTX 2080 Ti,NVIDIA,125,11.0,1,1,NVIDIA — RTX 20 Series,30
+32,nvidia-rtx-2080-super,NVIDIA RTX 2080 Super,NVIDIA,105,8.0,1,1,NVIDIA — RTX 20 Series,31
+33,nvidia-rtx-2080,NVIDIA RTX 2080,NVIDIA,98,8.0,1,1,NVIDIA — RTX 20 Series,32
+34,nvidia-rtx-2070-super,NVIDIA RTX 2070 Super,NVIDIA,92,8.0,1,1,NVIDIA — RTX 20 Series,33
+35,nvidia-rtx-2070,NVIDIA RTX 2070,NVIDIA,80,8.0,1,1,NVIDIA — RTX 20 Series,34
+36,nvidia-rtx-2060-super,NVIDIA RTX 2060 Super,NVIDIA,78,8.0,1,1,NVIDIA — RTX 20 Series,35
+37,nvidia-rtx-2060,NVIDIA RTX 2060,NVIDIA,70,6.0,1,1,NVIDIA — RTX 20 Series,36
+38,nvidia-rtx-2050-laptop,NVIDIA RTX 2050 (laptop),NVIDIA,30,4.0,1,1,NVIDIA — RTX 20 Series,37
+39,nvidia-gtx-1660-ti,NVIDIA GTX 1660 Ti,NVIDIA,58,6.0,0,0,NVIDIA — GTX 16 / 10 Series,38
+40,nvidia-gtx-1660-super,NVIDIA GTX 1660 Super,NVIDIA,56,6.0,0,0,NVIDIA — GTX 16 / 10 Series,39
+41,nvidia-gtx-1660,NVIDIA GTX 1660,NVIDIA,50,6.0,0,0,NVIDIA — GTX 16 / 10 Series,40
+42,nvidia-gtx-1650-super,NVIDIA GTX 1650 Super,NVIDIA,42,4.0,0,0,NVIDIA — GTX 16 / 10 Series,41
+43,nvidia-gtx-1650,NVIDIA GTX 1650,NVIDIA,32,4.0,0,0,NVIDIA — GTX 16 / 10 Series,42
+44,nvidia-gtx-1080-ti,NVIDIA GTX 1080 Ti,NVIDIA,88,11.0,0,0,NVIDIA — GTX 16 / 10 Series,43
+45,nvidia-gtx-1080,NVIDIA GTX 1080,NVIDIA,66,8.0,0,0,NVIDIA — GTX 16 / 10 Series,44
+46,nvidia-gtx-1070-ti,NVIDIA GTX 1070 Ti,NVIDIA,62,8.0,0,0,NVIDIA — GTX 16 / 10 Series,45
+47,nvidia-gtx-1070,NVIDIA GTX 1070,NVIDIA,54,8.0,0,0,NVIDIA — GTX 16 / 10 Series,46
+48,nvidia-gtx-1060-6gb,NVIDIA GTX 1060 (6GB),NVIDIA,38,6.0,0,0,NVIDIA — GTX 16 / 10 Series,47
+49,nvidia-gtx-1060-3gb,NVIDIA GTX 1060 (3GB),NVIDIA,33,3.0,0,0,NVIDIA — GTX 16 / 10 Series,48
+50,nvidia-gtx-1050-ti,NVIDIA GTX 1050 Ti,NVIDIA,22,4.0,0,0,NVIDIA — GTX 16 / 10 Series,49
+51,nvidia-gtx-1050-2gb,NVIDIA GTX 1050 (2GB),NVIDIA,16,2.0,0,0,NVIDIA — GTX 16 / 10 Series,50
+52,nvidia-gtx-980-ti,NVIDIA GTX 980 Ti,NVIDIA,78,6.0,0,0,NVIDIA — GTX 16 / 10 Series,51
+53,nvidia-gtx-980,NVIDIA GTX 980,NVIDIA,60,4.0,0,0,NVIDIA — GTX 16 / 10 Series,52
+54,nvidia-gtx-970,NVIDIA GTX 970,NVIDIA,52,4.0,0,0,NVIDIA — GTX 16 / 10 Series,53
+55,nvidia-gtx-960-4gb,NVIDIA GTX 960 (4GB),NVIDIA,34,4.0,0,0,NVIDIA — GTX 16 / 10 Series,54
+56,nvidia-gtx-950,NVIDIA GTX 950,NVIDIA,26,2.0,0,0,NVIDIA — GTX 16 / 10 Series,55
+57,nvidia-gtx-750-ti,NVIDIA GTX 750 Ti,NVIDIA,16,2.0,0,0,NVIDIA — GTX 16 / 10 Series,56
+58,nvidia-gtx-660-2gb,NVIDIA GTX 660 (2GB),NVIDIA,14,2.0,0,0,NVIDIA — GTX 16 / 10 Series,57
+59,nvidia-gt-1030-gddr5,NVIDIA GT 1030 (GDDR5),NVIDIA,12,2.0,0,0,NVIDIA — GTX 16 / 10 Series,58
+60,nvidia-rtx-4070-laptop-8gb,"NVIDIA RTX 4070 (laptop, 8GB)",NVIDIA,105,8.0,1,1,NVIDIA — Laptop / Mobile,59
+61,nvidia-rtx-4060-laptop-8gb,"NVIDIA RTX 4060 (laptop, 8GB)",NVIDIA,85,8.0,1,1,NVIDIA — Laptop / Mobile,60
+62,nvidia-rtx-4050-laptop-6gb,"NVIDIA RTX 4050 (laptop, 6GB)",NVIDIA,62,6.0,1,1,NVIDIA — Laptop / Mobile,61
+63,nvidia-rtx-5050-laptop-8gb,"NVIDIA RTX 5050 (laptop, 8GB)",NVIDIA,72,8.0,1,1,NVIDIA — Laptop / Mobile,62
+64,nvidia-rtx-3080-laptop-16gb,"NVIDIA RTX 3080 (laptop, 16GB)",NVIDIA,112,16.0,1,1,NVIDIA — Laptop / Mobile,63
+65,nvidia-rtx-3070-ti-laptop-8gb,"NVIDIA RTX 3070 Ti (laptop, 8GB)",NVIDIA,92,8.0,1,1,NVIDIA — Laptop / Mobile,64
+66,nvidia-rtx-3060-laptop-6gb,"NVIDIA RTX 3060 (laptop, 6GB)",NVIDIA,60,6.0,1,1,NVIDIA — Laptop / Mobile,65
+67,nvidia-rtx-3050-laptop-6gb,"NVIDIA RTX 3050 (laptop, 6GB)",NVIDIA,42,6.0,1,1,NVIDIA — Laptop / Mobile,66
+68,nvidia-rtx-3050-laptop-4gb,"NVIDIA RTX 3050 (laptop, 4GB)",NVIDIA,34,4.0,1,1,NVIDIA — Laptop / Mobile,67
+69,nvidia-gtx-1660-ti-laptop-6gb,"NVIDIA GTX 1660 Ti (laptop, 6GB)",NVIDIA,48,6.0,0,0,NVIDIA — Laptop / Mobile,68
+70,nvidia-gtx-1650-laptop-4gb,"NVIDIA GTX 1650 (laptop, 4GB)",NVIDIA,30,4.0,0,0,NVIDIA — Laptop / Mobile,69
+71,nvidia-rtx-5070-ti-laptop-12gb,"NVIDIA RTX 5070 Ti (laptop, 12GB)",NVIDIA,140,12.0,1,1,NVIDIA — Laptop / Mobile,70
+72,nvidia-rtx-5070-laptop-8gb,"NVIDIA RTX 5070 (laptop, 8GB)",NVIDIA,115,8.0,1,1,NVIDIA — Laptop / Mobile,71
+73,nvidia-rtx-5060-laptop-8gb,"NVIDIA RTX 5060 (laptop, 8GB)",NVIDIA,95,8.0,1,1,NVIDIA — Laptop / Mobile,72
+74,nvidia-rtx-2070-laptop-8gb,"NVIDIA RTX 2070 (laptop, 8GB)",NVIDIA,72,8.0,1,1,NVIDIA — Laptop / Mobile,73
+75,nvidia-rtx-2060-laptop-6gb,"NVIDIA RTX 2060 (laptop, 6GB)",NVIDIA,62,6.0,1,1,NVIDIA — Laptop / Mobile,74
+76,nvidia-gtx-1070-laptop-8gb,"NVIDIA GTX 1070 (laptop, 8GB)",NVIDIA,54,8.0,0,0,NVIDIA — Laptop / Mobile,75
+77,nvidia-rtx-3050-ti-laptop-4gb,"NVIDIA RTX 3050 Ti (laptop, 4GB)",NVIDIA,40,4.0,1,1,NVIDIA — Laptop / Mobile,76
+78,nvidia-gtx-1650-ti-laptop-4gb,"NVIDIA GTX 1650 Ti (laptop, 4GB)",NVIDIA,34,4.0,0,0,NVIDIA — Laptop / Mobile,77
+79,nvidia-rtx-3070-laptop-8gb,"NVIDIA RTX 3070 (laptop, 8GB)",NVIDIA,85,8.0,1,1,NVIDIA — Laptop / Mobile,78
+80,nvidia-gtx-1060-laptop-6gb,"NVIDIA GTX 1060 (laptop, 6GB)",NVIDIA,42,6.0,0,0,NVIDIA — Laptop / Mobile,79
+81,nvidia-gtx-1050-laptop-4gb,"NVIDIA GTX 1050 (laptop, 4GB)",NVIDIA,20,4.0,0,0,NVIDIA — Laptop / Mobile,80
+82,nvidia-gtx-960m-laptop-4gb,"NVIDIA GTX 960M (laptop, 4GB)",NVIDIA,14,4.0,0,0,NVIDIA — Laptop / Mobile,81
+83,nvidia-mx150-laptop-2gb,"NVIDIA MX150 (laptop, 2GB)",NVIDIA,8,2.0,0,0,NVIDIA — Laptop / Mobile,82
+84,nvidia-gtx-1630-4gb,NVIDIA GTX 1630 (4GB),NVIDIA,24,4.0,0,0,NVIDIA — GTX 16 / 10 Series,83
+85,nvidia-gtx-760-2gb,NVIDIA GTX 760 (2GB),NVIDIA,18,2.0,0,0,NVIDIA — GTX 16 / 10 Series,84
+86,nvidia-gtx-650-1gb,NVIDIA GTX 650 (1GB),NVIDIA,8,1.0,0,0,NVIDIA — GTX 16 / 10 Series,85
+87,amd-rx-7600s-laptop-8gb,"AMD RX 7600S (laptop, 8GB)",AMD,78,8.0,0,1,AMD — Laptop / Mobile,86
+88,amd-rx-6600m-laptop-8gb,"AMD RX 6600M (laptop, 8GB)",AMD,88,8.0,0,1,AMD — Laptop / Mobile,87
+89,amd-radeon-890m-igpu,AMD Radeon 890M (iGPU),AMD,30,2.0,0,0,AMD — Integrated (iGPU),88
+90,amd-radeon-660m-igpu,AMD Radeon 660M (iGPU),AMD,13,2.0,0,0,AMD — Integrated (iGPU),89
+91,amd-radeon-vega-10-igpu,AMD Radeon Vega 10 (iGPU),AMD,12,2.0,0,0,AMD — Integrated (iGPU),90
+92,amd-radeon-vega-8-igpu,AMD Radeon Vega 8 (iGPU),AMD,14,2.0,0,0,AMD — Integrated (iGPU),91
+93,amd-radeon-vega-7-igpu,AMD Radeon Vega 7 (iGPU),AMD,13,2.0,0,0,AMD — Integrated (iGPU),92
+94,amd-radeon-vega-6-igpu,AMD Radeon Vega 6 (iGPU),AMD,11,2.0,0,0,AMD — Integrated (iGPU),93
+95,amd-rx-9070-xt,AMD RX 9070 XT,AMD,225,16.0,0,1,AMD — RX 9000 Series,94
+96,amd-rx-9070,AMD RX 9070,AMD,200,16.0,0,1,AMD — RX 9000 Series,95
+97,amd-rx-9060-xt-16gb,AMD RX 9060 XT (16GB),AMD,130,16.0,0,1,AMD — RX 9000 Series,96
+98,amd-rx-9060-xt-8gb,AMD RX 9060 XT (8GB),AMD,122,8.0,0,1,AMD — RX 9000 Series,97
+99,amd-rx-7900-xtx,AMD RX 7900 XTX,AMD,252,24.0,0,1,AMD — RX 7000 Series,98
+100,amd-rx-7900-xt,AMD RX 7900 XT,AMD,220,20.0,0,1,AMD — RX 7000 Series,99
+101,amd-rx-7900-gre,AMD RX 7900 GRE,AMD,182,16.0,0,1,AMD — RX 7000 Series,100
+102,amd-rx-7800-xt,AMD RX 7800 XT,AMD,170,16.0,0,1,AMD — RX 7000 Series,101
+103,amd-rx-7700-xt,AMD RX 7700 XT,AMD,150,12.0,0,1,AMD — RX 7000 Series,102
+104,amd-rx-7600-xt,AMD RX 7600 XT,AMD,105,16.0,0,1,AMD — RX 7000 Series,103
+105,amd-rx-7600,AMD RX 7600,AMD,100,8.0,0,1,AMD — RX 7000 Series,104
+106,amd-rx-6950-xt,AMD RX 6950 XT,AMD,182,16.0,0,1,AMD — RX 6000 Series,105
+107,amd-rx-6900-xt,AMD RX 6900 XT,AMD,168,16.0,0,1,AMD — RX 6000 Series,106
+108,amd-rx-6800-xt,AMD RX 6800 XT,AMD,162,16.0,0,1,AMD — RX 6000 Series,107
+109,amd-rx-6800,AMD RX 6800,AMD,145,16.0,0,1,AMD — RX 6000 Series,108
+110,amd-rx-6750-xt,AMD RX 6750 XT,AMD,128,12.0,0,1,AMD — RX 6000 Series,109
+111,amd-rx-6700-xt,AMD RX 6700 XT,AMD,122,12.0,0,1,AMD — RX 6000 Series,110
+112,amd-rx-6700-10gb,AMD RX 6700 (10GB),AMD,110,10.0,0,1,AMD — RX 6000 Series,111
+113,amd-rx-6650-xt,AMD RX 6650 XT,AMD,96,8.0,0,1,AMD — RX 6000 Series,112
+114,amd-rx-6600-xt,AMD RX 6600 XT,AMD,90,8.0,0,1,AMD — RX 6000 Series,113
+115,amd-rx-6600,AMD RX 6600,AMD,84,8.0,0,1,AMD — RX 6000 Series,114
+116,amd-rx-6500-xt,AMD RX 6500 XT,AMD,42,4.0,0,0,AMD — RX 6000 Series,115
+117,amd-rx-6400,AMD RX 6400,AMD,32,4.0,0,0,AMD — RX 6000 Series,116
+118,amd-rx-5700-xt,AMD RX 5700 XT,AMD,96,8.0,0,0,AMD — RX 5000 / 500 Series,117
+119,amd-rx-5700,AMD RX 5700,AMD,86,8.0,0,0,AMD — RX 5000 / 500 Series,118
+120,amd-rx-5600-xt,AMD RX 5600 XT,AMD,74,6.0,0,0,AMD — RX 5000 / 500 Series,119
+121,amd-rx-590,AMD RX 590,AMD,46,8.0,0,0,AMD — RX 5000 / 500 Series,120
+122,amd-rx-580-8gb,AMD RX 580 (8GB),AMD,42,8.0,0,0,AMD — RX 5000 / 500 Series,121
+123,amd-rx-580-4gb,AMD RX 580 (4GB),AMD,40,4.0,0,0,AMD — RX 5000 / 500 Series,122
+124,amd-rx-570,AMD RX 570,AMD,36,4.0,0,0,AMD — RX 5000 / 500 Series,123
+125,amd-rx-480-8gb,AMD RX 480 (8GB),AMD,44,8.0,0,0,AMD — RX 5000 / 500 Series,124
+126,amd-rx-470-8gb,AMD RX 470 (8GB),AMD,38,8.0,0,0,AMD — RX 5000 / 500 Series,125
+127,amd-rx-460-4gb,AMD RX 460 (4GB),AMD,22,4.0,0,0,AMD — RX 5000 / 500 Series,126
+128,amd-rx-540-4gb,AMD RX 540 (4GB),AMD,12,4.0,0,0,AMD — RX 5000 / 500 Series,127
+129,amd-rx-vega-64-8gb,AMD RX Vega 64 (8GB),AMD,70,8.0,0,0,AMD — RX 5000 / 500 Series,128
+130,amd-rx-5500-xt-8gb,AMD RX 5500 XT (8GB),AMD,64,8.0,0,0,AMD — RX 5000 / 500 Series,129
+131,amd-rx-560-4gb,AMD RX 560 (4GB),AMD,18,4.0,0,0,AMD — RX 5000 / 500 Series,130
+132,amd-rx-550-4gb,AMD RX 550 (4GB),AMD,12,4.0,0,0,AMD — RX 5000 / 500 Series,131
+133,amd-r9-390-8gb,AMD R9 390 (8GB),AMD,42,8.0,0,0,AMD — RX 5000 / 500 Series,132
+134,amd-r9-380-4gb,AMD R9 380 (4GB),AMD,28,4.0,0,0,AMD — RX 5000 / 500 Series,133
+135,intel-arc-b580,Intel Arc B580,Intel,115,12.0,0,1,Intel Arc,134
+136,intel-arc-a370m-laptop-4gb,"Intel Arc A370M (laptop, 4GB)",Intel,38,4.0,0,1,Intel Arc,135
+137,intel-arc-b570,Intel Arc B570,Intel,98,10.0,0,1,Intel Arc,136
+138,intel-arc-a770-16gb,Intel Arc A770 (16GB),Intel,95,16.0,0,1,Intel Arc,137
+139,intel-arc-a750,Intel Arc A750,Intel,88,8.0,0,1,Intel Arc,138
+140,intel-arc-a580,Intel Arc A580,Intel,78,8.0,0,1,Intel Arc,139
+141,intel-arc-a380,Intel Arc A380,Intel,35,6.0,0,1,Intel Arc,140
+142,rtx-4090-laptop,RTX 4090 Laptop,NVIDIA,185,16.0,1,1,Laptop GPUs,141
+143,rtx-4080-laptop,RTX 4080 Laptop,NVIDIA,160,12.0,1,1,Laptop GPUs,142
+144,rtx-4070-laptop,RTX 4070 Laptop,NVIDIA,115,8.0,1,1,Laptop GPUs,143
+145,rtx-4060-laptop,RTX 4060 Laptop,NVIDIA,88,8.0,1,1,Laptop GPUs,144
+146,rtx-4050-laptop,RTX 4050 Laptop,NVIDIA,66,6.0,1,1,Laptop GPUs,145
+147,rtx-3070-laptop,RTX 3070 Laptop,NVIDIA,95,8.0,1,1,Laptop GPUs,146
+148,rtx-3060-laptop,RTX 3060 Laptop,NVIDIA,75,6.0,1,1,Laptop GPUs,147
+149,rtx-3050-laptop,RTX 3050 Laptop,NVIDIA,44,4.0,1,1,Laptop GPUs,148
+150,rog-ally-x-z1-extreme,ROG Ally X (Z1 Extreme),AMD,48,4.0,0,0,Handhelds & Integrated,149
+151,rog-ally-legion-go-z1-extreme,ROG Ally / Legion Go (Z1 Extreme),AMD,46,4.0,0,0,Handhelds & Integrated,150
+152,steam-deck-rdna2-igpu,Steam Deck (RDNA2 iGPU),AMD,30,4.0,0,0,Handhelds & Integrated,151
+153,amd-radeon-780m-igpu,AMD Radeon 780M (iGPU),AMD,38,4.0,0,0,Handhelds & Integrated,152
+154,amd-radeon-760m-igpu,AMD Radeon 760M (iGPU),AMD,26,4.0,0,0,Handhelds & Integrated,153
+155,intel-arc-140v-igpu,Intel Arc 140V (iGPU),Intel,36,4.0,0,0,Handhelds & Integrated,154
+156,intel-iris-xe-96eu-11th-12th-gen-laptop,Intel Iris Xe (96EU — 11th/12th Gen laptop),Intel,18,4.0,0,0,Low-End & Integrated GPUs,155
+157,intel-uhd-770-desktop-12th-13th-gen,Intel UHD 770 (desktop 12th/13th Gen),Intel,10,2.0,0,0,Low-End & Integrated GPUs,156
+158,intel-uhd-630-desktop-8th-10th-gen,Intel UHD 630 (desktop 8th–10th Gen),Intel,6,2.0,0,0,Low-End & Integrated GPUs,157
+159,amd-vega-8-ryzen-5-2400g-3400g-igpu,AMD Vega 8 (Ryzen 5 2400G / 3400G iGPU),AMD,14,2.0,0,0,Low-End & Integrated GPUs,158
+160,amd-vega-11-ryzen-5-2400g-igpu,AMD Vega 11 (Ryzen 5 2400G iGPU),AMD,16,2.0,0,0,Low-End & Integrated GPUs,159
+161,amd-radeon-680m-ryzen-6000-igpu,AMD Radeon 680M (Ryzen 6000 iGPU),AMD,28,4.0,0,0,Low-End & Integrated GPUs,160
+162,nvidia-geforce-gt-730m-laptop,NVIDIA GeForce GT 730M (laptop),NVIDIA,5,2.0,0,0,Low-End & Integrated GPUs,161
+163,nvidia-geforce-mx330-laptop,NVIDIA GeForce MX330 (laptop),NVIDIA,9,2.0,0,0,Low-End & Integrated GPUs,162
+164,nvidia-quadro-p2000-laptop,NVIDIA Quadro P2000 (laptop),NVIDIA,28,4.0,0,0,Low-End & Integrated GPUs,163
+165,nvidia-geforce-mx230-laptop,NVIDIA GeForce MX230 (laptop),NVIDIA,6,2.0,0,0,Low-End & Integrated GPUs,164
+166,intel-hd-graphics-4000-ivy-bridge-igpu,Intel HD Graphics 4000 (Ivy Bridge iGPU),Intel,3,2.0,0,0,Low-End & Integrated GPUs,165
+167,amd-rx-9070-gre,AMD RX 9070 GRE,AMD,165,12.0,0,1,AMD — RX 9000 Series,166
+168,nvidia-gtx-750,NVIDIA GTX 750,NVIDIA,13,1.0,0,0,NVIDIA — GTX 16 / 10 Series,167
+169,nvidia-gt-730-2gb,NVIDIA GT 730 (2GB),NVIDIA,4,2.0,0,0,Low-End & Integrated GPUs,168
+170,nvidia-geforce-mx130-laptop,NVIDIA GeForce MX130 (laptop),NVIDIA,6,2.0,0,0,Low-End & Integrated GPUs,169
+171,amd-radeon-vega-3-ryzen-3000u-igpu,AMD Radeon Vega 3 (Ryzen 3000U iGPU),AMD,7,2.0,0,0,AMD — Integrated (iGPU),170
+172,amd-radeon-610m-ryzen-7020-igpu,AMD Radeon 610M (Ryzen 7020 iGPU),AMD,8,2.0,0,0,AMD — Integrated (iGPU),171
+173,amd-radeon-r4-stoney-ridge-igpu,AMD Radeon R4 (Stoney Ridge iGPU),AMD,3,2.0,0,0,Low-End & Integrated GPUs,172
+174,intel-hd-630-7th-gen,Intel HD 630 (7th Gen),Intel,6,2.0,0,0,Low-End & Integrated GPUs,173
+175,amd-radeon-rx-550-2-гб-970707936,AMD Radeon RX 550 (2 Гб),AMD,12,2.0,0,0,AMD — RX 5000 / 500 Series,100000
+176,amd-radeon-rx-550-4-гб-970707937,AMD Radeon RX 550 (4 Гб),AMD,12,4.0,0,0,AMD — RX 5000 / 500 Series,100001
+177,amd-radeon-rx-560-2-гб-971162479,AMD Radeon RX 560 (2 Гб),AMD,18,2.0,0,0,AMD — RX 5000 / 500 Series,100002
+178,amd-radeon-rx-560-4-гб-970707939,AMD Radeon RX 560 (4 Гб),AMD,18,4.0,0,0,AMD — RX 5000 / 500 Series,100003
+179,amd-radeon-rx-5600-6-гб-971162489,AMD Radeon RX 5600 (6 Гб),AMD,65,6.0,0,0,AMD Radeon — RX 5000/9000 Series,100004
+180,amd-radeon-rx-5600-xt-6-гб-970813285,AMD Radeon RX 5600 XT (6 Гб),AMD,74,6.0,0,0,AMD — RX 5000 / 500 Series,100005
+181,amd-radeon-rx-570-4-гб-970707941,AMD Radeon RX 570 (4 Гб),AMD,36,4.0,0,0,AMD — RX 5000 / 500 Series,100006
+182,amd-radeon-rx-570-8-гб-970985874,AMD Radeon RX 570 (8 Гб),AMD,36,8.0,0,0,AMD — RX 5000 / 500 Series,100007
+183,amd-radeon-rx-5700-8-гб-970813288,AMD Radeon RX 5700 (8 Гб),AMD,86,8.0,0,0,AMD — RX 5000 / 500 Series,100008
+184,amd-radeon-rx-5700-xt-8-гб-970813287,AMD Radeon RX 5700 XT (8 Гб),AMD,96,8.0,0,0,AMD — RX 5000 / 500 Series,100009
+185,amd-radeon-rx-580-8-гб-970707943,AMD Radeon RX 580 (8 Гб),AMD,42,8.0,0,0,AMD — RX 5000 / 500 Series,100010
+186,amd-radeon-rx-6400-4-гб-971292082,AMD Radeon RX 6400 (4 Гб),AMD,32,4.0,0,0,AMD — RX 6000 Series,100011
+187,amd-radeon-rx-6500-xt-4-гб-971148480,AMD Radeon RX 6500 XT (4 Гб),AMD,42,4.0,0,0,AMD — RX 6000 Series,100012
+188,amd-radeon-rx-6600-8-гб-971086038,AMD Radeon RX 6600 (8 Гб),AMD,84,8.0,0,1,AMD — RX 6000 Series,100013
+189,amd-radeon-rx-6600-xt-8-гб-971066292,AMD Radeon RX 6600 XT (8 Гб),AMD,90,8.0,0,1,AMD — RX 6000 Series,100014
+190,amd-radeon-rx-6650-xt-8-гб-971455265,AMD Radeon RX 6650 XT (8 Гб),AMD,96,8.0,0,1,AMD — RX 6000 Series,100015
+191,amd-radeon-rx-6700-10-гб-971454601,AMD Radeon RX 6700 (10 Гб),AMD,110,10.0,0,1,AMD — RX 6000 Series,100016
+192,amd-radeon-rx-6700-xt-12-гб-971004411,AMD Radeon RX 6700 XT (12 Гб),AMD,122,12.0,0,1,AMD — RX 6000 Series,100017
+193,amd-radeon-rx-6800-16-гб-970890538,AMD Radeon RX 6800 (16 Гб),AMD,145,16.0,0,1,AMD — RX 6000 Series,100018
+194,amd-radeon-rx-6800-xt-16-гб-970890537,AMD Radeon RX 6800 XT (16 Гб),AMD,162,16.0,0,1,AMD — RX 6000 Series,100019
+195,amd-radeon-rx-6900-xt-16-гб-970965248,AMD Radeon RX 6900 XT (16 Гб),AMD,168,16.0,0,1,AMD — RX 6000 Series,100020
+196,amd-radeon-rx-7600-8-гб-971853372,AMD Radeon RX 7600 (8 Гб),AMD,100,8.0,0,1,AMD — RX 7000 Series,100021
+197,amd-radeon-rx-7600-xt-16-гб-972090195,AMD Radeon RX 7600 XT (16 Гб),AMD,105,16.0,0,1,AMD — RX 7000 Series,100022
+198,amd-radeon-rx-7700-xt-12-гб-972027536,AMD Radeon RX 7700 XT (12 Гб),AMD,150,12.0,0,1,AMD — RX 7000 Series,100023
+199,amd-radeon-rx-7800-xt-16-гб-972063596,AMD Radeon RX 7800 XT (16 Гб),AMD,170,16.0,0,1,AMD — RX 7000 Series,100024
+200,amd-radeon-rx-7900-xt-20-гб-971446340,AMD Radeon RX 7900 XT (20 Гб),AMD,220,20.0,0,1,AMD — RX 7000 Series,100025
+201,amd-radeon-rx-7900-xtx-24-гб-971455264,AMD Radeon RX 7900 XTX (24 Гб),AMD,252,24.0,0,1,AMD — RX 7000 Series,100026
+202,amd-radeon-rx-9060-xt-16-гб-972807766,AMD Radeon RX 9060 XT (16 Гб),AMD,130,16.0,0,1,AMD — RX 9000 Series,100027
+203,amd-radeon-rx-9060-xt-8-гб-972807767,AMD Radeon RX 9060 XT (8 Гб),AMD,122,8.0,0,1,AMD — RX 9000 Series,100028
+204,amd-radeon-rx-9070-16-гб-972756827,AMD Radeon RX 9070 (16 Гб),AMD,200,16.0,0,1,AMD — RX 9000 Series,100029
+205,amd-radeon-rx-9070-xt-16-гб-972756780,AMD Radeon RX 9070 XT (16 Гб),AMD,225,16.0,0,1,AMD — RX 9000 Series,100030
+206,nvidia-geforce-gt-1030-2-гб-970708002,NVIDIA GeForce GT 1030 (2 Гб),NVIDIA,12,2.0,0,0,NVIDIA — GT Legacy,100031
+207,nvidia-geforce-gt-1030-4-гб-971134161,NVIDIA GeForce GT 1030 (4 Гб),NVIDIA,12,4.0,0,0,NVIDIA — GT Legacy,100032
+208,nvidia-geforce-gt-210-1-гб-970961691,NVIDIA GeForce GT 210 (1 Гб),NVIDIA,2,1.0,0,0,NVIDIA — GT Legacy,100033
+209,nvidia-geforce-gt-430-1-гб-971852190,NVIDIA GeForce GT 430 (1 Гб),NVIDIA,4,1.0,0,0,NVIDIA — GT Legacy,100034
+210,nvidia-geforce-gt-610-1-гб-972047144,NVIDIA GeForce GT 610 (1 Гб),NVIDIA,5,1.0,0,0,NVIDIA — GT Legacy,100035
+211,nvidia-geforce-gt-610-2-гб-971285341,NVIDIA GeForce GT 610 (2 Гб),NVIDIA,5,2.0,0,0,NVIDIA — GT Legacy,100036
+212,nvidia-geforce-gt-710-2-гб-970708005,NVIDIA GeForce GT 710 (2 Гб),NVIDIA,6,2.0,0,0,NVIDIA — GT Legacy,100037
+213,nvidia-geforce-gt-730-2-гб-970708006,NVIDIA GeForce GT 730 (2 Гб),NVIDIA,4,2.0,0,0,Low-End & Integrated GPUs,100038
+214,nvidia-geforce-gt-730-4-гб-971047436,NVIDIA GeForce GT 730 (4 Гб),NVIDIA,4,4.0,0,0,Low-End & Integrated GPUs,100039
+215,nvidia-geforce-gtx-1050-2-гб-970708007,NVIDIA GeForce GTX 1050 (2 Гб),NVIDIA,16,2.0,0,0,NVIDIA — GTX 16 / 10 Series,100040
+216,nvidia-geforce-gtx-1050-ti-4-гб-970708014,NVIDIA GeForce GTX 1050 Ti (4 Гб),NVIDIA,22,4.0,0,0,NVIDIA — GTX 16 / 10 Series,100041
+217,nvidia-geforce-gtx-1060-3-гб-970708017,NVIDIA GeForce GTX 1060 (3 Гб),NVIDIA,33,3.0,0,0,NVIDIA — GTX 16 / 10 Series,100042
+218,nvidia-geforce-gtx-1060-6-гб-970708018,NVIDIA GeForce GTX 1060 (6 Гб),NVIDIA,38,6.0,0,0,NVIDIA — GTX 16 / 10 Series,100043
+219,nvidia-geforce-gtx-1630-4-гб-971314662,NVIDIA GeForce GTX 1630 (4 Гб),NVIDIA,24,4.0,0,0,NVIDIA — GTX 16 / 10 Series,100044
+220,nvidia-geforce-gtx-1650-4-гб-970708026,NVIDIA GeForce GTX 1650 (4 Гб),NVIDIA,32,4.0,0,0,NVIDIA — GTX 16 / 10 Series,100045
+221,nvidia-geforce-gtx-1650-super-4-гб-970813286,NVIDIA GeForce GTX 1650 SUPER (4 Гб),NVIDIA,42,4.0,0,0,NVIDIA — GTX 16 / 10 Series,100046
+222,nvidia-geforce-gtx-1660-6-гб-970708027,NVIDIA GeForce GTX 1660 (6 Гб),NVIDIA,50,6.0,0,0,NVIDIA — GTX 16 / 10 Series,100047
+223,nvidia-geforce-gtx-1660-super-6-гб-970801115,NVIDIA GeForce GTX 1660 SUPER (6 Гб),NVIDIA,56,6.0,0,0,NVIDIA — GTX 16 / 10 Series,100048
+224,nvidia-geforce-gtx-1660-ti-6-гб-970708029,NVIDIA GeForce GTX 1660 Ti (6 Гб),NVIDIA,58,6.0,0,0,NVIDIA — GTX 16 / 10 Series,100049
+225,nvidia-geforce-rtx-2060-6-гб-970708043,NVIDIA GeForce RTX 2060 (6 Гб),NVIDIA,70,6.0,1,1,NVIDIA — RTX 20 Series,100050
+226,nvidia-geforce-rtx-2060-super-8-гб-970707984,NVIDIA GeForce RTX 2060 SUPER (8 Гб),NVIDIA,78,8.0,1,1,NVIDIA — RTX 20 Series,100051
+227,nvidia-geforce-rtx-2070-8-гб-970708045,NVIDIA GeForce RTX 2070 (8 Гб),NVIDIA,80,8.0,1,1,NVIDIA — RTX 20 Series,100052
+228,nvidia-geforce-rtx-3050-6-гб-971747410,NVIDIA GeForce RTX 3050 (6 Гб),NVIDIA,52,6.0,1,1,NVIDIA — RTX 30 Series,100053
+229,nvidia-geforce-rtx-3050-8-гб-971151768,NVIDIA GeForce RTX 3050 (8 Гб),NVIDIA,66,8.0,1,1,NVIDIA — RTX 30 Series,100054
+230,nvidia-geforce-rtx-3060-12-гб-970966004,NVIDIA GeForce RTX 3060 (12 Гб),NVIDIA,92,12.0,1,1,NVIDIA — RTX 30 Series,100055
+231,nvidia-geforce-rtx-3060-8-гб-971410192,NVIDIA GeForce RTX 3060 (8 Гб),NVIDIA,88,8.0,1,1,NVIDIA — RTX 30 Series,100056
+232,nvidia-geforce-rtx-3060-ti-8-гб-970890506,NVIDIA GeForce RTX 3060 Ti (8 Гб),NVIDIA,125,8.0,1,1,NVIDIA — RTX 30 Series,100057
+233,nvidia-geforce-rtx-3070-8-гб-970863383,NVIDIA GeForce RTX 3070 (8 Гб),NVIDIA,145,8.0,1,1,NVIDIA — RTX 30 Series,100058
+234,nvidia-geforce-rtx-3070-ti-8-гб-971013257,NVIDIA GeForce RTX 3070 Ti (8 Гб),NVIDIA,155,8.0,1,1,NVIDIA — RTX 30 Series,100059
+235,nvidia-geforce-rtx-3080-10-гб-970863384,NVIDIA GeForce RTX 3080 (10 Гб),NVIDIA,178,10.0,1,1,NVIDIA — RTX 30 Series,100060
+236,nvidia-geforce-rtx-3080-ti-12-гб-971013258,NVIDIA GeForce RTX 3080 Ti (12 Гб),NVIDIA,192,12.0,1,1,NVIDIA — RTX 30 Series,100061
+237,nvidia-geforce-rtx-3090-24-гб-gpu-970863385,NVIDIA GeForce RTX 3090 (24 Гб) · GPU,NVIDIA,195,24.0,1,1,NVIDIA — RTX 30 Series,100062
+238,nvidia-geforce-rtx-3090-ti-24-гб-971287591,NVIDIA GeForce RTX 3090 Ti (24 Гб),NVIDIA,210,24.0,1,1,NVIDIA — RTX 30 Series,100063
+239,nvidia-geforce-rtx-4060-8-гб-971909347,NVIDIA GeForce RTX 4060 (8 Гб),NVIDIA,108,8.0,1,1,NVIDIA — RTX 40 Series,100064
+240,nvidia-geforce-rtx-4060-ti-16-гб-971844170,NVIDIA GeForce RTX 4060 Ti (16 Гб),NVIDIA,130,16.0,1,1,NVIDIA — RTX 40 Series,100065
+241,nvidia-geforce-rtx-4060-ti-8-гб-971844169,NVIDIA GeForce RTX 4060 Ti (8 Гб),NVIDIA,128,8.0,1,1,NVIDIA — RTX 40 Series,100066
+242,nvidia-geforce-rtx-4070-12-гб-971813091,NVIDIA GeForce RTX 4070 (12 ГБ),NVIDIA,162,12.0,1,1,NVIDIA — RTX 40 Series,100067
+243,nvidia-geforce-rtx-4070-super-12-гб-972058408,NVIDIA GeForce RTX 4070 SUPER (12 Гб),NVIDIA,182,12.0,1,1,NVIDIA — RTX 40 Series,100068
+244,nvidia-geforce-rtx-4070-ti-12-гб-971429677,NVIDIA GeForce RTX 4070 Ti (12 ГБ),NVIDIA,200,12.0,1,1,NVIDIA — RTX 40 Series,100069
+245,nvidia-geforce-rtx-4070-ti-super-16-гб-972063533,NVIDIA GeForce RTX 4070 Ti SUPER (16 Гб),NVIDIA,215,16.0,1,1,NVIDIA — RTX 40 Series,100070
+246,nvidia-geforce-rtx-4080-16-гб-971413194,NVIDIA GeForce RTX 4080 (16 Гб),NVIDIA,235,16.0,1,1,NVIDIA — RTX 40 Series,100071
+247,nvidia-geforce-rtx-4080-super-16-гб-972071009,NVIDIA GeForce RTX 4080 SUPER (16 Гб),NVIDIA,240,16.0,1,1,NVIDIA — RTX 40 Series,100072
+248,nvidia-geforce-rtx-4090-24-гб-971395626,NVIDIA GeForce RTX 4090 (24 Гб),NVIDIA,285,24.0,1,1,NVIDIA — RTX 40 Series,100073
+249,nvidia-geforce-rtx-5050-8-гб-972807765,NVIDIA GeForce RTX 5050 (8 Гб),NVIDIA,88,8.0,1,1,NVIDIA — RTX 50 Series,100074
+250,nvidia-geforce-rtx-5060-8-гб-972807768,NVIDIA GeForce RTX 5060 (8 Гб),NVIDIA,118,8.0,1,1,NVIDIA — RTX 50 Series,100075
+251,nvidia-geforce-rtx-5060-ti-16-гб-972793888,NVIDIA GeForce RTX 5060 Ti (16 Гб),NVIDIA,135,16.0,1,1,NVIDIA — RTX 50 Series,100076
+252,nvidia-geforce-rtx-5060-ti-8-гб-972805287,NVIDIA GeForce RTX 5060 Ti (8 Гб),NVIDIA,133,8.0,1,1,NVIDIA — RTX 50 Series,100077
+253,nvidia-geforce-rtx-5070-12-гб-972748420,NVIDIA GeForce RTX 5070 (12 Гб),NVIDIA,185,12.0,1,1,NVIDIA — RTX 50 Series,100078
+254,nvidia-geforce-rtx-5070-ti-16-гб-972748410,NVIDIA GeForce RTX 5070 Ti (16 Гб),NVIDIA,228,16.0,1,1,NVIDIA — RTX 50 Series,100079
+255,nvidia-geforce-rtx-5080-16-гб-972741326,NVIDIA GeForce RTX 5080 (16 Гб),NVIDIA,265,16.0,1,1,NVIDIA — RTX 50 Series,100080
+256,nvidia-geforce-rtx-5090-32-гб-972756779,NVIDIA GeForce RTX 5090 (32 Гб),NVIDIA,360,32.0,1,1,NVIDIA — RTX 50 Series,100081
+257,nvidia-geforce-rtx-a2000-6-gb-972139469,NVIDIA GeForce RTX A2000 (6 Гб),NVIDIA,48,6.0,1,1,CRM catalog hardware,100082
+258,nvidia-quadro-p2000-5-gb-970708066,NVIDIA Quadro P2000 (5 Гб),NVIDIA,30,5.0,0,0,NVIDIA — Quadro / RTX Workstation,100083
+259,nvidia-quadro-t1000-8-гб-gpu-970708993,NVIDIA Quadro T1000 (8 Гб) · GPU,NVIDIA,22,8.0,0,0,NVIDIA — Quadro / RTX Workstation,100084

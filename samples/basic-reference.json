@@ -1,0 +1,6065 @@
+{
+  "algorithm": "fps-edu-basic-v1",
+  "datasetSourceHash": "b93c95bd31ce80db3d3cd7b6c3de7d7862d53364bd087f3a4f49892a64425989",
+  "datasetSha256": "afa175999576bb6481579e1081d62ba3b021f4f16ea138ab091714d6197dbbfb",
+  "rounding": "JavaScript Math.round (nonnegative values: floor(x + 0.5)); retain full precision before rounding.",
+  "cases": [
+    {
+      "id": "cs2-index-zero",
+      "label": "CS2: omitted selected means every index is zero",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "counter-strike-2",
+        "resolution": "1080p"
+      },
+      "expected": {
+        "resolution": "1080p",
+        "metrics": {
+          "beforeSettingsFps": 237,
+          "cpuBound": false,
+          "cpuCeiling": 390,
+          "gpuFps": 390,
+          "realFps": 390,
+          "settingMultiplier": 1.64685321941108
+        },
+        "stateId": "0",
+        "selectedSettingIndexes": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "selectedByOrder": {
+        "@0": 0,
+        "@1": 0,
+        "@2": 0,
+        "@3": 0,
+        "@4": 0,
+        "@5": 0,
+        "@6": 0,
+        "@7": 0,
+        "@8": 0,
+        "@9": 0,
+        "@10": 0
+      },
+      "selectedOptions": [
+        {
+          "setting_order": 0,
+          "key": "upscale",
+          "name": "Upscaling",
+          "type": "upscale",
+          "high_index": null,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 1,
+          "key": "msaa",
+          "name": "Anti-Aliasing Mode",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "CMAA2",
+          "multiplier": 1.16
+        },
+        {
+          "setting_order": 2,
+          "key": "shadows",
+          "name": "Global Shadow Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.1
+        },
+        {
+          "setting_order": 3,
+          "key": "contrast",
+          "name": "Boost Player Contrast",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 0,
+          "label": "Disabled",
+          "multiplier": 1.01
+        },
+        {
+          "setting_order": 4,
+          "key": "ao",
+          "name": "Ambient Occlusion",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Disabled",
+          "multiplier": 1.05
+        },
+        {
+          "setting_order": 5,
+          "key": "shader",
+          "name": "Shader Detail",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.05
+        },
+        {
+          "setting_order": 6,
+          "key": "particle",
+          "name": "Particle Detail",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.04
+        },
+        {
+          "setting_order": 7,
+          "key": "textures",
+          "name": "Model / Texture Detail",
+          "type": "vram",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.03
+        },
+        {
+          "setting_order": 8,
+          "key": "aniso",
+          "name": "Texture Filtering Mode",
+          "type": "norm",
+          "high_index": 3,
+          "option_index": 0,
+          "label": "Bilinear",
+          "multiplier": 1.02
+        },
+        {
+          "setting_order": 9,
+          "key": "dynshadows",
+          "name": "Dynamic Shadows",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "None",
+          "multiplier": 1.04
+        },
+        {
+          "setting_order": 10,
+          "key": "hdr",
+          "name": "High Dynamic Range",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 0,
+          "label": "Performance",
+          "multiplier": 1.02
+        }
+      ],
+      "rawComponents": {
+        "base_gpu_fps": 236.57142857142858,
+        "cpu_ceiling_raw": 390,
+        "fps_cap": null,
+        "resolution_multiplier": 1,
+        "settingMultipliers": [
+          1,
+          1.16,
+          1.1,
+          1.01,
+          1.05,
+          1.05,
+          1.04,
+          1.03,
+          1.02,
+          1.04,
+          1.02
+        ],
+        "gpuFpsBeforeRounding": 389.59841876353556
+      },
+      "explanation": "Resolution multiplier is informational: base_gpu_fps already includes it. Only base factors, selected option multipliers and fps_cap participate. No benchmark calibration or native presets."
+    },
+    {
+      "id": "cs2-explicit-high",
+      "label": "CS2: explicit high_index vector",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "counter-strike-2",
+        "resolution": "1080p",
+        "selected": {
+          "@0": 0,
+          "@1": 2,
+          "@2": 2,
+          "@3": 1,
+          "@4": 2,
+          "@5": 2,
+          "@6": 2,
+          "@7": 2,
+          "@8": 3,
+          "@9": 2,
+          "@10": 1
+        }
+      },
+      "expected": {
+        "resolution": "1080p",
+        "metrics": {
+          "beforeSettingsFps": 237,
+          "cpuBound": false,
+          "cpuCeiling": 390,
+          "gpuFps": 237,
+          "realFps": 237,
+          "settingMultiplier": 1
+        },
+        "stateId": "248808",
+        "selectedSettingIndexes": [
+          0,
+          2,
+          2,
+          1,
+          2,
+          2,
+          2,
+          2,
+          3,
+          2,
+          1
+        ]
+      },
+      "selectedByOrder": {
+        "@0": 0,
+        "@1": 2,
+        "@2": 2,
+        "@3": 1,
+        "@4": 2,
+        "@5": 2,
+        "@6": 2,
+        "@7": 2,
+        "@8": 3,
+        "@9": 2,
+        "@10": 1
+      },
+      "selectedOptions": [
+        {
+          "setting_order": 0,
+          "key": "upscale",
+          "name": "Upscaling",
+          "type": "upscale",
+          "high_index": null,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 1,
+          "key": "msaa",
+          "name": "Anti-Aliasing Mode",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "4x MSAA",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 2,
+          "key": "shadows",
+          "name": "Global Shadow Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 3,
+          "key": "contrast",
+          "name": "Boost Player Contrast",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 1,
+          "label": "Enabled",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 4,
+          "key": "ao",
+          "name": "Ambient Occlusion",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 5,
+          "key": "shader",
+          "name": "Shader Detail",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 6,
+          "key": "particle",
+          "name": "Particle Detail",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 7,
+          "key": "textures",
+          "name": "Model / Texture Detail",
+          "type": "vram",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 8,
+          "key": "aniso",
+          "name": "Texture Filtering Mode",
+          "type": "norm",
+          "high_index": 3,
+          "option_index": 3,
+          "label": "Anisotropic 16x",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 9,
+          "key": "dynshadows",
+          "name": "Dynamic Shadows",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "All",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 10,
+          "key": "hdr",
+          "name": "High Dynamic Range",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 1,
+          "label": "Quality",
+          "multiplier": 1
+        }
+      ],
+      "rawComponents": {
+        "base_gpu_fps": 236.57142857142858,
+        "cpu_ceiling_raw": 390,
+        "fps_cap": null,
+        "resolution_multiplier": 1,
+        "settingMultipliers": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "gpuFpsBeforeRounding": 236.57142857142858
+      },
+      "explanation": "Resolution multiplier is informational: base_gpu_fps already includes it. Only base factors, selected option multipliers and fps_cap participate. No benchmark calibration or native presets."
+    },
+    {
+      "id": "cs2-high-1440",
+      "label": "CS2: same high settings at 1440p",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "counter-strike-2",
+        "resolution": "1440p",
+        "selected": {
+          "@0": 0,
+          "@1": 2,
+          "@2": 2,
+          "@3": 1,
+          "@4": 2,
+          "@5": 2,
+          "@6": 2,
+          "@7": 2,
+          "@8": 3,
+          "@9": 2,
+          "@10": 1
+        }
+      },
+      "expected": {
+        "resolution": "1440p",
+        "metrics": {
+          "beforeSettingsFps": 142,
+          "cpuBound": false,
+          "cpuCeiling": 390,
+          "gpuFps": 142,
+          "realFps": 142,
+          "settingMultiplier": 1
+        },
+        "stateId": "248808",
+        "selectedSettingIndexes": [
+          0,
+          2,
+          2,
+          1,
+          2,
+          2,
+          2,
+          2,
+          3,
+          2,
+          1
+        ]
+      },
+      "selectedByOrder": {
+        "@0": 0,
+        "@1": 2,
+        "@2": 2,
+        "@3": 1,
+        "@4": 2,
+        "@5": 2,
+        "@6": 2,
+        "@7": 2,
+        "@8": 3,
+        "@9": 2,
+        "@10": 1
+      },
+      "selectedOptions": [
+        {
+          "setting_order": 0,
+          "key": "upscale",
+          "name": "Upscaling",
+          "type": "upscale",
+          "high_index": null,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 1,
+          "key": "msaa",
+          "name": "Anti-Aliasing Mode",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "4x MSAA",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 2,
+          "key": "shadows",
+          "name": "Global Shadow Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 3,
+          "key": "contrast",
+          "name": "Boost Player Contrast",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 1,
+          "label": "Enabled",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 4,
+          "key": "ao",
+          "name": "Ambient Occlusion",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 5,
+          "key": "shader",
+          "name": "Shader Detail",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 6,
+          "key": "particle",
+          "name": "Particle Detail",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 7,
+          "key": "textures",
+          "name": "Model / Texture Detail",
+          "type": "vram",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 8,
+          "key": "aniso",
+          "name": "Texture Filtering Mode",
+          "type": "norm",
+          "high_index": 3,
+          "option_index": 3,
+          "label": "Anisotropic 16x",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 9,
+          "key": "dynshadows",
+          "name": "Dynamic Shadows",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "All",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 10,
+          "key": "hdr",
+          "name": "High Dynamic Range",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 1,
+          "label": "Quality",
+          "multiplier": 1
+        }
+      ],
+      "rawComponents": {
+        "base_gpu_fps": 141.94285714285715,
+        "cpu_ceiling_raw": 390,
+        "fps_cap": null,
+        "resolution_multiplier": 0.6,
+        "settingMultipliers": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "gpuFpsBeforeRounding": 141.94285714285715
+      },
+      "explanation": "Resolution multiplier is informational: base_gpu_fps already includes it. Only base factors, selected option multipliers and fps_cap participate. No benchmark calibration or native presets."
+    },
+    {
+      "id": "cs2-4k-zero",
+      "label": "CS2: index-zero settings at 4K",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "counter-strike-2",
+        "resolution": "2160p"
+      },
+      "expected": {
+        "resolution": "2160p",
+        "metrics": {
+          "beforeSettingsFps": 80,
+          "cpuBound": false,
+          "cpuCeiling": 390,
+          "gpuFps": 132,
+          "realFps": 132,
+          "settingMultiplier": 1.64685321941108
+        },
+        "stateId": "0",
+        "selectedSettingIndexes": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "selectedByOrder": {
+        "@0": 0,
+        "@1": 0,
+        "@2": 0,
+        "@3": 0,
+        "@4": 0,
+        "@5": 0,
+        "@6": 0,
+        "@7": 0,
+        "@8": 0,
+        "@9": 0,
+        "@10": 0
+      },
+      "selectedOptions": [
+        {
+          "setting_order": 0,
+          "key": "upscale",
+          "name": "Upscaling",
+          "type": "upscale",
+          "high_index": null,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 1,
+          "key": "msaa",
+          "name": "Anti-Aliasing Mode",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "CMAA2",
+          "multiplier": 1.16
+        },
+        {
+          "setting_order": 2,
+          "key": "shadows",
+          "name": "Global Shadow Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.1
+        },
+        {
+          "setting_order": 3,
+          "key": "contrast",
+          "name": "Boost Player Contrast",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 0,
+          "label": "Disabled",
+          "multiplier": 1.01
+        },
+        {
+          "setting_order": 4,
+          "key": "ao",
+          "name": "Ambient Occlusion",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Disabled",
+          "multiplier": 1.05
+        },
+        {
+          "setting_order": 5,
+          "key": "shader",
+          "name": "Shader Detail",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.05
+        },
+        {
+          "setting_order": 6,
+          "key": "particle",
+          "name": "Particle Detail",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.04
+        },
+        {
+          "setting_order": 7,
+          "key": "textures",
+          "name": "Model / Texture Detail",
+          "type": "vram",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.03
+        },
+        {
+          "setting_order": 8,
+          "key": "aniso",
+          "name": "Texture Filtering Mode",
+          "type": "norm",
+          "high_index": 3,
+          "option_index": 0,
+          "label": "Bilinear",
+          "multiplier": 1.02
+        },
+        {
+          "setting_order": 9,
+          "key": "dynshadows",
+          "name": "Dynamic Shadows",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "None",
+          "multiplier": 1.04
+        },
+        {
+          "setting_order": 10,
+          "key": "hdr",
+          "name": "High Dynamic Range",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 0,
+          "label": "Performance",
+          "multiplier": 1.02
+        }
+      ],
+      "rawComponents": {
+        "base_gpu_fps": 80.43428571428572,
+        "cpu_ceiling_raw": 390,
+        "fps_cap": null,
+        "resolution_multiplier": 0.34,
+        "settingMultipliers": [
+          1,
+          1.16,
+          1.1,
+          1.01,
+          1.05,
+          1.05,
+          1.04,
+          1.03,
+          1.02,
+          1.04,
+          1.02
+        ],
+        "gpuFpsBeforeRounding": 132.46346237960208
+      },
+      "explanation": "Resolution multiplier is informational: base_gpu_fps already includes it. Only base factors, selected option multipliers and fps_cap participate. No benchmark calibration or native presets."
+    },
+    {
+      "id": "cs2-upscale",
+      "label": "CS2: quality upscaling with explicit high settings",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "counter-strike-2",
+        "resolution": "1080p",
+        "selected": {
+          "@0": 1,
+          "@1": 2,
+          "@2": 2,
+          "@3": 1,
+          "@4": 2,
+          "@5": 2,
+          "@6": 2,
+          "@7": 2,
+          "@8": 3,
+          "@9": 2,
+          "@10": 1
+        }
+      },
+      "expected": {
+        "resolution": "1080p",
+        "metrics": {
+          "beforeSettingsFps": 237,
+          "cpuBound": false,
+          "cpuCeiling": 390,
+          "gpuFps": 319,
+          "realFps": 319,
+          "settingMultiplier": 1.35
+        },
+        "stateId": "248809",
+        "selectedSettingIndexes": [
+          1,
+          2,
+          2,
+          1,
+          2,
+          2,
+          2,
+          2,
+          3,
+          2,
+          1
+        ]
+      },
+      "selectedByOrder": {
+        "@0": 1,
+        "@1": 2,
+        "@2": 2,
+        "@3": 1,
+        "@4": 2,
+        "@5": 2,
+        "@6": 2,
+        "@7": 2,
+        "@8": 3,
+        "@9": 2,
+        "@10": 1
+      },
+      "selectedOptions": [
+        {
+          "setting_order": 0,
+          "key": "upscale",
+          "name": "Upscaling",
+          "type": "upscale",
+          "high_index": null,
+          "option_index": 1,
+          "label": "Quality",
+          "multiplier": 1.35
+        },
+        {
+          "setting_order": 1,
+          "key": "msaa",
+          "name": "Anti-Aliasing Mode",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "4x MSAA",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 2,
+          "key": "shadows",
+          "name": "Global Shadow Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 3,
+          "key": "contrast",
+          "name": "Boost Player Contrast",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 1,
+          "label": "Enabled",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 4,
+          "key": "ao",
+          "name": "Ambient Occlusion",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 5,
+          "key": "shader",
+          "name": "Shader Detail",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 6,
+          "key": "particle",
+          "name": "Particle Detail",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 7,
+          "key": "textures",
+          "name": "Model / Texture Detail",
+          "type": "vram",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 8,
+          "key": "aniso",
+          "name": "Texture Filtering Mode",
+          "type": "norm",
+          "high_index": 3,
+          "option_index": 3,
+          "label": "Anisotropic 16x",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 9,
+          "key": "dynshadows",
+          "name": "Dynamic Shadows",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "All",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 10,
+          "key": "hdr",
+          "name": "High Dynamic Range",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 1,
+          "label": "Quality",
+          "multiplier": 1
+        }
+      ],
+      "rawComponents": {
+        "base_gpu_fps": 236.57142857142858,
+        "cpu_ceiling_raw": 390,
+        "fps_cap": null,
+        "resolution_multiplier": 1,
+        "settingMultipliers": [
+          1.35,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "gpuFpsBeforeRounding": 319.3714285714286
+      },
+      "explanation": "Resolution multiplier is informational: base_gpu_fps already includes it. Only base factors, selected option multipliers and fps_cap participate. No benchmark calibration or native presets."
+    },
+    {
+      "id": "cs2-cpu-bound",
+      "label": "CS2: older CPU with RTX 4090",
+      "request": {
+        "cpu": "intel-i5-12400",
+        "gpu": "nvidia-rtx-4090",
+        "game": "counter-strike-2",
+        "resolution": "1080p"
+      },
+      "expected": {
+        "resolution": "1080p",
+        "metrics": {
+          "beforeSettingsFps": 405,
+          "cpuBound": true,
+          "cpuCeiling": 405,
+          "gpuFps": 1207,
+          "realFps": 405,
+          "settingMultiplier": 1.64685321941108
+        },
+        "stateId": "0",
+        "selectedSettingIndexes": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "selectedByOrder": {
+        "@0": 0,
+        "@1": 0,
+        "@2": 0,
+        "@3": 0,
+        "@4": 0,
+        "@5": 0,
+        "@6": 0,
+        "@7": 0,
+        "@8": 0,
+        "@9": 0,
+        "@10": 0
+      },
+      "selectedOptions": [
+        {
+          "setting_order": 0,
+          "key": "upscale",
+          "name": "Upscaling",
+          "type": "upscale",
+          "high_index": null,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 1,
+          "key": "msaa",
+          "name": "Anti-Aliasing Mode",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "CMAA2",
+          "multiplier": 1.16
+        },
+        {
+          "setting_order": 2,
+          "key": "shadows",
+          "name": "Global Shadow Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.1
+        },
+        {
+          "setting_order": 3,
+          "key": "contrast",
+          "name": "Boost Player Contrast",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 0,
+          "label": "Disabled",
+          "multiplier": 1.01
+        },
+        {
+          "setting_order": 4,
+          "key": "ao",
+          "name": "Ambient Occlusion",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Disabled",
+          "multiplier": 1.05
+        },
+        {
+          "setting_order": 5,
+          "key": "shader",
+          "name": "Shader Detail",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.05
+        },
+        {
+          "setting_order": 6,
+          "key": "particle",
+          "name": "Particle Detail",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.04
+        },
+        {
+          "setting_order": 7,
+          "key": "textures",
+          "name": "Model / Texture Detail",
+          "type": "vram",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.03
+        },
+        {
+          "setting_order": 8,
+          "key": "aniso",
+          "name": "Texture Filtering Mode",
+          "type": "norm",
+          "high_index": 3,
+          "option_index": 0,
+          "label": "Bilinear",
+          "multiplier": 1.02
+        },
+        {
+          "setting_order": 9,
+          "key": "dynshadows",
+          "name": "Dynamic Shadows",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "None",
+          "multiplier": 1.04
+        },
+        {
+          "setting_order": 10,
+          "key": "hdr",
+          "name": "High Dynamic Range",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 0,
+          "label": "Performance",
+          "multiplier": 1.02
+        }
+      ],
+      "rawComponents": {
+        "base_gpu_fps": 732.8571428571428,
+        "cpu_ceiling_raw": 405,
+        "fps_cap": null,
+        "resolution_multiplier": 1,
+        "settingMultipliers": [
+          1,
+          1.16,
+          1.1,
+          1.01,
+          1.05,
+          1.05,
+          1.04,
+          1.03,
+          1.02,
+          1.04,
+          1.02
+        ],
+        "gpuFpsBeforeRounding": 1206.9081450826914
+      },
+      "explanation": "Resolution multiplier is informational: base_gpu_fps already includes it. Only base factors, selected option multipliers and fps_cap participate. No benchmark calibration or native presets."
+    },
+    {
+      "id": "valorant-zero",
+      "label": "Valorant: all index-zero settings",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "valorant",
+        "resolution": "1080p"
+      },
+      "expected": {
+        "resolution": "1080p",
+        "metrics": {
+          "beforeSettingsFps": 345,
+          "cpuBound": true,
+          "cpuCeiling": 390,
+          "gpuFps": 476,
+          "realFps": 390,
+          "settingMultiplier": 1.380881258346782
+        },
+        "stateId": "0",
+        "selectedSettingIndexes": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "selectedByOrder": {
+        "@0": 0,
+        "@1": 0,
+        "@2": 0,
+        "@3": 0,
+        "@4": 0,
+        "@5": 0,
+        "@6": 0,
+        "@7": 0,
+        "@8": 0,
+        "@9": 0
+      },
+      "selectedOptions": [
+        {
+          "setting_order": 0,
+          "key": "aa",
+          "name": "Anti-Aliasing",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "None",
+          "multiplier": 1.08
+        },
+        {
+          "setting_order": 1,
+          "key": "material",
+          "name": "Material Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.04
+        },
+        {
+          "setting_order": 2,
+          "key": "detail",
+          "name": "Detail Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.04
+        },
+        {
+          "setting_order": 3,
+          "key": "shadows",
+          "name": "Cast Shadows",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1.05
+        },
+        {
+          "setting_order": 4,
+          "key": "bloom",
+          "name": "Bloom",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1.01
+        },
+        {
+          "setting_order": 5,
+          "key": "textures",
+          "name": "Texture Quality",
+          "type": "vram",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.02
+        },
+        {
+          "setting_order": 6,
+          "key": "aniso",
+          "name": "Anisotropic Filtering",
+          "type": "norm",
+          "high_index": 4,
+          "option_index": 0,
+          "label": "1x",
+          "multiplier": 1.02
+        },
+        {
+          "setting_order": 7,
+          "key": "detail",
+          "name": "Detail Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.04
+        },
+        {
+          "setting_order": 8,
+          "key": "distortion",
+          "name": "Distortion",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1.02
+        },
+        {
+          "setting_order": 9,
+          "key": "vignette",
+          "name": "Vignette",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1.01
+        }
+      ],
+      "rawComponents": {
+        "base_gpu_fps": 345,
+        "cpu_ceiling_raw": 390,
+        "fps_cap": null,
+        "resolution_multiplier": 1,
+        "settingMultipliers": [
+          1.08,
+          1.04,
+          1.04,
+          1.05,
+          1.01,
+          1.02,
+          1.02,
+          1.04,
+          1.02,
+          1.01
+        ],
+        "gpuFpsBeforeRounding": 476.4040341296398
+      },
+      "explanation": "Resolution multiplier is informational: base_gpu_fps already includes it. Only base factors, selected option multipliers and fps_cap participate. No benchmark calibration or native presets."
+    },
+    {
+      "id": "valorant-high",
+      "label": "Valorant: explicit high including both detail settings",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "valorant",
+        "resolution": "1080p",
+        "selected": {
+          "@0": 2,
+          "@1": 2,
+          "@2": 2,
+          "@3": 1,
+          "@4": 1,
+          "@5": 2,
+          "@6": 4,
+          "@7": 2,
+          "@8": 1,
+          "@9": 1
+        }
+      },
+      "expected": {
+        "resolution": "1080p",
+        "metrics": {
+          "beforeSettingsFps": 345,
+          "cpuBound": false,
+          "cpuCeiling": 390,
+          "gpuFps": 345,
+          "realFps": 345,
+          "settingMultiplier": 1
+        },
+        "stateId": "19439",
+        "selectedSettingIndexes": [
+          2,
+          2,
+          2,
+          1,
+          1,
+          2,
+          4,
+          2,
+          1,
+          1
+        ]
+      },
+      "selectedByOrder": {
+        "@0": 2,
+        "@1": 2,
+        "@2": 2,
+        "@3": 1,
+        "@4": 1,
+        "@5": 2,
+        "@6": 4,
+        "@7": 2,
+        "@8": 1,
+        "@9": 1
+      },
+      "selectedOptions": [
+        {
+          "setting_order": 0,
+          "key": "aa",
+          "name": "Anti-Aliasing",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "MSAA 4x",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 1,
+          "key": "material",
+          "name": "Material Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 2,
+          "key": "detail",
+          "name": "Detail Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 3,
+          "key": "shadows",
+          "name": "Cast Shadows",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 1,
+          "label": "On",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 4,
+          "key": "bloom",
+          "name": "Bloom",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 1,
+          "label": "On",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 5,
+          "key": "textures",
+          "name": "Texture Quality",
+          "type": "vram",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 6,
+          "key": "aniso",
+          "name": "Anisotropic Filtering",
+          "type": "norm",
+          "high_index": 4,
+          "option_index": 4,
+          "label": "16x",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 7,
+          "key": "detail",
+          "name": "Detail Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 8,
+          "key": "distortion",
+          "name": "Distortion",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 1,
+          "label": "On",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 9,
+          "key": "vignette",
+          "name": "Vignette",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 1,
+          "label": "On",
+          "multiplier": 1
+        }
+      ],
+      "rawComponents": {
+        "base_gpu_fps": 345,
+        "cpu_ceiling_raw": 390,
+        "fps_cap": null,
+        "resolution_multiplier": 1,
+        "settingMultipliers": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "gpuFpsBeforeRounding": 345
+      },
+      "explanation": "Resolution multiplier is informational: base_gpu_fps already includes it. Only base factors, selected option multipliers and fps_cap participate. No benchmark calibration or native presets."
+    },
+    {
+      "id": "valorant-duplicate-orders",
+      "label": "Valorant: separate detail orders 2 and 7",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "valorant",
+        "resolution": "1080p",
+        "selected": {
+          "@2": 2,
+          "@7": 1
+        }
+      },
+      "expected": {
+        "resolution": "1080p",
+        "metrics": {
+          "beforeSettingsFps": 345,
+          "cpuBound": true,
+          "cpuCeiling": 390,
+          "gpuFps": 449,
+          "realFps": 390,
+          "settingMultiplier": 1.3022363937811743
+        },
+        "stateId": "1638",
+        "selectedSettingIndexes": [
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "selectedByOrder": {
+        "@0": 0,
+        "@1": 0,
+        "@2": 2,
+        "@3": 0,
+        "@4": 0,
+        "@5": 0,
+        "@6": 0,
+        "@7": 1,
+        "@8": 0,
+        "@9": 0
+      },
+      "selectedOptions": [
+        {
+          "setting_order": 0,
+          "key": "aa",
+          "name": "Anti-Aliasing",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "None",
+          "multiplier": 1.08
+        },
+        {
+          "setting_order": 1,
+          "key": "material",
+          "name": "Material Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.04
+        },
+        {
+          "setting_order": 2,
+          "key": "detail",
+          "name": "Detail Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 3,
+          "key": "shadows",
+          "name": "Cast Shadows",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1.05
+        },
+        {
+          "setting_order": 4,
+          "key": "bloom",
+          "name": "Bloom",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1.01
+        },
+        {
+          "setting_order": 5,
+          "key": "textures",
+          "name": "Texture Quality",
+          "type": "vram",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.02
+        },
+        {
+          "setting_order": 6,
+          "key": "aniso",
+          "name": "Anisotropic Filtering",
+          "type": "norm",
+          "high_index": 4,
+          "option_index": 0,
+          "label": "1x",
+          "multiplier": 1.02
+        },
+        {
+          "setting_order": 7,
+          "key": "detail",
+          "name": "Detail Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 1,
+          "label": "Medium",
+          "multiplier": 1.02
+        },
+        {
+          "setting_order": 8,
+          "key": "distortion",
+          "name": "Distortion",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1.02
+        },
+        {
+          "setting_order": 9,
+          "key": "vignette",
+          "name": "Vignette",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1.01
+        }
+      ],
+      "rawComponents": {
+        "base_gpu_fps": 345,
+        "cpu_ceiling_raw": 390,
+        "fps_cap": null,
+        "resolution_multiplier": 1,
+        "settingMultipliers": [
+          1.08,
+          1.04,
+          1,
+          1.05,
+          1.01,
+          1.02,
+          1.02,
+          1.02,
+          1.02,
+          1.01
+        ],
+        "gpuFpsBeforeRounding": 449.27155585450515
+      },
+      "explanation": "Resolution multiplier is informational: base_gpu_fps already includes it. Only base factors, selected option multipliers and fps_cap participate. No benchmark calibration or native presets."
+    },
+    {
+      "id": "valorant-label-selectors",
+      "label": "Valorant: canonical integer selections with alternate hardware at 1440p",
+      "request": {
+        "cpu": "amd-ryzen-7-9800x3d",
+        "gpu": "amd-rx-7800-xt",
+        "game": "valorant",
+        "resolution": "1440p",
+        "selected": {
+          "@2": 2,
+          "@7": 1,
+          "@0": 2
+        }
+      },
+      "expected": {
+        "resolution": "1440p",
+        "metrics": {
+          "beforeSettingsFps": 383,
+          "cpuBound": false,
+          "cpuCeiling": 660,
+          "gpuFps": 461,
+          "realFps": 461,
+          "settingMultiplier": 1.2057744386862719
+        },
+        "stateId": "1640",
+        "selectedSettingIndexes": [
+          2,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "selectedByOrder": {
+        "@0": 2,
+        "@1": 0,
+        "@2": 2,
+        "@3": 0,
+        "@4": 0,
+        "@5": 0,
+        "@6": 0,
+        "@7": 1,
+        "@8": 0,
+        "@9": 0
+      },
+      "selectedOptions": [
+        {
+          "setting_order": 0,
+          "key": "aa",
+          "name": "Anti-Aliasing",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "MSAA 4x",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 1,
+          "key": "material",
+          "name": "Material Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.04
+        },
+        {
+          "setting_order": 2,
+          "key": "detail",
+          "name": "Detail Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 3,
+          "key": "shadows",
+          "name": "Cast Shadows",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1.05
+        },
+        {
+          "setting_order": 4,
+          "key": "bloom",
+          "name": "Bloom",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1.01
+        },
+        {
+          "setting_order": 5,
+          "key": "textures",
+          "name": "Texture Quality",
+          "type": "vram",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.02
+        },
+        {
+          "setting_order": 6,
+          "key": "aniso",
+          "name": "Anisotropic Filtering",
+          "type": "norm",
+          "high_index": 4,
+          "option_index": 0,
+          "label": "1x",
+          "multiplier": 1.02
+        },
+        {
+          "setting_order": 7,
+          "key": "detail",
+          "name": "Detail Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 1,
+          "label": "Medium",
+          "multiplier": 1.02
+        },
+        {
+          "setting_order": 8,
+          "key": "distortion",
+          "name": "Distortion",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1.02
+        },
+        {
+          "setting_order": 9,
+          "key": "vignette",
+          "name": "Vignette",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1.01
+        }
+      ],
+      "rawComponents": {
+        "base_gpu_fps": 382.5,
+        "cpu_ceiling_raw": 660,
+        "fps_cap": null,
+        "resolution_multiplier": 0.6,
+        "settingMultipliers": [
+          1,
+          1.04,
+          1,
+          1.05,
+          1.01,
+          1.02,
+          1.02,
+          1.02,
+          1.02,
+          1.01
+        ],
+        "gpuFpsBeforeRounding": 461.208722797499
+      },
+      "explanation": "Resolution multiplier is informational: base_gpu_fps already includes it. Only base factors, selected option multipliers and fps_cap participate. No benchmark calibration or native presets."
+    },
+    {
+      "id": "cyberpunk-zero",
+      "label": "Cyberpunk: index-zero settings",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "cyberpunk-2077",
+        "resolution": "1080p"
+      },
+      "expected": {
+        "resolution": "1080p",
+        "metrics": {
+          "beforeSettingsFps": 69,
+          "cpuBound": true,
+          "cpuCeiling": 130,
+          "gpuFps": 173,
+          "realFps": 130,
+          "settingMultiplier": 2.5047024490239487
+        },
+        "stateId": "0",
+        "selectedSettingIndexes": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "selectedByOrder": {
+        "@0": 0,
+        "@1": 0,
+        "@2": 0,
+        "@3": 0,
+        "@4": 0,
+        "@5": 0,
+        "@6": 0,
+        "@7": 0,
+        "@8": 0,
+        "@9": 0,
+        "@10": 0,
+        "@11": 0,
+        "@12": 0,
+        "@13": 0,
+        "@14": 0,
+        "@15": 0,
+        "@16": 0,
+        "@17": 0,
+        "@18": 0,
+        "@19": 0,
+        "@20": 0
+      },
+      "selectedOptions": [
+        {
+          "setting_order": 0,
+          "key": "upscale",
+          "name": "Upscaling",
+          "type": "upscale",
+          "high_index": null,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 1,
+          "key": "rt",
+          "name": "Ray Tracing / Path Tracing",
+          "type": "rt",
+          "high_index": 0,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 2,
+          "key": "ssr",
+          "name": "Screen Space Reflections Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.13
+        },
+        {
+          "setting_order": 3,
+          "key": "shadows",
+          "name": "Cascaded / Volumetric Shadow Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.12
+        },
+        {
+          "setting_order": 4,
+          "key": "volfog",
+          "name": "Volumetric Fog Resolution",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.1
+        },
+        {
+          "setting_order": 5,
+          "key": "crowd",
+          "name": "Crowd Density",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.07
+        },
+        {
+          "setting_order": 6,
+          "key": "lod",
+          "name": "Level of Detail (LOD)",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.06
+        },
+        {
+          "setting_order": 7,
+          "key": "sss",
+          "name": "Subsurface Scattering Quality",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.04
+        },
+        {
+          "setting_order": 8,
+          "key": "distshadow",
+          "name": "Distant Shadows Resolution",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.05
+        },
+        {
+          "setting_order": 9,
+          "key": "textures",
+          "name": "Texture Quality",
+          "type": "vram",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.03
+        },
+        {
+          "setting_order": 10,
+          "key": "post",
+          "name": "Motion Blur / Film Grain / Chromatic Aberration",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1.02
+        },
+        {
+          "setting_order": 11,
+          "key": "aniso",
+          "name": "Anisotropic Filtering",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 0,
+          "label": "8x",
+          "multiplier": 1.02
+        },
+        {
+          "setting_order": 12,
+          "key": "localshadow",
+          "name": "Local Shadow Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.05
+        },
+        {
+          "setting_order": 13,
+          "key": "shadowrange",
+          "name": "Cascaded Shadows Range",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.05
+        },
+        {
+          "setting_order": 14,
+          "key": "volclouds",
+          "name": "Volumetric Cloud Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1.05
+        },
+        {
+          "setting_order": 15,
+          "key": "decals",
+          "name": "Max Dynamic Decals",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.03
+        },
+        {
+          "setting_order": 16,
+          "key": "mirror",
+          "name": "Mirror Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.03
+        },
+        {
+          "setting_order": 17,
+          "key": "colorprecision",
+          "name": "Color Precision",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 0,
+          "label": "Medium",
+          "multiplier": 1.02
+        },
+        {
+          "setting_order": 18,
+          "key": "contactshadows",
+          "name": "Contact Shadows",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1.03
+        },
+        {
+          "setting_order": 19,
+          "key": "facial",
+          "name": "Improved Facial Lighting Geometry",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1.02
+        },
+        {
+          "setting_order": 20,
+          "key": "dof",
+          "name": "Depth of Field",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1.03
+        }
+      ],
+      "rawComponents": {
+        "base_gpu_fps": 69,
+        "cpu_ceiling_raw": 130,
+        "fps_cap": null,
+        "resolution_multiplier": 1,
+        "settingMultipliers": [
+          1,
+          1,
+          1.13,
+          1.12,
+          1.1,
+          1.07,
+          1.06,
+          1.04,
+          1.05,
+          1.03,
+          1.02,
+          1.02,
+          1.05,
+          1.05,
+          1.05,
+          1.03,
+          1.03,
+          1.02,
+          1.03,
+          1.02,
+          1.03
+        ],
+        "gpuFpsBeforeRounding": 172.82446898265246
+      },
+      "explanation": "Resolution multiplier is informational: base_gpu_fps already includes it. Only base factors, selected option multipliers and fps_cap participate. No benchmark calibration or native presets."
+    },
+    {
+      "id": "cyberpunk-high",
+      "label": "Cyberpunk: explicit high without RT/upscaling",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "cyberpunk-2077",
+        "resolution": "1080p",
+        "selected": {
+          "@0": 0,
+          "@1": 0,
+          "@2": 2,
+          "@3": 2,
+          "@4": 2,
+          "@5": 2,
+          "@6": 2,
+          "@7": 1,
+          "@8": 2,
+          "@9": 2,
+          "@10": 1,
+          "@11": 1,
+          "@12": 2,
+          "@13": 2,
+          "@14": 2,
+          "@15": 2,
+          "@16": 2,
+          "@17": 1,
+          "@18": 1,
+          "@19": 1,
+          "@20": 1
+        }
+      },
+      "expected": {
+        "resolution": "1080p",
+        "metrics": {
+          "beforeSettingsFps": 69,
+          "cpuBound": false,
+          "cpuCeiling": 130,
+          "gpuFps": 69,
+          "realFps": 69,
+          "settingMultiplier": 1
+        },
+        "stateId": "8543438912",
+        "selectedSettingIndexes": [
+          0,
+          0,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2,
+          2,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "selectedByOrder": {
+        "@0": 0,
+        "@1": 0,
+        "@2": 2,
+        "@3": 2,
+        "@4": 2,
+        "@5": 2,
+        "@6": 2,
+        "@7": 1,
+        "@8": 2,
+        "@9": 2,
+        "@10": 1,
+        "@11": 1,
+        "@12": 2,
+        "@13": 2,
+        "@14": 2,
+        "@15": 2,
+        "@16": 2,
+        "@17": 1,
+        "@18": 1,
+        "@19": 1,
+        "@20": 1
+      },
+      "selectedOptions": [
+        {
+          "setting_order": 0,
+          "key": "upscale",
+          "name": "Upscaling",
+          "type": "upscale",
+          "high_index": null,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 1,
+          "key": "rt",
+          "name": "Ray Tracing / Path Tracing",
+          "type": "rt",
+          "high_index": 0,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 2,
+          "key": "ssr",
+          "name": "Screen Space Reflections Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 3,
+          "key": "shadows",
+          "name": "Cascaded / Volumetric Shadow Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 4,
+          "key": "volfog",
+          "name": "Volumetric Fog Resolution",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 5,
+          "key": "crowd",
+          "name": "Crowd Density",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 6,
+          "key": "lod",
+          "name": "Level of Detail (LOD)",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 7,
+          "key": "sss",
+          "name": "Subsurface Scattering Quality",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 1,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 8,
+          "key": "distshadow",
+          "name": "Distant Shadows Resolution",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 9,
+          "key": "textures",
+          "name": "Texture Quality",
+          "type": "vram",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 10,
+          "key": "post",
+          "name": "Motion Blur / Film Grain / Chromatic Aberration",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 1,
+          "label": "Low",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 11,
+          "key": "aniso",
+          "name": "Anisotropic Filtering",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 1,
+          "label": "16x",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 12,
+          "key": "localshadow",
+          "name": "Local Shadow Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 13,
+          "key": "shadowrange",
+          "name": "Cascaded Shadows Range",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 14,
+          "key": "volclouds",
+          "name": "Volumetric Cloud Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "Medium",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 15,
+          "key": "decals",
+          "name": "Max Dynamic Decals",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 16,
+          "key": "mirror",
+          "name": "Mirror Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 17,
+          "key": "colorprecision",
+          "name": "Color Precision",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 1,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 18,
+          "key": "contactshadows",
+          "name": "Contact Shadows",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 1,
+          "label": "On",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 19,
+          "key": "facial",
+          "name": "Improved Facial Lighting Geometry",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 1,
+          "label": "On",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 20,
+          "key": "dof",
+          "name": "Depth of Field",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 1,
+          "label": "On",
+          "multiplier": 1
+        }
+      ],
+      "rawComponents": {
+        "base_gpu_fps": 69,
+        "cpu_ceiling_raw": 130,
+        "fps_cap": null,
+        "resolution_multiplier": 1,
+        "settingMultipliers": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "gpuFpsBeforeRounding": 69
+      },
+      "explanation": "Resolution multiplier is informational: base_gpu_fps already includes it. Only base factors, selected option multipliers and fps_cap participate. No benchmark calibration or native presets."
+    },
+    {
+      "id": "cyberpunk-upscale",
+      "label": "Cyberpunk: quality upscaling at 1440p",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "cyberpunk-2077",
+        "resolution": "1440p",
+        "selected": {
+          "@0": 1,
+          "@1": 0,
+          "@2": 2,
+          "@3": 2,
+          "@4": 2,
+          "@5": 2,
+          "@6": 2,
+          "@7": 1,
+          "@8": 2,
+          "@9": 2,
+          "@10": 1,
+          "@11": 1,
+          "@12": 2,
+          "@13": 2,
+          "@14": 2,
+          "@15": 2,
+          "@16": 2,
+          "@17": 1,
+          "@18": 1,
+          "@19": 1,
+          "@20": 1
+        }
+      },
+      "expected": {
+        "resolution": "1440p",
+        "metrics": {
+          "beforeSettingsFps": 41,
+          "cpuBound": false,
+          "cpuCeiling": 130,
+          "gpuFps": 56,
+          "realFps": 56,
+          "settingMultiplier": 1.35
+        },
+        "stateId": "8543438913",
+        "selectedSettingIndexes": [
+          1,
+          0,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2,
+          2,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "selectedByOrder": {
+        "@0": 1,
+        "@1": 0,
+        "@2": 2,
+        "@3": 2,
+        "@4": 2,
+        "@5": 2,
+        "@6": 2,
+        "@7": 1,
+        "@8": 2,
+        "@9": 2,
+        "@10": 1,
+        "@11": 1,
+        "@12": 2,
+        "@13": 2,
+        "@14": 2,
+        "@15": 2,
+        "@16": 2,
+        "@17": 1,
+        "@18": 1,
+        "@19": 1,
+        "@20": 1
+      },
+      "selectedOptions": [
+        {
+          "setting_order": 0,
+          "key": "upscale",
+          "name": "Upscaling",
+          "type": "upscale",
+          "high_index": null,
+          "option_index": 1,
+          "label": "Quality",
+          "multiplier": 1.35
+        },
+        {
+          "setting_order": 1,
+          "key": "rt",
+          "name": "Ray Tracing / Path Tracing",
+          "type": "rt",
+          "high_index": 0,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 2,
+          "key": "ssr",
+          "name": "Screen Space Reflections Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 3,
+          "key": "shadows",
+          "name": "Cascaded / Volumetric Shadow Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 4,
+          "key": "volfog",
+          "name": "Volumetric Fog Resolution",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 5,
+          "key": "crowd",
+          "name": "Crowd Density",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 6,
+          "key": "lod",
+          "name": "Level of Detail (LOD)",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 7,
+          "key": "sss",
+          "name": "Subsurface Scattering Quality",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 1,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 8,
+          "key": "distshadow",
+          "name": "Distant Shadows Resolution",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 9,
+          "key": "textures",
+          "name": "Texture Quality",
+          "type": "vram",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 10,
+          "key": "post",
+          "name": "Motion Blur / Film Grain / Chromatic Aberration",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 1,
+          "label": "Low",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 11,
+          "key": "aniso",
+          "name": "Anisotropic Filtering",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 1,
+          "label": "16x",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 12,
+          "key": "localshadow",
+          "name": "Local Shadow Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 13,
+          "key": "shadowrange",
+          "name": "Cascaded Shadows Range",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 14,
+          "key": "volclouds",
+          "name": "Volumetric Cloud Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "Medium",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 15,
+          "key": "decals",
+          "name": "Max Dynamic Decals",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 16,
+          "key": "mirror",
+          "name": "Mirror Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 17,
+          "key": "colorprecision",
+          "name": "Color Precision",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 1,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 18,
+          "key": "contactshadows",
+          "name": "Contact Shadows",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 1,
+          "label": "On",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 19,
+          "key": "facial",
+          "name": "Improved Facial Lighting Geometry",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 1,
+          "label": "On",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 20,
+          "key": "dof",
+          "name": "Depth of Field",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 1,
+          "label": "On",
+          "multiplier": 1
+        }
+      ],
+      "rawComponents": {
+        "base_gpu_fps": 41.4,
+        "cpu_ceiling_raw": 130,
+        "fps_cap": null,
+        "resolution_multiplier": 0.6,
+        "settingMultipliers": [
+          1.35,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "gpuFpsBeforeRounding": 55.89
+      },
+      "explanation": "Resolution multiplier is informational: base_gpu_fps already includes it. Only base factors, selected option multipliers and fps_cap participate. No benchmark calibration or native presets."
+    },
+    {
+      "id": "cyberpunk-path-tracing",
+      "label": "Cyberpunk: path tracing with RTX 4090 at 4K",
+      "request": {
+        "cpu": "amd-ryzen-7-9800x3d",
+        "gpu": "nvidia-rtx-4090",
+        "game": "cyberpunk-2077",
+        "resolution": "2160p",
+        "selected": {
+          "@0": 0,
+          "@1": 3,
+          "@2": 2,
+          "@3": 2,
+          "@4": 2,
+          "@5": 2,
+          "@6": 2,
+          "@7": 1,
+          "@8": 2,
+          "@9": 2,
+          "@10": 1,
+          "@11": 1,
+          "@12": 2,
+          "@13": 2,
+          "@14": 2,
+          "@15": 2,
+          "@16": 2,
+          "@17": 1,
+          "@18": 1,
+          "@19": 1,
+          "@20": 1
+        }
+      },
+      "expected": {
+        "resolution": "2160p",
+        "metrics": {
+          "beforeSettingsFps": 73,
+          "cpuBound": false,
+          "cpuCeiling": 220,
+          "gpuFps": 33,
+          "realFps": 33,
+          "settingMultiplier": 0.44999999999999996
+        },
+        "stateId": "8543438924",
+        "selectedSettingIndexes": [
+          0,
+          3,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2,
+          2,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "selectedByOrder": {
+        "@0": 0,
+        "@1": 3,
+        "@2": 2,
+        "@3": 2,
+        "@4": 2,
+        "@5": 2,
+        "@6": 2,
+        "@7": 1,
+        "@8": 2,
+        "@9": 2,
+        "@10": 1,
+        "@11": 1,
+        "@12": 2,
+        "@13": 2,
+        "@14": 2,
+        "@15": 2,
+        "@16": 2,
+        "@17": 1,
+        "@18": 1,
+        "@19": 1,
+        "@20": 1
+      },
+      "selectedOptions": [
+        {
+          "setting_order": 0,
+          "key": "upscale",
+          "name": "Upscaling",
+          "type": "upscale",
+          "high_index": null,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 1,
+          "key": "rt",
+          "name": "Ray Tracing / Path Tracing",
+          "type": "rt",
+          "high_index": 0,
+          "option_index": 3,
+          "label": "Path Tracing",
+          "multiplier": 0.44999999999999996
+        },
+        {
+          "setting_order": 2,
+          "key": "ssr",
+          "name": "Screen Space Reflections Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 3,
+          "key": "shadows",
+          "name": "Cascaded / Volumetric Shadow Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 4,
+          "key": "volfog",
+          "name": "Volumetric Fog Resolution",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 5,
+          "key": "crowd",
+          "name": "Crowd Density",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 6,
+          "key": "lod",
+          "name": "Level of Detail (LOD)",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 7,
+          "key": "sss",
+          "name": "Subsurface Scattering Quality",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 1,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 8,
+          "key": "distshadow",
+          "name": "Distant Shadows Resolution",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 9,
+          "key": "textures",
+          "name": "Texture Quality",
+          "type": "vram",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 10,
+          "key": "post",
+          "name": "Motion Blur / Film Grain / Chromatic Aberration",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 1,
+          "label": "Low",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 11,
+          "key": "aniso",
+          "name": "Anisotropic Filtering",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 1,
+          "label": "16x",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 12,
+          "key": "localshadow",
+          "name": "Local Shadow Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 13,
+          "key": "shadowrange",
+          "name": "Cascaded Shadows Range",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 14,
+          "key": "volclouds",
+          "name": "Volumetric Cloud Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "Medium",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 15,
+          "key": "decals",
+          "name": "Max Dynamic Decals",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 16,
+          "key": "mirror",
+          "name": "Mirror Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 17,
+          "key": "colorprecision",
+          "name": "Color Precision",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 1,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 18,
+          "key": "contactshadows",
+          "name": "Contact Shadows",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 1,
+          "label": "On",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 19,
+          "key": "facial",
+          "name": "Improved Facial Lighting Geometry",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 1,
+          "label": "On",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 20,
+          "key": "dof",
+          "name": "Depth of Field",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 1,
+          "label": "On",
+          "multiplier": 1
+        }
+      ],
+      "rawComponents": {
+        "base_gpu_fps": 72.67500000000001,
+        "cpu_ceiling_raw": 220,
+        "fps_cap": null,
+        "resolution_multiplier": 0.34,
+        "settingMultipliers": [
+          1,
+          0.44999999999999996,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "gpuFpsBeforeRounding": 32.70375
+      },
+      "explanation": "Resolution multiplier is informational: base_gpu_fps already includes it. Only base factors, selected option multipliers and fps_cap participate. No benchmark calibration or native presets."
+    },
+    {
+      "id": "cyberpunk-state-priority",
+      "label": "Cyberpunk: stateId takes priority over a different valid selected vector",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "cyberpunk-2077",
+        "resolution": "1080p",
+        "stateId": "1",
+        "selected": {
+          "@0": 0
+        }
+      },
+      "expected": {
+        "resolution": "1080p",
+        "metrics": {
+          "beforeSettingsFps": 69,
+          "cpuBound": true,
+          "cpuCeiling": 130,
+          "gpuFps": 233,
+          "realFps": 130,
+          "settingMultiplier": 3.38134830618233
+        },
+        "stateId": "1",
+        "selectedSettingIndexes": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "selectedByOrder": {
+        "@0": 1,
+        "@1": 0,
+        "@2": 0,
+        "@3": 0,
+        "@4": 0,
+        "@5": 0,
+        "@6": 0,
+        "@7": 0,
+        "@8": 0,
+        "@9": 0,
+        "@10": 0,
+        "@11": 0,
+        "@12": 0,
+        "@13": 0,
+        "@14": 0,
+        "@15": 0,
+        "@16": 0,
+        "@17": 0,
+        "@18": 0,
+        "@19": 0,
+        "@20": 0
+      },
+      "selectedOptions": [
+        {
+          "setting_order": 0,
+          "key": "upscale",
+          "name": "Upscaling",
+          "type": "upscale",
+          "high_index": null,
+          "option_index": 1,
+          "label": "Quality",
+          "multiplier": 1.35
+        },
+        {
+          "setting_order": 1,
+          "key": "rt",
+          "name": "Ray Tracing / Path Tracing",
+          "type": "rt",
+          "high_index": 0,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 2,
+          "key": "ssr",
+          "name": "Screen Space Reflections Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.13
+        },
+        {
+          "setting_order": 3,
+          "key": "shadows",
+          "name": "Cascaded / Volumetric Shadow Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.12
+        },
+        {
+          "setting_order": 4,
+          "key": "volfog",
+          "name": "Volumetric Fog Resolution",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.1
+        },
+        {
+          "setting_order": 5,
+          "key": "crowd",
+          "name": "Crowd Density",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.07
+        },
+        {
+          "setting_order": 6,
+          "key": "lod",
+          "name": "Level of Detail (LOD)",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.06
+        },
+        {
+          "setting_order": 7,
+          "key": "sss",
+          "name": "Subsurface Scattering Quality",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.04
+        },
+        {
+          "setting_order": 8,
+          "key": "distshadow",
+          "name": "Distant Shadows Resolution",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.05
+        },
+        {
+          "setting_order": 9,
+          "key": "textures",
+          "name": "Texture Quality",
+          "type": "vram",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.03
+        },
+        {
+          "setting_order": 10,
+          "key": "post",
+          "name": "Motion Blur / Film Grain / Chromatic Aberration",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1.02
+        },
+        {
+          "setting_order": 11,
+          "key": "aniso",
+          "name": "Anisotropic Filtering",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 0,
+          "label": "8x",
+          "multiplier": 1.02
+        },
+        {
+          "setting_order": 12,
+          "key": "localshadow",
+          "name": "Local Shadow Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.05
+        },
+        {
+          "setting_order": 13,
+          "key": "shadowrange",
+          "name": "Cascaded Shadows Range",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.05
+        },
+        {
+          "setting_order": 14,
+          "key": "volclouds",
+          "name": "Volumetric Cloud Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1.05
+        },
+        {
+          "setting_order": 15,
+          "key": "decals",
+          "name": "Max Dynamic Decals",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.03
+        },
+        {
+          "setting_order": 16,
+          "key": "mirror",
+          "name": "Mirror Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.03
+        },
+        {
+          "setting_order": 17,
+          "key": "colorprecision",
+          "name": "Color Precision",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 0,
+          "label": "Medium",
+          "multiplier": 1.02
+        },
+        {
+          "setting_order": 18,
+          "key": "contactshadows",
+          "name": "Contact Shadows",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1.03
+        },
+        {
+          "setting_order": 19,
+          "key": "facial",
+          "name": "Improved Facial Lighting Geometry",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1.02
+        },
+        {
+          "setting_order": 20,
+          "key": "dof",
+          "name": "Depth of Field",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1.03
+        }
+      ],
+      "rawComponents": {
+        "base_gpu_fps": 69,
+        "cpu_ceiling_raw": 130,
+        "fps_cap": null,
+        "resolution_multiplier": 1,
+        "settingMultipliers": [
+          1.35,
+          1,
+          1.13,
+          1.12,
+          1.1,
+          1.07,
+          1.06,
+          1.04,
+          1.05,
+          1.03,
+          1.02,
+          1.02,
+          1.05,
+          1.05,
+          1.05,
+          1.03,
+          1.03,
+          1.02,
+          1.03,
+          1.02,
+          1.03
+        ],
+        "gpuFpsBeforeRounding": 233.3130331265808
+      },
+      "explanation": "Resolution multiplier is informational: base_gpu_fps already includes it. Only base factors, selected option multipliers and fps_cap participate. No benchmark calibration or native presets."
+    },
+    {
+      "id": "cyberpunk-ultrawide",
+      "label": "Cyberpunk: ultrawide 1440p",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "cyberpunk-2077",
+        "resolution": "uw1440",
+        "selected": {
+          "@0": 0,
+          "@1": 0,
+          "@2": 2,
+          "@3": 2,
+          "@4": 2,
+          "@5": 2,
+          "@6": 2,
+          "@7": 1,
+          "@8": 2,
+          "@9": 2,
+          "@10": 1,
+          "@11": 1,
+          "@12": 2,
+          "@13": 2,
+          "@14": 2,
+          "@15": 2,
+          "@16": 2,
+          "@17": 1,
+          "@18": 1,
+          "@19": 1,
+          "@20": 1
+        }
+      },
+      "expected": {
+        "resolution": "uw1440",
+        "metrics": {
+          "beforeSettingsFps": 31,
+          "cpuBound": false,
+          "cpuCeiling": 130,
+          "gpuFps": 31,
+          "realFps": 31,
+          "settingMultiplier": 1
+        },
+        "stateId": "8543438912",
+        "selectedSettingIndexes": [
+          0,
+          0,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2,
+          2,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "selectedByOrder": {
+        "@0": 0,
+        "@1": 0,
+        "@2": 2,
+        "@3": 2,
+        "@4": 2,
+        "@5": 2,
+        "@6": 2,
+        "@7": 1,
+        "@8": 2,
+        "@9": 2,
+        "@10": 1,
+        "@11": 1,
+        "@12": 2,
+        "@13": 2,
+        "@14": 2,
+        "@15": 2,
+        "@16": 2,
+        "@17": 1,
+        "@18": 1,
+        "@19": 1,
+        "@20": 1
+      },
+      "selectedOptions": [
+        {
+          "setting_order": 0,
+          "key": "upscale",
+          "name": "Upscaling",
+          "type": "upscale",
+          "high_index": null,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 1,
+          "key": "rt",
+          "name": "Ray Tracing / Path Tracing",
+          "type": "rt",
+          "high_index": 0,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 2,
+          "key": "ssr",
+          "name": "Screen Space Reflections Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 3,
+          "key": "shadows",
+          "name": "Cascaded / Volumetric Shadow Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 4,
+          "key": "volfog",
+          "name": "Volumetric Fog Resolution",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 5,
+          "key": "crowd",
+          "name": "Crowd Density",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 6,
+          "key": "lod",
+          "name": "Level of Detail (LOD)",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 7,
+          "key": "sss",
+          "name": "Subsurface Scattering Quality",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 1,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 8,
+          "key": "distshadow",
+          "name": "Distant Shadows Resolution",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 9,
+          "key": "textures",
+          "name": "Texture Quality",
+          "type": "vram",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 10,
+          "key": "post",
+          "name": "Motion Blur / Film Grain / Chromatic Aberration",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 1,
+          "label": "Low",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 11,
+          "key": "aniso",
+          "name": "Anisotropic Filtering",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 1,
+          "label": "16x",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 12,
+          "key": "localshadow",
+          "name": "Local Shadow Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 13,
+          "key": "shadowrange",
+          "name": "Cascaded Shadows Range",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 14,
+          "key": "volclouds",
+          "name": "Volumetric Cloud Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "Medium",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 15,
+          "key": "decals",
+          "name": "Max Dynamic Decals",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 16,
+          "key": "mirror",
+          "name": "Mirror Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 17,
+          "key": "colorprecision",
+          "name": "Color Precision",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 1,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 18,
+          "key": "contactshadows",
+          "name": "Contact Shadows",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 1,
+          "label": "On",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 19,
+          "key": "facial",
+          "name": "Improved Facial Lighting Geometry",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 1,
+          "label": "On",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 20,
+          "key": "dof",
+          "name": "Depth of Field",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 1,
+          "label": "On",
+          "multiplier": 1
+        }
+      ],
+      "rawComponents": {
+        "base_gpu_fps": 31.05,
+        "cpu_ceiling_raw": 130,
+        "fps_cap": null,
+        "resolution_multiplier": 0.45,
+        "settingMultipliers": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "gpuFpsBeforeRounding": 31.05
+      },
+      "explanation": "Resolution multiplier is informational: base_gpu_fps already includes it. Only base factors, selected option multipliers and fps_cap participate. No benchmark calibration or native presets."
+    },
+    {
+      "id": "fortnite-zero",
+      "label": "Fortnite: index-zero settings",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "fortnite",
+        "resolution": "1080p"
+      },
+      "expected": {
+        "resolution": "1080p",
+        "metrics": {
+          "beforeSettingsFps": 85,
+          "cpuBound": true,
+          "cpuCeiling": 176,
+          "gpuFps": 181,
+          "realFps": 176,
+          "settingMultiplier": 2.1260198134258053
+        },
+        "stateId": "0",
+        "selectedSettingIndexes": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "selectedByOrder": {
+        "@0": 0,
+        "@1": 0,
+        "@2": 0,
+        "@3": 0,
+        "@4": 0,
+        "@5": 0,
+        "@6": 0,
+        "@7": 0,
+        "@8": 0,
+        "@9": 0,
+        "@10": 0,
+        "@11": 0,
+        "@12": 0,
+        "@13": 0
+      },
+      "selectedOptions": [
+        {
+          "setting_order": 0,
+          "key": "upscale",
+          "name": "Upscaling",
+          "type": "upscale",
+          "high_index": null,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 1,
+          "key": "rt",
+          "name": "Hardware Ray Tracing (Lumen)",
+          "type": "rt",
+          "high_index": 0,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 2,
+          "key": "gi",
+          "name": "Global Illumination (Lumen)",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1.18
+        },
+        {
+          "setting_order": 3,
+          "key": "shadows",
+          "name": "Shadows",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1.12
+        },
+        {
+          "setting_order": 4,
+          "key": "reflections",
+          "name": "Reflections (Lumen)",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1.09
+        },
+        {
+          "setting_order": 5,
+          "key": "nanite",
+          "name": "Nanite Virtualized Geometry",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1.08
+        },
+        {
+          "setting_order": 6,
+          "key": "effects",
+          "name": "Effects",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.06
+        },
+        {
+          "setting_order": 7,
+          "key": "distance",
+          "name": "View Distance",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Near",
+          "multiplier": 1.05
+        },
+        {
+          "setting_order": 8,
+          "key": "foliage",
+          "name": "Foliage",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.05
+        },
+        {
+          "setting_order": 9,
+          "key": "post",
+          "name": "Post Processing",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.05
+        },
+        {
+          "setting_order": 10,
+          "key": "textures",
+          "name": "Textures",
+          "type": "vram",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.03
+        },
+        {
+          "setting_order": 11,
+          "key": "aniso",
+          "name": "Anisotropic Filtering",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "4x",
+          "multiplier": 1.02
+        },
+        {
+          "setting_order": 12,
+          "key": "vsm",
+          "name": "Virtual Shadow Maps",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1.06
+        },
+        {
+          "setting_order": 13,
+          "key": "motionblur",
+          "name": "Motion Blur",
+          "type": "norm",
+          "high_index": 0,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1
+        }
+      ],
+      "rawComponents": {
+        "base_gpu_fps": 85.36082474226804,
+        "cpu_ceiling_raw": 175.5,
+        "fps_cap": null,
+        "resolution_multiplier": 1,
+        "settingMultipliers": [
+          1,
+          1,
+          1.18,
+          1.12,
+          1.09,
+          1.08,
+          1.06,
+          1.05,
+          1.05,
+          1.05,
+          1.03,
+          1.02,
+          1.06,
+          1
+        ],
+        "gpuFpsBeforeRounding": 181.47880469242955
+      },
+      "explanation": "Resolution multiplier is informational: base_gpu_fps already includes it. Only base factors, selected option multipliers and fps_cap participate. No benchmark calibration or native presets."
+    },
+    {
+      "id": "fortnite-high",
+      "label": "Fortnite: explicit high settings",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "fortnite",
+        "resolution": "1080p",
+        "selected": {
+          "@0": 0,
+          "@1": 0,
+          "@2": 2,
+          "@3": 2,
+          "@4": 2,
+          "@5": 1,
+          "@6": 2,
+          "@7": 2,
+          "@8": 2,
+          "@9": 2,
+          "@10": 2,
+          "@11": 2,
+          "@12": 1,
+          "@13": 0
+        }
+      },
+      "expected": {
+        "resolution": "1080p",
+        "metrics": {
+          "beforeSettingsFps": 85,
+          "cpuBound": false,
+          "cpuCeiling": 176,
+          "gpuFps": 85,
+          "realFps": 85,
+          "settingMultiplier": 1
+        },
+        "stateId": "11884192",
+        "selectedSettingIndexes": [
+          0,
+          0,
+          2,
+          2,
+          2,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          0
+        ]
+      },
+      "selectedByOrder": {
+        "@0": 0,
+        "@1": 0,
+        "@2": 2,
+        "@3": 2,
+        "@4": 2,
+        "@5": 1,
+        "@6": 2,
+        "@7": 2,
+        "@8": 2,
+        "@9": 2,
+        "@10": 2,
+        "@11": 2,
+        "@12": 1,
+        "@13": 0
+      },
+      "selectedOptions": [
+        {
+          "setting_order": 0,
+          "key": "upscale",
+          "name": "Upscaling",
+          "type": "upscale",
+          "high_index": null,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 1,
+          "key": "rt",
+          "name": "Hardware Ray Tracing (Lumen)",
+          "type": "rt",
+          "high_index": 0,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 2,
+          "key": "gi",
+          "name": "Global Illumination (Lumen)",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 3,
+          "key": "shadows",
+          "name": "Shadows",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 4,
+          "key": "reflections",
+          "name": "Reflections (Lumen)",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 5,
+          "key": "nanite",
+          "name": "Nanite Virtualized Geometry",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 1,
+          "label": "On",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 6,
+          "key": "effects",
+          "name": "Effects",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 7,
+          "key": "distance",
+          "name": "View Distance",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "Far",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 8,
+          "key": "foliage",
+          "name": "Foliage",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 9,
+          "key": "post",
+          "name": "Post Processing",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 10,
+          "key": "textures",
+          "name": "Textures",
+          "type": "vram",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 11,
+          "key": "aniso",
+          "name": "Anisotropic Filtering",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "16x",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 12,
+          "key": "vsm",
+          "name": "Virtual Shadow Maps",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 1,
+          "label": "On",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 13,
+          "key": "motionblur",
+          "name": "Motion Blur",
+          "type": "norm",
+          "high_index": 0,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1
+        }
+      ],
+      "rawComponents": {
+        "base_gpu_fps": 85.36082474226804,
+        "cpu_ceiling_raw": 175.5,
+        "fps_cap": null,
+        "resolution_multiplier": 1,
+        "settingMultipliers": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "gpuFpsBeforeRounding": 85.36082474226804
+      },
+      "explanation": "Resolution multiplier is informational: base_gpu_fps already includes it. Only base factors, selected option multipliers and fps_cap participate. No benchmark calibration or native presets."
+    },
+    {
+      "id": "fortnite-rt",
+      "label": "Fortnite: Epic RT with quality upscaling",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-4090",
+        "game": "fortnite",
+        "resolution": "1440p",
+        "selected": {
+          "@0": 1,
+          "@1": 3,
+          "@2": 2,
+          "@3": 2,
+          "@4": 2,
+          "@5": 1,
+          "@6": 2,
+          "@7": 2,
+          "@8": 2,
+          "@9": 2,
+          "@10": 2,
+          "@11": 2,
+          "@12": 1,
+          "@13": 0
+        }
+      },
+      "expected": {
+        "resolution": "1440p",
+        "metrics": {
+          "beforeSettingsFps": 159,
+          "cpuBound": false,
+          "cpuCeiling": 176,
+          "gpuFps": 129,
+          "realFps": 129,
+          "settingMultiplier": 0.81
+        },
+        "stateId": "11884205",
+        "selectedSettingIndexes": [
+          1,
+          3,
+          2,
+          2,
+          2,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          0
+        ]
+      },
+      "selectedByOrder": {
+        "@0": 1,
+        "@1": 3,
+        "@2": 2,
+        "@3": 2,
+        "@4": 2,
+        "@5": 1,
+        "@6": 2,
+        "@7": 2,
+        "@8": 2,
+        "@9": 2,
+        "@10": 2,
+        "@11": 2,
+        "@12": 1,
+        "@13": 0
+      },
+      "selectedOptions": [
+        {
+          "setting_order": 0,
+          "key": "upscale",
+          "name": "Upscaling",
+          "type": "upscale",
+          "high_index": null,
+          "option_index": 1,
+          "label": "Quality",
+          "multiplier": 1.35
+        },
+        {
+          "setting_order": 1,
+          "key": "rt",
+          "name": "Hardware Ray Tracing (Lumen)",
+          "type": "rt",
+          "high_index": 0,
+          "option_index": 3,
+          "label": "Epic",
+          "multiplier": 0.6
+        },
+        {
+          "setting_order": 2,
+          "key": "gi",
+          "name": "Global Illumination (Lumen)",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 3,
+          "key": "shadows",
+          "name": "Shadows",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 4,
+          "key": "reflections",
+          "name": "Reflections (Lumen)",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 5,
+          "key": "nanite",
+          "name": "Nanite Virtualized Geometry",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 1,
+          "label": "On",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 6,
+          "key": "effects",
+          "name": "Effects",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 7,
+          "key": "distance",
+          "name": "View Distance",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "Far",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 8,
+          "key": "foliage",
+          "name": "Foliage",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 9,
+          "key": "post",
+          "name": "Post Processing",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 10,
+          "key": "textures",
+          "name": "Textures",
+          "type": "vram",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 11,
+          "key": "aniso",
+          "name": "Anisotropic Filtering",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "16x",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 12,
+          "key": "vsm",
+          "name": "Virtual Shadow Maps",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 1,
+          "label": "On",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 13,
+          "key": "motionblur",
+          "name": "Motion Blur",
+          "type": "norm",
+          "high_index": 0,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1
+        }
+      ],
+      "rawComponents": {
+        "base_gpu_fps": 158.65979381443302,
+        "cpu_ceiling_raw": 175.5,
+        "fps_cap": null,
+        "resolution_multiplier": 0.6,
+        "settingMultipliers": [
+          1.35,
+          0.6,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "gpuFpsBeforeRounding": 128.51443298969076
+      },
+      "explanation": "Resolution multiplier is informational: base_gpu_fps already includes it. Only base factors, selected option multipliers and fps_cap participate. No benchmark calibration or native presets."
+    },
+    {
+      "id": "elden-ring-cap",
+      "label": "Elden Ring: 60 FPS cap",
+      "request": {
+        "cpu": "amd-ryzen-7-9800x3d",
+        "gpu": "nvidia-rtx-4090",
+        "game": "elden-ring",
+        "resolution": "1080p",
+        "selected": {
+          "@0": 0,
+          "@1": 2,
+          "@2": 2,
+          "@3": 2,
+          "@4": 2,
+          "@5": 2,
+          "@6": 2,
+          "@7": 2,
+          "@8": 2,
+          "@9": 2,
+          "@10": 2,
+          "@11": 2,
+          "@12": 2,
+          "@13": 1,
+          "@14": 0
+        }
+      },
+      "expected": {
+        "resolution": "1080p",
+        "metrics": {
+          "beforeSettingsFps": 60,
+          "cpuBound": true,
+          "cpuCeiling": 297,
+          "gpuFps": 321,
+          "realFps": 60,
+          "settingMultiplier": 1
+        },
+        "stateId": "63449768",
+        "selectedSettingIndexes": [
+          0,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          0
+        ]
+      },
+      "selectedByOrder": {
+        "@0": 0,
+        "@1": 2,
+        "@2": 2,
+        "@3": 2,
+        "@4": 2,
+        "@5": 2,
+        "@6": 2,
+        "@7": 2,
+        "@8": 2,
+        "@9": 2,
+        "@10": 2,
+        "@11": 2,
+        "@12": 2,
+        "@13": 1,
+        "@14": 0
+      },
+      "selectedOptions": [
+        {
+          "setting_order": 0,
+          "key": "rt",
+          "name": "Ray Tracing",
+          "type": "rt",
+          "high_index": 0,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 1,
+          "key": "shadows",
+          "name": "Shadow Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 2,
+          "key": "gi",
+          "name": "Global Illumination Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 3,
+          "key": "lighting",
+          "name": "Lighting Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 4,
+          "key": "ssr",
+          "name": "Reflection Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 5,
+          "key": "effects",
+          "name": "Effects Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 6,
+          "key": "grass",
+          "name": "Grass Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 7,
+          "key": "aa",
+          "name": "Anti-Aliasing Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 8,
+          "key": "textures",
+          "name": "Texture Quality",
+          "type": "vram",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 9,
+          "key": "volumetric",
+          "name": "Volumetric Lighting Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 10,
+          "key": "ssao",
+          "name": "SSAO",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 11,
+          "key": "shader",
+          "name": "Shader Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 12,
+          "key": "water",
+          "name": "Water Surface Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 13,
+          "key": "dof",
+          "name": "Depth of Field",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 1,
+          "label": "On",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 14,
+          "key": "motionblur",
+          "name": "Motion Blur",
+          "type": "norm",
+          "high_index": 0,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1
+        }
+      ],
+      "rawComponents": {
+        "base_gpu_fps": 320.625,
+        "cpu_ceiling_raw": 297,
+        "fps_cap": 60,
+        "resolution_multiplier": 1,
+        "settingMultipliers": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "gpuFpsBeforeRounding": 320.625
+      },
+      "explanation": "Resolution multiplier is informational: base_gpu_fps already includes it. Only base factors, selected option multipliers and fps_cap participate. No benchmark calibration or native presets."
+    },
+    {
+      "id": "elden-ring-gpu-limit",
+      "label": "Elden Ring: GTX 1060 at 4K",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-gtx-1060-6gb",
+        "game": "elden-ring",
+        "resolution": "2160p",
+        "selected": {
+          "@0": 0,
+          "@1": 2,
+          "@2": 2,
+          "@3": 2,
+          "@4": 2,
+          "@5": 2,
+          "@6": 2,
+          "@7": 2,
+          "@8": 2,
+          "@9": 2,
+          "@10": 2,
+          "@11": 2,
+          "@12": 2,
+          "@13": 1,
+          "@14": 0
+        }
+      },
+      "expected": {
+        "resolution": "2160p",
+        "metrics": {
+          "beforeSettingsFps": 15,
+          "cpuBound": false,
+          "cpuCeiling": 176,
+          "gpuFps": 15,
+          "realFps": 15,
+          "settingMultiplier": 1
+        },
+        "stateId": "63449768",
+        "selectedSettingIndexes": [
+          0,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          0
+        ]
+      },
+      "selectedByOrder": {
+        "@0": 0,
+        "@1": 2,
+        "@2": 2,
+        "@3": 2,
+        "@4": 2,
+        "@5": 2,
+        "@6": 2,
+        "@7": 2,
+        "@8": 2,
+        "@9": 2,
+        "@10": 2,
+        "@11": 2,
+        "@12": 2,
+        "@13": 1,
+        "@14": 0
+      },
+      "selectedOptions": [
+        {
+          "setting_order": 0,
+          "key": "rt",
+          "name": "Ray Tracing",
+          "type": "rt",
+          "high_index": 0,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 1,
+          "key": "shadows",
+          "name": "Shadow Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 2,
+          "key": "gi",
+          "name": "Global Illumination Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 3,
+          "key": "lighting",
+          "name": "Lighting Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 4,
+          "key": "ssr",
+          "name": "Reflection Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 5,
+          "key": "effects",
+          "name": "Effects Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 6,
+          "key": "grass",
+          "name": "Grass Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 7,
+          "key": "aa",
+          "name": "Anti-Aliasing Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 8,
+          "key": "textures",
+          "name": "Texture Quality",
+          "type": "vram",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 9,
+          "key": "volumetric",
+          "name": "Volumetric Lighting Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 10,
+          "key": "ssao",
+          "name": "SSAO",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 11,
+          "key": "shader",
+          "name": "Shader Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 12,
+          "key": "water",
+          "name": "Water Surface Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 13,
+          "key": "dof",
+          "name": "Depth of Field",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 1,
+          "label": "On",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 14,
+          "key": "motionblur",
+          "name": "Motion Blur",
+          "type": "norm",
+          "high_index": 0,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1
+        }
+      ],
+      "rawComponents": {
+        "base_gpu_fps": 14.535000000000002,
+        "cpu_ceiling_raw": 175.5,
+        "fps_cap": 60,
+        "resolution_multiplier": 0.34,
+        "settingMultipliers": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "gpuFpsBeforeRounding": 14.535000000000002
+      },
+      "explanation": "Resolution multiplier is informational: base_gpu_fps already includes it. Only base factors, selected option multipliers and fps_cap participate. No benchmark calibration or native presets."
+    },
+    {
+      "id": "cs2-state-zero",
+      "label": "CS2: explicit stateId zero",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "counter-strike-2",
+        "resolution": "1080p",
+        "stateId": "0"
+      },
+      "expected": {
+        "resolution": "1080p",
+        "metrics": {
+          "beforeSettingsFps": 237,
+          "cpuBound": false,
+          "cpuCeiling": 390,
+          "gpuFps": 390,
+          "realFps": 390,
+          "settingMultiplier": 1.64685321941108
+        },
+        "stateId": "0",
+        "selectedSettingIndexes": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "selectedByOrder": {
+        "@0": 0,
+        "@1": 0,
+        "@2": 0,
+        "@3": 0,
+        "@4": 0,
+        "@5": 0,
+        "@6": 0,
+        "@7": 0,
+        "@8": 0,
+        "@9": 0,
+        "@10": 0
+      },
+      "selectedOptions": [
+        {
+          "setting_order": 0,
+          "key": "upscale",
+          "name": "Upscaling",
+          "type": "upscale",
+          "high_index": null,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 1,
+          "key": "msaa",
+          "name": "Anti-Aliasing Mode",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "CMAA2",
+          "multiplier": 1.16
+        },
+        {
+          "setting_order": 2,
+          "key": "shadows",
+          "name": "Global Shadow Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.1
+        },
+        {
+          "setting_order": 3,
+          "key": "contrast",
+          "name": "Boost Player Contrast",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 0,
+          "label": "Disabled",
+          "multiplier": 1.01
+        },
+        {
+          "setting_order": 4,
+          "key": "ao",
+          "name": "Ambient Occlusion",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Disabled",
+          "multiplier": 1.05
+        },
+        {
+          "setting_order": 5,
+          "key": "shader",
+          "name": "Shader Detail",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.05
+        },
+        {
+          "setting_order": 6,
+          "key": "particle",
+          "name": "Particle Detail",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.04
+        },
+        {
+          "setting_order": 7,
+          "key": "textures",
+          "name": "Model / Texture Detail",
+          "type": "vram",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.03
+        },
+        {
+          "setting_order": 8,
+          "key": "aniso",
+          "name": "Texture Filtering Mode",
+          "type": "norm",
+          "high_index": 3,
+          "option_index": 0,
+          "label": "Bilinear",
+          "multiplier": 1.02
+        },
+        {
+          "setting_order": 9,
+          "key": "dynshadows",
+          "name": "Dynamic Shadows",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "None",
+          "multiplier": 1.04
+        },
+        {
+          "setting_order": 10,
+          "key": "hdr",
+          "name": "High Dynamic Range",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 0,
+          "label": "Performance",
+          "multiplier": 1.02
+        }
+      ],
+      "rawComponents": {
+        "base_gpu_fps": 236.57142857142858,
+        "cpu_ceiling_raw": 390,
+        "fps_cap": null,
+        "resolution_multiplier": 1,
+        "settingMultipliers": [
+          1,
+          1.16,
+          1.1,
+          1.01,
+          1.05,
+          1.05,
+          1.04,
+          1.03,
+          1.02,
+          1.04,
+          1.02
+        ],
+        "gpuFpsBeforeRounding": 389.59841876353556
+      },
+      "explanation": "Resolution multiplier is informational: base_gpu_fps already includes it. Only base factors, selected option multipliers and fps_cap participate. No benchmark calibration or native presets."
+    },
+    {
+      "id": "007-calibrated-scenario",
+      "label": "007 First Light: exact site calibration differs from educational baseline",
+      "request": {
+        "cpu": "amd-ryzen-7-9800x3d",
+        "gpu": "nvidia-rtx-5090",
+        "game": "007-first-light",
+        "resolution": "1440p",
+        "selected": {
+          "@0": 0,
+          "@1": 0,
+          "@2": 3,
+          "@3": 3,
+          "@4": 2,
+          "@5": 2,
+          "@6": 2,
+          "@7": 3,
+          "@8": 2,
+          "@9": 3,
+          "@10": 3
+        }
+      },
+      "expected": {
+        "resolution": "1440p",
+        "metrics": {
+          "beforeSettingsFps": 221,
+          "cpuBound": false,
+          "cpuCeiling": 297,
+          "gpuFps": 187,
+          "realFps": 187,
+          "settingMultiplier": 0.8470045085935713
+        },
+        "stateId": "663544",
+        "selectedSettingIndexes": [
+          0,
+          0,
+          3,
+          3,
+          2,
+          2,
+          2,
+          3,
+          2,
+          3,
+          3
+        ]
+      },
+      "selectedByOrder": {
+        "@0": 0,
+        "@1": 0,
+        "@2": 3,
+        "@3": 3,
+        "@4": 2,
+        "@5": 2,
+        "@6": 2,
+        "@7": 3,
+        "@8": 2,
+        "@9": 3,
+        "@10": 3
+      },
+      "selectedOptions": [
+        {
+          "setting_order": 0,
+          "key": "upscale",
+          "name": "Upscaling (DLSS / FSR / XeSS)",
+          "type": "upscale",
+          "high_index": null,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 1,
+          "key": "rt",
+          "name": "Ray-Traced Reflections",
+          "type": "rt",
+          "high_index": 0,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 2,
+          "key": "shadows",
+          "name": "Shadow Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 3,
+          "label": "Ultra",
+          "multiplier": 0.9661835748792271
+        },
+        {
+          "setting_order": 3,
+          "key": "ssr",
+          "name": "Screen Space Reflections",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 3,
+          "label": "High",
+          "multiplier": 0.9727626459143969
+        },
+        {
+          "setting_order": 4,
+          "key": "sim",
+          "name": "Simulation Quality",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 0.9760858955588092
+        },
+        {
+          "setting_order": 5,
+          "key": "volumetric",
+          "name": "Volumetric Lighting",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 2,
+          "label": "High",
+          "multiplier": 0.9794319294809012
+        },
+        {
+          "setting_order": 6,
+          "key": "ao",
+          "name": "Ambient Occlusion",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 2,
+          "label": "HBAO+",
+          "multiplier": 0.9828009828009827
+        },
+        {
+          "setting_order": 7,
+          "key": "lod",
+          "name": "Level of Detail",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 3,
+          "label": "Ultra",
+          "multiplier": 0.9828009828009827
+        },
+        {
+          "setting_order": 8,
+          "key": "aa",
+          "name": "Anti-Aliasing",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 2,
+          "label": "TAA High",
+          "multiplier": 0.9896091044037606
+        },
+        {
+          "setting_order": 9,
+          "key": "textures",
+          "name": "Texture Quality",
+          "type": "vram",
+          "high_index": 2,
+          "option_index": 3,
+          "label": "Ultra",
+          "multiplier": 0.9861932938856016
+        },
+        {
+          "setting_order": 10,
+          "key": "af",
+          "name": "Anisotropic Filtering",
+          "type": "norm",
+          "high_index": 3,
+          "option_index": 3,
+          "label": "16x",
+          "multiplier": 1
+        }
+      ],
+      "rawComponents": {
+        "base_gpu_fps": 220.9090909090909,
+        "cpu_ceiling_raw": 297,
+        "fps_cap": null,
+        "resolution_multiplier": 0.6,
+        "settingMultipliers": [
+          1,
+          1,
+          0.9661835748792271,
+          0.9727626459143969,
+          0.9760858955588092,
+          0.9794319294809012,
+          0.9828009828009827,
+          0.9828009828009827,
+          0.9896091044037606,
+          0.9861932938856016,
+          1
+        ],
+        "gpuFpsBeforeRounding": 187.11099598930713
+      },
+      "explanation": "Resolution multiplier is informational: base_gpu_fps already includes it. Only base factors, selected option multipliers and fps_cap participate. No benchmark calibration or native presets."
+    },
+    {
+      "id": "007-calibrated-native",
+      "label": "007 First Light: native GPU calibration profile",
+      "request": {
+        "cpu": "amd-ryzen-7-9800x3d",
+        "gpu": "nvidia-rtx-5090",
+        "game": "007-first-light",
+        "resolution": "1080p"
+      },
+      "expected": {
+        "resolution": "1080p",
+        "metrics": {
+          "beforeSettingsFps": 297,
+          "cpuBound": true,
+          "cpuCeiling": 297,
+          "gpuFps": 592,
+          "realFps": 297,
+          "settingMultiplier": 1.6072247793682086
+        },
+        "stateId": "0",
+        "selectedSettingIndexes": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "selectedByOrder": {
+        "@0": 0,
+        "@1": 0,
+        "@2": 0,
+        "@3": 0,
+        "@4": 0,
+        "@5": 0,
+        "@6": 0,
+        "@7": 0,
+        "@8": 0,
+        "@9": 0,
+        "@10": 0
+      },
+      "selectedOptions": [
+        {
+          "setting_order": 0,
+          "key": "upscale",
+          "name": "Upscaling (DLSS / FSR / XeSS)",
+          "type": "upscale",
+          "high_index": null,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 1,
+          "key": "rt",
+          "name": "Ray-Traced Reflections",
+          "type": "rt",
+          "high_index": 0,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 2,
+          "key": "shadows",
+          "name": "Shadow Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.1
+        },
+        {
+          "setting_order": 3,
+          "key": "ssr",
+          "name": "Screen Space Reflections",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1.08
+        },
+        {
+          "setting_order": 4,
+          "key": "sim",
+          "name": "Simulation Quality",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.07
+        },
+        {
+          "setting_order": 5,
+          "key": "volumetric",
+          "name": "Volumetric Lighting",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.06
+        },
+        {
+          "setting_order": 6,
+          "key": "ao",
+          "name": "Ambient Occlusion",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1.05
+        },
+        {
+          "setting_order": 7,
+          "key": "lod",
+          "name": "Level of Detail",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.05
+        },
+        {
+          "setting_order": 8,
+          "key": "aa",
+          "name": "Anti-Aliasing",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1.03
+        },
+        {
+          "setting_order": 9,
+          "key": "textures",
+          "name": "Texture Quality",
+          "type": "vram",
+          "high_index": 2,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.04
+        },
+        {
+          "setting_order": 10,
+          "key": "af",
+          "name": "Anisotropic Filtering",
+          "type": "norm",
+          "high_index": 3,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1.01
+        }
+      ],
+      "rawComponents": {
+        "base_gpu_fps": 368.1818181818182,
+        "cpu_ceiling_raw": 297,
+        "fps_cap": null,
+        "resolution_multiplier": 1,
+        "settingMultipliers": [
+          1,
+          1,
+          1.1,
+          1.08,
+          1.07,
+          1.06,
+          1.05,
+          1.05,
+          1.03,
+          1.04,
+          1.01
+        ],
+        "gpuFpsBeforeRounding": 591.7509414946586
+      },
+      "explanation": "Resolution multiplier is informational: base_gpu_fps already includes it. Only base factors, selected option multipliers and fps_cap participate. No benchmark calibration or native presets."
+    },
+    {
+      "id": "cs2-medium",
+      "label": "CS2: Medium visual preset with RT/upscaling off",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "counter-strike-2",
+        "resolution": "1080p",
+        "selected": {
+          "@0": 0,
+          "@1": 1,
+          "@2": 1,
+          "@3": 0,
+          "@4": 1,
+          "@5": 1,
+          "@6": 1,
+          "@7": 1,
+          "@8": 2,
+          "@9": 1,
+          "@10": 0
+        }
+      },
+      "expected": {
+        "resolution": "1080p",
+        "metrics": {
+          "beforeSettingsFps": 237,
+          "cpuBound": false,
+          "cpuCeiling": 390,
+          "gpuFps": 309,
+          "realFps": 309,
+          "settingMultiplier": 1.3047713287908569
+        },
+        "stateId": "67348",
+        "selectedSettingIndexes": [
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          0
+        ]
+      },
+      "selectedByOrder": {
+        "@0": 0,
+        "@1": 1,
+        "@2": 1,
+        "@3": 0,
+        "@4": 1,
+        "@5": 1,
+        "@6": 1,
+        "@7": 1,
+        "@8": 2,
+        "@9": 1,
+        "@10": 0
+      },
+      "selectedOptions": [
+        {
+          "setting_order": 0,
+          "key": "upscale",
+          "name": "Upscaling",
+          "type": "upscale",
+          "high_index": null,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 1,
+          "key": "msaa",
+          "name": "Anti-Aliasing Mode",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 1,
+          "label": "2x MSAA",
+          "multiplier": 1.08
+        },
+        {
+          "setting_order": 2,
+          "key": "shadows",
+          "name": "Global Shadow Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 1,
+          "label": "Medium",
+          "multiplier": 1.05
+        },
+        {
+          "setting_order": 3,
+          "key": "contrast",
+          "name": "Boost Player Contrast",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 0,
+          "label": "Disabled",
+          "multiplier": 1.01
+        },
+        {
+          "setting_order": 4,
+          "key": "ao",
+          "name": "Ambient Occlusion",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 1,
+          "label": "Medium",
+          "multiplier": 1.025
+        },
+        {
+          "setting_order": 5,
+          "key": "shader",
+          "name": "Shader Detail",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 1,
+          "label": "Medium",
+          "multiplier": 1.025
+        },
+        {
+          "setting_order": 6,
+          "key": "particle",
+          "name": "Particle Detail",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 1,
+          "label": "Medium",
+          "multiplier": 1.02
+        },
+        {
+          "setting_order": 7,
+          "key": "textures",
+          "name": "Model / Texture Detail",
+          "type": "vram",
+          "high_index": 2,
+          "option_index": 1,
+          "label": "Medium",
+          "multiplier": 1.015
+        },
+        {
+          "setting_order": 8,
+          "key": "aniso",
+          "name": "Texture Filtering Mode",
+          "type": "norm",
+          "high_index": 3,
+          "option_index": 2,
+          "label": "Anisotropic 4x",
+          "multiplier": 1.0066666666666666
+        },
+        {
+          "setting_order": 9,
+          "key": "dynshadows",
+          "name": "Dynamic Shadows",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 1,
+          "label": "Sun Only",
+          "multiplier": 1.02
+        },
+        {
+          "setting_order": 10,
+          "key": "hdr",
+          "name": "High Dynamic Range",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 0,
+          "label": "Performance",
+          "multiplier": 1.02
+        }
+      ],
+      "rawComponents": {
+        "base_gpu_fps": 236.57142857142858,
+        "cpu_ceiling_raw": 390,
+        "fps_cap": null,
+        "resolution_multiplier": 1,
+        "settingMultipliers": [
+          1,
+          1.08,
+          1.05,
+          1.01,
+          1.025,
+          1.025,
+          1.02,
+          1.015,
+          1.0066666666666666,
+          1.02,
+          1.02
+        ],
+        "gpuFpsBeforeRounding": 308.67161721109414
+      },
+      "explanation": "Medium vector resolved with current resolveGamePerformanceScenario; RT/upscaling/frame generation off. Baseline uses raw factors only; no calibration. Resolution multiplier already applied."
+    },
+    {
+      "id": "cyberpunk-medium",
+      "label": "Cyberpunk: Medium includes post Off via high_index fallback",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "cyberpunk-2077",
+        "resolution": "1080p",
+        "selected": {
+          "@0": 0,
+          "@1": 0,
+          "@2": 1,
+          "@3": 1,
+          "@4": 1,
+          "@5": 1,
+          "@6": 1,
+          "@7": 0,
+          "@8": 1,
+          "@9": 1,
+          "@10": 0,
+          "@11": 0,
+          "@12": 1,
+          "@13": 1,
+          "@14": 2,
+          "@15": 1,
+          "@16": 1,
+          "@17": 0,
+          "@18": 0,
+          "@19": 0,
+          "@20": 0
+        }
+      },
+      "expected": {
+        "resolution": "1080p",
+        "metrics": {
+          "beforeSettingsFps": 69,
+          "cpuBound": false,
+          "cpuCeiling": 130,
+          "gpuFps": 117,
+          "realFps": 117,
+          "settingMultiplier": 1.6994192966263169
+        },
+        "stateId": "251418016",
+        "selectedSettingIndexes": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          1,
+          1,
+          2,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "selectedByOrder": {
+        "@0": 0,
+        "@1": 0,
+        "@2": 1,
+        "@3": 1,
+        "@4": 1,
+        "@5": 1,
+        "@6": 1,
+        "@7": 0,
+        "@8": 1,
+        "@9": 1,
+        "@10": 0,
+        "@11": 0,
+        "@12": 1,
+        "@13": 1,
+        "@14": 2,
+        "@15": 1,
+        "@16": 1,
+        "@17": 0,
+        "@18": 0,
+        "@19": 0,
+        "@20": 0
+      },
+      "selectedOptions": [
+        {
+          "setting_order": 0,
+          "key": "upscale",
+          "name": "Upscaling",
+          "type": "upscale",
+          "high_index": null,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 1,
+          "key": "rt",
+          "name": "Ray Tracing / Path Tracing",
+          "type": "rt",
+          "high_index": 0,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 2,
+          "key": "ssr",
+          "name": "Screen Space Reflections Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 1,
+          "label": "Medium",
+          "multiplier": 1.065
+        },
+        {
+          "setting_order": 3,
+          "key": "shadows",
+          "name": "Cascaded / Volumetric Shadow Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 1,
+          "label": "Medium",
+          "multiplier": 1.06
+        },
+        {
+          "setting_order": 4,
+          "key": "volfog",
+          "name": "Volumetric Fog Resolution",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 1,
+          "label": "Medium",
+          "multiplier": 1.05
+        },
+        {
+          "setting_order": 5,
+          "key": "crowd",
+          "name": "Crowd Density",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 1,
+          "label": "Medium",
+          "multiplier": 1.035
+        },
+        {
+          "setting_order": 6,
+          "key": "lod",
+          "name": "Level of Detail (LOD)",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 1,
+          "label": "Medium",
+          "multiplier": 1.03
+        },
+        {
+          "setting_order": 7,
+          "key": "sss",
+          "name": "Subsurface Scattering Quality",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 0,
+          "label": "Low",
+          "multiplier": 1.04
+        },
+        {
+          "setting_order": 8,
+          "key": "distshadow",
+          "name": "Distant Shadows Resolution",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 1,
+          "label": "Medium",
+          "multiplier": 1.025
+        },
+        {
+          "setting_order": 9,
+          "key": "textures",
+          "name": "Texture Quality",
+          "type": "vram",
+          "high_index": 2,
+          "option_index": 1,
+          "label": "Medium",
+          "multiplier": 1.015
+        },
+        {
+          "setting_order": 10,
+          "key": "post",
+          "name": "Motion Blur / Film Grain / Chromatic Aberration",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1.02
+        },
+        {
+          "setting_order": 11,
+          "key": "aniso",
+          "name": "Anisotropic Filtering",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 0,
+          "label": "8x",
+          "multiplier": 1.02
+        },
+        {
+          "setting_order": 12,
+          "key": "localshadow",
+          "name": "Local Shadow Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 1,
+          "label": "Medium",
+          "multiplier": 1.025
+        },
+        {
+          "setting_order": 13,
+          "key": "shadowrange",
+          "name": "Cascaded Shadows Range",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 1,
+          "label": "Medium",
+          "multiplier": 1.025
+        },
+        {
+          "setting_order": 14,
+          "key": "volclouds",
+          "name": "Volumetric Cloud Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 2,
+          "label": "Medium",
+          "multiplier": 1
+        },
+        {
+          "setting_order": 15,
+          "key": "decals",
+          "name": "Max Dynamic Decals",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 1,
+          "label": "Medium",
+          "multiplier": 1.015
+        },
+        {
+          "setting_order": 16,
+          "key": "mirror",
+          "name": "Mirror Quality",
+          "type": "norm",
+          "high_index": 2,
+          "option_index": 1,
+          "label": "Medium",
+          "multiplier": 1.015
+        },
+        {
+          "setting_order": 17,
+          "key": "colorprecision",
+          "name": "Color Precision",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 0,
+          "label": "Medium",
+          "multiplier": 1.02
+        },
+        {
+          "setting_order": 18,
+          "key": "contactshadows",
+          "name": "Contact Shadows",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1.03
+        },
+        {
+          "setting_order": 19,
+          "key": "facial",
+          "name": "Improved Facial Lighting Geometry",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1.02
+        },
+        {
+          "setting_order": 20,
+          "key": "dof",
+          "name": "Depth of Field",
+          "type": "norm",
+          "high_index": 1,
+          "option_index": 0,
+          "label": "Off",
+          "multiplier": 1.03
+        }
+      ],
+      "rawComponents": {
+        "base_gpu_fps": 69,
+        "cpu_ceiling_raw": 130,
+        "fps_cap": null,
+        "resolution_multiplier": 1,
+        "settingMultipliers": [
+          1,
+          1,
+          1.065,
+          1.06,
+          1.05,
+          1.035,
+          1.03,
+          1.04,
+          1.025,
+          1.015,
+          1.02,
+          1.02,
+          1.025,
+          1.025,
+          1,
+          1.015,
+          1.015,
+          1.02,
+          1.03,
+          1.02,
+          1.03
+        ],
+        "gpuFpsBeforeRounding": 117.25993146721586
+      },
+      "explanation": "Medium vector resolved with current resolveGamePerformanceScenario; RT/upscaling/frame generation off. Baseline uses raw factors only; no calibration. Resolution multiplier already applied."
+    }
+  ]
+}

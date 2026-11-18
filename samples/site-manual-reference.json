@@ -1,0 +1,4569 @@
+{
+  "formatVersion": 1,
+  "engine": "FpsConditionsStore.calculateFps",
+  "scope": "Manual low-level engine only. Not public scenario or workload API.",
+  "datasetSha256": "afa175999576bb6481579e1081d62ba3b021f4f16ea138ab091714d6197dbbfb",
+  "cases": [
+    {
+      "id": "cs2-index-zero",
+      "label": "CS2: omitted selected means every index is zero",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "counter-strike-2",
+        "resolution": "1080p"
+      },
+      "expected": {
+        "cpu": {
+          "group": "AMD Ryzen 5000 (Zen 3)",
+          "name": "AMD Ryzen 5 5600X",
+          "slug": "amd-ryzen-5-5600x"
+        },
+        "game": {
+          "group": null,
+          "name": "Counter-Strike 2",
+          "slug": "counter-strike-2"
+        },
+        "gpu": {
+          "group": "NVIDIA — RTX 30 Series",
+          "name": "NVIDIA RTX 3060 (12GB)",
+          "slug": "nvidia-rtx-3060-12gb"
+        },
+        "metrics": {
+          "beforeSettingsFps": 237,
+          "cpuBound": false,
+          "cpuCeiling": 390,
+          "gpuFps": 390,
+          "realFps": 390,
+          "settingMultiplier": 1.64685321941108,
+          "upscaleActive": false,
+          "upscaleTech": null
+        },
+        "resolution": "1080p",
+        "selectedSettings": [
+          {
+            "index": 0,
+            "key": "upscale",
+            "name": "Upscaling",
+            "order": 0,
+            "type": "upscale",
+            "value": "Off"
+          },
+          {
+            "index": 0,
+            "key": "msaa",
+            "name": "Anti-Aliasing Mode",
+            "order": 1,
+            "type": "norm",
+            "value": "CMAA2"
+          },
+          {
+            "index": 0,
+            "key": "shadows",
+            "name": "Global Shadow Quality",
+            "order": 2,
+            "type": "norm",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "contrast",
+            "name": "Boost Player Contrast",
+            "order": 3,
+            "type": "norm",
+            "value": "Disabled"
+          },
+          {
+            "index": 0,
+            "key": "ao",
+            "name": "Ambient Occlusion",
+            "order": 4,
+            "type": "norm",
+            "value": "Disabled"
+          },
+          {
+            "index": 0,
+            "key": "shader",
+            "name": "Shader Detail",
+            "order": 5,
+            "type": "norm",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "particle",
+            "name": "Particle Detail",
+            "order": 6,
+            "type": "norm",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "textures",
+            "name": "Model / Texture Detail",
+            "order": 7,
+            "type": "vram",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "aniso",
+            "name": "Texture Filtering Mode",
+            "order": 8,
+            "type": "norm",
+            "value": "Bilinear"
+          },
+          {
+            "index": 0,
+            "key": "dynshadows",
+            "name": "Dynamic Shadows",
+            "order": 9,
+            "type": "norm",
+            "value": "None"
+          },
+          {
+            "index": 0,
+            "key": "hdr",
+            "name": "High Dynamic Range",
+            "order": 10,
+            "type": "norm",
+            "value": "Performance"
+          }
+        ],
+        "stateCount": "248832",
+        "stateId": 0
+      }
+    },
+    {
+      "id": "cs2-explicit-high",
+      "label": "CS2: explicit high_index vector",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "counter-strike-2",
+        "resolution": "1080p",
+        "selected": {
+          "@0": 0,
+          "@1": 2,
+          "@2": 2,
+          "@3": 1,
+          "@4": 2,
+          "@5": 2,
+          "@6": 2,
+          "@7": 2,
+          "@8": 3,
+          "@9": 2,
+          "@10": 1
+        }
+      },
+      "expected": {
+        "cpu": {
+          "group": "AMD Ryzen 5000 (Zen 3)",
+          "name": "AMD Ryzen 5 5600X",
+          "slug": "amd-ryzen-5-5600x"
+        },
+        "game": {
+          "group": null,
+          "name": "Counter-Strike 2",
+          "slug": "counter-strike-2"
+        },
+        "gpu": {
+          "group": "NVIDIA — RTX 30 Series",
+          "name": "NVIDIA RTX 3060 (12GB)",
+          "slug": "nvidia-rtx-3060-12gb"
+        },
+        "metrics": {
+          "beforeSettingsFps": 237,
+          "cpuBound": false,
+          "cpuCeiling": 390,
+          "gpuFps": 237,
+          "realFps": 237,
+          "settingMultiplier": 1,
+          "upscaleActive": false,
+          "upscaleTech": null
+        },
+        "resolution": "1080p",
+        "selectedSettings": [
+          {
+            "index": 0,
+            "key": "upscale",
+            "name": "Upscaling",
+            "order": 0,
+            "type": "upscale",
+            "value": "Off"
+          },
+          {
+            "index": 2,
+            "key": "msaa",
+            "name": "Anti-Aliasing Mode",
+            "order": 1,
+            "type": "norm",
+            "value": "4x MSAA"
+          },
+          {
+            "index": 2,
+            "key": "shadows",
+            "name": "Global Shadow Quality",
+            "order": 2,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 1,
+            "key": "contrast",
+            "name": "Boost Player Contrast",
+            "order": 3,
+            "type": "norm",
+            "value": "Enabled"
+          },
+          {
+            "index": 2,
+            "key": "ao",
+            "name": "Ambient Occlusion",
+            "order": 4,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "shader",
+            "name": "Shader Detail",
+            "order": 5,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "particle",
+            "name": "Particle Detail",
+            "order": 6,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "textures",
+            "name": "Model / Texture Detail",
+            "order": 7,
+            "type": "vram",
+            "value": "High"
+          },
+          {
+            "index": 3,
+            "key": "aniso",
+            "name": "Texture Filtering Mode",
+            "order": 8,
+            "type": "norm",
+            "value": "Anisotropic 16x"
+          },
+          {
+            "index": 2,
+            "key": "dynshadows",
+            "name": "Dynamic Shadows",
+            "order": 9,
+            "type": "norm",
+            "value": "All"
+          },
+          {
+            "index": 1,
+            "key": "hdr",
+            "name": "High Dynamic Range",
+            "order": 10,
+            "type": "norm",
+            "value": "Quality"
+          }
+        ],
+        "stateCount": "248832",
+        "stateId": 248808
+      }
+    },
+    {
+      "id": "cs2-high-1440",
+      "label": "CS2: same high settings at 1440p",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "counter-strike-2",
+        "resolution": "1440p",
+        "selected": {
+          "@0": 0,
+          "@1": 2,
+          "@2": 2,
+          "@3": 1,
+          "@4": 2,
+          "@5": 2,
+          "@6": 2,
+          "@7": 2,
+          "@8": 3,
+          "@9": 2,
+          "@10": 1
+        }
+      },
+      "expected": {
+        "cpu": {
+          "group": "AMD Ryzen 5000 (Zen 3)",
+          "name": "AMD Ryzen 5 5600X",
+          "slug": "amd-ryzen-5-5600x"
+        },
+        "game": {
+          "group": null,
+          "name": "Counter-Strike 2",
+          "slug": "counter-strike-2"
+        },
+        "gpu": {
+          "group": "NVIDIA — RTX 30 Series",
+          "name": "NVIDIA RTX 3060 (12GB)",
+          "slug": "nvidia-rtx-3060-12gb"
+        },
+        "metrics": {
+          "beforeSettingsFps": 142,
+          "cpuBound": false,
+          "cpuCeiling": 390,
+          "gpuFps": 142,
+          "realFps": 142,
+          "settingMultiplier": 1,
+          "upscaleActive": false,
+          "upscaleTech": null
+        },
+        "resolution": "1440p",
+        "selectedSettings": [
+          {
+            "index": 0,
+            "key": "upscale",
+            "name": "Upscaling",
+            "order": 0,
+            "type": "upscale",
+            "value": "Off"
+          },
+          {
+            "index": 2,
+            "key": "msaa",
+            "name": "Anti-Aliasing Mode",
+            "order": 1,
+            "type": "norm",
+            "value": "4x MSAA"
+          },
+          {
+            "index": 2,
+            "key": "shadows",
+            "name": "Global Shadow Quality",
+            "order": 2,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 1,
+            "key": "contrast",
+            "name": "Boost Player Contrast",
+            "order": 3,
+            "type": "norm",
+            "value": "Enabled"
+          },
+          {
+            "index": 2,
+            "key": "ao",
+            "name": "Ambient Occlusion",
+            "order": 4,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "shader",
+            "name": "Shader Detail",
+            "order": 5,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "particle",
+            "name": "Particle Detail",
+            "order": 6,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "textures",
+            "name": "Model / Texture Detail",
+            "order": 7,
+            "type": "vram",
+            "value": "High"
+          },
+          {
+            "index": 3,
+            "key": "aniso",
+            "name": "Texture Filtering Mode",
+            "order": 8,
+            "type": "norm",
+            "value": "Anisotropic 16x"
+          },
+          {
+            "index": 2,
+            "key": "dynshadows",
+            "name": "Dynamic Shadows",
+            "order": 9,
+            "type": "norm",
+            "value": "All"
+          },
+          {
+            "index": 1,
+            "key": "hdr",
+            "name": "High Dynamic Range",
+            "order": 10,
+            "type": "norm",
+            "value": "Quality"
+          }
+        ],
+        "stateCount": "248832",
+        "stateId": 248808
+      }
+    },
+    {
+      "id": "cs2-4k-zero",
+      "label": "CS2: index-zero settings at 4K",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "counter-strike-2",
+        "resolution": "2160p"
+      },
+      "expected": {
+        "cpu": {
+          "group": "AMD Ryzen 5000 (Zen 3)",
+          "name": "AMD Ryzen 5 5600X",
+          "slug": "amd-ryzen-5-5600x"
+        },
+        "game": {
+          "group": null,
+          "name": "Counter-Strike 2",
+          "slug": "counter-strike-2"
+        },
+        "gpu": {
+          "group": "NVIDIA — RTX 30 Series",
+          "name": "NVIDIA RTX 3060 (12GB)",
+          "slug": "nvidia-rtx-3060-12gb"
+        },
+        "metrics": {
+          "beforeSettingsFps": 80,
+          "cpuBound": false,
+          "cpuCeiling": 390,
+          "gpuFps": 132,
+          "realFps": 132,
+          "settingMultiplier": 1.64685321941108,
+          "upscaleActive": false,
+          "upscaleTech": null
+        },
+        "resolution": "2160p",
+        "selectedSettings": [
+          {
+            "index": 0,
+            "key": "upscale",
+            "name": "Upscaling",
+            "order": 0,
+            "type": "upscale",
+            "value": "Off"
+          },
+          {
+            "index": 0,
+            "key": "msaa",
+            "name": "Anti-Aliasing Mode",
+            "order": 1,
+            "type": "norm",
+            "value": "CMAA2"
+          },
+          {
+            "index": 0,
+            "key": "shadows",
+            "name": "Global Shadow Quality",
+            "order": 2,
+            "type": "norm",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "contrast",
+            "name": "Boost Player Contrast",
+            "order": 3,
+            "type": "norm",
+            "value": "Disabled"
+          },
+          {
+            "index": 0,
+            "key": "ao",
+            "name": "Ambient Occlusion",
+            "order": 4,
+            "type": "norm",
+            "value": "Disabled"
+          },
+          {
+            "index": 0,
+            "key": "shader",
+            "name": "Shader Detail",
+            "order": 5,
+            "type": "norm",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "particle",
+            "name": "Particle Detail",
+            "order": 6,
+            "type": "norm",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "textures",
+            "name": "Model / Texture Detail",
+            "order": 7,
+            "type": "vram",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "aniso",
+            "name": "Texture Filtering Mode",
+            "order": 8,
+            "type": "norm",
+            "value": "Bilinear"
+          },
+          {
+            "index": 0,
+            "key": "dynshadows",
+            "name": "Dynamic Shadows",
+            "order": 9,
+            "type": "norm",
+            "value": "None"
+          },
+          {
+            "index": 0,
+            "key": "hdr",
+            "name": "High Dynamic Range",
+            "order": 10,
+            "type": "norm",
+            "value": "Performance"
+          }
+        ],
+        "stateCount": "248832",
+        "stateId": 0
+      }
+    },
+    {
+      "id": "cs2-upscale",
+      "label": "CS2: quality upscaling with explicit high settings",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "counter-strike-2",
+        "resolution": "1080p",
+        "selected": {
+          "@0": 1,
+          "@1": 2,
+          "@2": 2,
+          "@3": 1,
+          "@4": 2,
+          "@5": 2,
+          "@6": 2,
+          "@7": 2,
+          "@8": 3,
+          "@9": 2,
+          "@10": 1
+        }
+      },
+      "expected": {
+        "cpu": {
+          "group": "AMD Ryzen 5000 (Zen 3)",
+          "name": "AMD Ryzen 5 5600X",
+          "slug": "amd-ryzen-5-5600x"
+        },
+        "game": {
+          "group": null,
+          "name": "Counter-Strike 2",
+          "slug": "counter-strike-2"
+        },
+        "gpu": {
+          "group": "NVIDIA — RTX 30 Series",
+          "name": "NVIDIA RTX 3060 (12GB)",
+          "slug": "nvidia-rtx-3060-12gb"
+        },
+        "metrics": {
+          "beforeSettingsFps": 237,
+          "cpuBound": false,
+          "cpuCeiling": 390,
+          "gpuFps": 319,
+          "realFps": 319,
+          "settingMultiplier": 1.35,
+          "upscaleActive": true,
+          "upscaleTech": "FSR"
+        },
+        "resolution": "1080p",
+        "selectedSettings": [
+          {
+            "index": 1,
+            "key": "upscale",
+            "name": "Upscaling",
+            "order": 0,
+            "type": "upscale",
+            "value": "Quality"
+          },
+          {
+            "index": 2,
+            "key": "msaa",
+            "name": "Anti-Aliasing Mode",
+            "order": 1,
+            "type": "norm",
+            "value": "4x MSAA"
+          },
+          {
+            "index": 2,
+            "key": "shadows",
+            "name": "Global Shadow Quality",
+            "order": 2,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 1,
+            "key": "contrast",
+            "name": "Boost Player Contrast",
+            "order": 3,
+            "type": "norm",
+            "value": "Enabled"
+          },
+          {
+            "index": 2,
+            "key": "ao",
+            "name": "Ambient Occlusion",
+            "order": 4,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "shader",
+            "name": "Shader Detail",
+            "order": 5,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "particle",
+            "name": "Particle Detail",
+            "order": 6,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "textures",
+            "name": "Model / Texture Detail",
+            "order": 7,
+            "type": "vram",
+            "value": "High"
+          },
+          {
+            "index": 3,
+            "key": "aniso",
+            "name": "Texture Filtering Mode",
+            "order": 8,
+            "type": "norm",
+            "value": "Anisotropic 16x"
+          },
+          {
+            "index": 2,
+            "key": "dynshadows",
+            "name": "Dynamic Shadows",
+            "order": 9,
+            "type": "norm",
+            "value": "All"
+          },
+          {
+            "index": 1,
+            "key": "hdr",
+            "name": "High Dynamic Range",
+            "order": 10,
+            "type": "norm",
+            "value": "Quality"
+          }
+        ],
+        "stateCount": "248832",
+        "stateId": 248809
+      }
+    },
+    {
+      "id": "cs2-cpu-bound",
+      "label": "CS2: older CPU with RTX 4090",
+      "request": {
+        "cpu": "intel-i5-12400",
+        "gpu": "nvidia-rtx-4090",
+        "game": "counter-strike-2",
+        "resolution": "1080p"
+      },
+      "expected": {
+        "cpu": {
+          "group": "Intel 12th Gen",
+          "name": "Intel Core i5-12400",
+          "slug": "intel-i5-12400"
+        },
+        "game": {
+          "group": null,
+          "name": "Counter-Strike 2",
+          "slug": "counter-strike-2"
+        },
+        "gpu": {
+          "group": "NVIDIA — RTX 40 Series",
+          "name": "NVIDIA RTX 4090",
+          "slug": "nvidia-rtx-4090"
+        },
+        "metrics": {
+          "beforeSettingsFps": 405,
+          "cpuBound": true,
+          "cpuCeiling": 405,
+          "gpuFps": 1207,
+          "realFps": 405,
+          "settingMultiplier": 1.64685321941108,
+          "upscaleActive": false,
+          "upscaleTech": null
+        },
+        "resolution": "1080p",
+        "selectedSettings": [
+          {
+            "index": 0,
+            "key": "upscale",
+            "name": "Upscaling",
+            "order": 0,
+            "type": "upscale",
+            "value": "Off"
+          },
+          {
+            "index": 0,
+            "key": "msaa",
+            "name": "Anti-Aliasing Mode",
+            "order": 1,
+            "type": "norm",
+            "value": "CMAA2"
+          },
+          {
+            "index": 0,
+            "key": "shadows",
+            "name": "Global Shadow Quality",
+            "order": 2,
+            "type": "norm",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "contrast",
+            "name": "Boost Player Contrast",
+            "order": 3,
+            "type": "norm",
+            "value": "Disabled"
+          },
+          {
+            "index": 0,
+            "key": "ao",
+            "name": "Ambient Occlusion",
+            "order": 4,
+            "type": "norm",
+            "value": "Disabled"
+          },
+          {
+            "index": 0,
+            "key": "shader",
+            "name": "Shader Detail",
+            "order": 5,
+            "type": "norm",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "particle",
+            "name": "Particle Detail",
+            "order": 6,
+            "type": "norm",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "textures",
+            "name": "Model / Texture Detail",
+            "order": 7,
+            "type": "vram",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "aniso",
+            "name": "Texture Filtering Mode",
+            "order": 8,
+            "type": "norm",
+            "value": "Bilinear"
+          },
+          {
+            "index": 0,
+            "key": "dynshadows",
+            "name": "Dynamic Shadows",
+            "order": 9,
+            "type": "norm",
+            "value": "None"
+          },
+          {
+            "index": 0,
+            "key": "hdr",
+            "name": "High Dynamic Range",
+            "order": 10,
+            "type": "norm",
+            "value": "Performance"
+          }
+        ],
+        "stateCount": "248832",
+        "stateId": 0
+      }
+    },
+    {
+      "id": "valorant-zero",
+      "label": "Valorant: all index-zero settings",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "valorant",
+        "resolution": "1080p"
+      },
+      "expected": {
+        "cpu": {
+          "group": "AMD Ryzen 5000 (Zen 3)",
+          "name": "AMD Ryzen 5 5600X",
+          "slug": "amd-ryzen-5-5600x"
+        },
+        "game": {
+          "group": null,
+          "name": "Valorant",
+          "slug": "valorant"
+        },
+        "gpu": {
+          "group": "NVIDIA — RTX 30 Series",
+          "name": "NVIDIA RTX 3060 (12GB)",
+          "slug": "nvidia-rtx-3060-12gb"
+        },
+        "metrics": {
+          "beforeSettingsFps": 345,
+          "cpuBound": true,
+          "cpuCeiling": 390,
+          "gpuFps": 476,
+          "realFps": 390,
+          "settingMultiplier": 1.380881258346782,
+          "upscaleActive": false,
+          "upscaleTech": null
+        },
+        "resolution": "1080p",
+        "selectedSettings": [
+          {
+            "index": 0,
+            "key": "aa",
+            "name": "Anti-Aliasing",
+            "order": 0,
+            "type": "norm",
+            "value": "None"
+          },
+          {
+            "index": 0,
+            "key": "material",
+            "name": "Material Quality",
+            "order": 1,
+            "type": "norm",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "detail",
+            "name": "Detail Quality",
+            "order": 2,
+            "type": "norm",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "shadows",
+            "name": "Cast Shadows",
+            "order": 3,
+            "type": "norm",
+            "value": "Off"
+          },
+          {
+            "index": 0,
+            "key": "bloom",
+            "name": "Bloom",
+            "order": 4,
+            "type": "norm",
+            "value": "Off"
+          },
+          {
+            "index": 0,
+            "key": "textures",
+            "name": "Texture Quality",
+            "order": 5,
+            "type": "vram",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "aniso",
+            "name": "Anisotropic Filtering",
+            "order": 6,
+            "type": "norm",
+            "value": "1x"
+          },
+          {
+            "index": 0,
+            "key": "detail",
+            "name": "Detail Quality",
+            "order": 7,
+            "type": "norm",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "distortion",
+            "name": "Distortion",
+            "order": 8,
+            "type": "norm",
+            "value": "Off"
+          },
+          {
+            "index": 0,
+            "key": "vignette",
+            "name": "Vignette",
+            "order": 9,
+            "type": "norm",
+            "value": "Off"
+          }
+        ],
+        "stateCount": "19440",
+        "stateId": 0
+      }
+    },
+    {
+      "id": "valorant-high",
+      "label": "Valorant: explicit high including both detail settings",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "valorant",
+        "resolution": "1080p",
+        "selected": {
+          "@0": 2,
+          "@1": 2,
+          "@2": 2,
+          "@3": 1,
+          "@4": 1,
+          "@5": 2,
+          "@6": 4,
+          "@7": 2,
+          "@8": 1,
+          "@9": 1
+        }
+      },
+      "expected": {
+        "cpu": {
+          "group": "AMD Ryzen 5000 (Zen 3)",
+          "name": "AMD Ryzen 5 5600X",
+          "slug": "amd-ryzen-5-5600x"
+        },
+        "game": {
+          "group": null,
+          "name": "Valorant",
+          "slug": "valorant"
+        },
+        "gpu": {
+          "group": "NVIDIA — RTX 30 Series",
+          "name": "NVIDIA RTX 3060 (12GB)",
+          "slug": "nvidia-rtx-3060-12gb"
+        },
+        "metrics": {
+          "beforeSettingsFps": 345,
+          "cpuBound": false,
+          "cpuCeiling": 390,
+          "gpuFps": 345,
+          "realFps": 345,
+          "settingMultiplier": 1,
+          "upscaleActive": false,
+          "upscaleTech": null
+        },
+        "resolution": "1080p",
+        "selectedSettings": [
+          {
+            "index": 2,
+            "key": "aa",
+            "name": "Anti-Aliasing",
+            "order": 0,
+            "type": "norm",
+            "value": "MSAA 4x"
+          },
+          {
+            "index": 2,
+            "key": "material",
+            "name": "Material Quality",
+            "order": 1,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "detail",
+            "name": "Detail Quality",
+            "order": 2,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 1,
+            "key": "shadows",
+            "name": "Cast Shadows",
+            "order": 3,
+            "type": "norm",
+            "value": "On"
+          },
+          {
+            "index": 1,
+            "key": "bloom",
+            "name": "Bloom",
+            "order": 4,
+            "type": "norm",
+            "value": "On"
+          },
+          {
+            "index": 2,
+            "key": "textures",
+            "name": "Texture Quality",
+            "order": 5,
+            "type": "vram",
+            "value": "High"
+          },
+          {
+            "index": 4,
+            "key": "aniso",
+            "name": "Anisotropic Filtering",
+            "order": 6,
+            "type": "norm",
+            "value": "16x"
+          },
+          {
+            "index": 2,
+            "key": "detail",
+            "name": "Detail Quality",
+            "order": 7,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 1,
+            "key": "distortion",
+            "name": "Distortion",
+            "order": 8,
+            "type": "norm",
+            "value": "On"
+          },
+          {
+            "index": 1,
+            "key": "vignette",
+            "name": "Vignette",
+            "order": 9,
+            "type": "norm",
+            "value": "On"
+          }
+        ],
+        "stateCount": "19440",
+        "stateId": 19439
+      }
+    },
+    {
+      "id": "valorant-duplicate-orders",
+      "label": "Valorant: separate detail orders 2 and 7",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "valorant",
+        "resolution": "1080p",
+        "selected": {
+          "@2": 2,
+          "@7": 1
+        }
+      },
+      "expected": {
+        "cpu": {
+          "group": "AMD Ryzen 5000 (Zen 3)",
+          "name": "AMD Ryzen 5 5600X",
+          "slug": "amd-ryzen-5-5600x"
+        },
+        "game": {
+          "group": null,
+          "name": "Valorant",
+          "slug": "valorant"
+        },
+        "gpu": {
+          "group": "NVIDIA — RTX 30 Series",
+          "name": "NVIDIA RTX 3060 (12GB)",
+          "slug": "nvidia-rtx-3060-12gb"
+        },
+        "metrics": {
+          "beforeSettingsFps": 345,
+          "cpuBound": true,
+          "cpuCeiling": 390,
+          "gpuFps": 449,
+          "realFps": 390,
+          "settingMultiplier": 1.3022363937811743,
+          "upscaleActive": false,
+          "upscaleTech": null
+        },
+        "resolution": "1080p",
+        "selectedSettings": [
+          {
+            "index": 0,
+            "key": "aa",
+            "name": "Anti-Aliasing",
+            "order": 0,
+            "type": "norm",
+            "value": "None"
+          },
+          {
+            "index": 0,
+            "key": "material",
+            "name": "Material Quality",
+            "order": 1,
+            "type": "norm",
+            "value": "Low"
+          },
+          {
+            "index": 2,
+            "key": "detail",
+            "name": "Detail Quality",
+            "order": 2,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 0,
+            "key": "shadows",
+            "name": "Cast Shadows",
+            "order": 3,
+            "type": "norm",
+            "value": "Off"
+          },
+          {
+            "index": 0,
+            "key": "bloom",
+            "name": "Bloom",
+            "order": 4,
+            "type": "norm",
+            "value": "Off"
+          },
+          {
+            "index": 0,
+            "key": "textures",
+            "name": "Texture Quality",
+            "order": 5,
+            "type": "vram",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "aniso",
+            "name": "Anisotropic Filtering",
+            "order": 6,
+            "type": "norm",
+            "value": "1x"
+          },
+          {
+            "index": 1,
+            "key": "detail",
+            "name": "Detail Quality",
+            "order": 7,
+            "type": "norm",
+            "value": "Medium"
+          },
+          {
+            "index": 0,
+            "key": "distortion",
+            "name": "Distortion",
+            "order": 8,
+            "type": "norm",
+            "value": "Off"
+          },
+          {
+            "index": 0,
+            "key": "vignette",
+            "name": "Vignette",
+            "order": 9,
+            "type": "norm",
+            "value": "Off"
+          }
+        ],
+        "stateCount": "19440",
+        "stateId": 1638
+      }
+    },
+    {
+      "id": "valorant-label-selectors",
+      "label": "Valorant: case-insensitive option labels",
+      "request": {
+        "cpu": "amd-ryzen-7-9800x3d",
+        "gpu": "amd-rx-7800-xt",
+        "game": "valorant",
+        "resolution": "1440p",
+        "selected": {
+          "@2": "HIGH",
+          "@7": "medium",
+          "aa": "MSAA 4x"
+        }
+      },
+      "expected": {
+        "cpu": {
+          "group": "AMD Ryzen X3D (best for gaming)",
+          "name": "AMD Ryzen 7 9800X3D",
+          "slug": "amd-ryzen-7-9800x3d"
+        },
+        "game": {
+          "group": null,
+          "name": "Valorant",
+          "slug": "valorant"
+        },
+        "gpu": {
+          "group": "AMD — RX 7000 Series",
+          "name": "AMD RX 7800 XT",
+          "slug": "amd-rx-7800-xt"
+        },
+        "metrics": {
+          "beforeSettingsFps": 383,
+          "cpuBound": false,
+          "cpuCeiling": 660,
+          "gpuFps": 461,
+          "realFps": 461,
+          "settingMultiplier": 1.2057744386862719,
+          "upscaleActive": false,
+          "upscaleTech": null
+        },
+        "resolution": "1440p",
+        "selectedSettings": [
+          {
+            "index": 2,
+            "key": "aa",
+            "name": "Anti-Aliasing",
+            "order": 0,
+            "type": "norm",
+            "value": "MSAA 4x"
+          },
+          {
+            "index": 0,
+            "key": "material",
+            "name": "Material Quality",
+            "order": 1,
+            "type": "norm",
+            "value": "Low"
+          },
+          {
+            "index": 2,
+            "key": "detail",
+            "name": "Detail Quality",
+            "order": 2,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 0,
+            "key": "shadows",
+            "name": "Cast Shadows",
+            "order": 3,
+            "type": "norm",
+            "value": "Off"
+          },
+          {
+            "index": 0,
+            "key": "bloom",
+            "name": "Bloom",
+            "order": 4,
+            "type": "norm",
+            "value": "Off"
+          },
+          {
+            "index": 0,
+            "key": "textures",
+            "name": "Texture Quality",
+            "order": 5,
+            "type": "vram",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "aniso",
+            "name": "Anisotropic Filtering",
+            "order": 6,
+            "type": "norm",
+            "value": "1x"
+          },
+          {
+            "index": 1,
+            "key": "detail",
+            "name": "Detail Quality",
+            "order": 7,
+            "type": "norm",
+            "value": "Medium"
+          },
+          {
+            "index": 0,
+            "key": "distortion",
+            "name": "Distortion",
+            "order": 8,
+            "type": "norm",
+            "value": "Off"
+          },
+          {
+            "index": 0,
+            "key": "vignette",
+            "name": "Vignette",
+            "order": 9,
+            "type": "norm",
+            "value": "Off"
+          }
+        ],
+        "stateCount": "19440",
+        "stateId": 1640
+      }
+    },
+    {
+      "id": "cyberpunk-zero",
+      "label": "Cyberpunk: index-zero settings",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "cyberpunk-2077",
+        "resolution": "1080p"
+      },
+      "expected": {
+        "cpu": {
+          "group": "AMD Ryzen 5000 (Zen 3)",
+          "name": "AMD Ryzen 5 5600X",
+          "slug": "amd-ryzen-5-5600x"
+        },
+        "game": {
+          "group": null,
+          "name": "Cyberpunk 2077",
+          "slug": "cyberpunk-2077"
+        },
+        "gpu": {
+          "group": "NVIDIA — RTX 30 Series",
+          "name": "NVIDIA RTX 3060 (12GB)",
+          "slug": "nvidia-rtx-3060-12gb"
+        },
+        "metrics": {
+          "beforeSettingsFps": 69,
+          "cpuBound": true,
+          "cpuCeiling": 130,
+          "gpuFps": 173,
+          "realFps": 130,
+          "settingMultiplier": 2.5047024490239487,
+          "upscaleActive": false,
+          "upscaleTech": null
+        },
+        "resolution": "1080p",
+        "selectedSettings": [
+          {
+            "index": 0,
+            "key": "upscale",
+            "name": "Upscaling",
+            "order": 0,
+            "type": "upscale",
+            "value": "Off"
+          },
+          {
+            "index": 0,
+            "key": "rt",
+            "name": "Ray Tracing / Path Tracing",
+            "order": 1,
+            "type": "rt",
+            "value": "Off"
+          },
+          {
+            "index": 0,
+            "key": "ssr",
+            "name": "Screen Space Reflections Quality",
+            "order": 2,
+            "type": "norm",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "shadows",
+            "name": "Cascaded / Volumetric Shadow Quality",
+            "order": 3,
+            "type": "norm",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "volfog",
+            "name": "Volumetric Fog Resolution",
+            "order": 4,
+            "type": "norm",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "crowd",
+            "name": "Crowd Density",
+            "order": 5,
+            "type": "norm",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "lod",
+            "name": "Level of Detail (LOD)",
+            "order": 6,
+            "type": "norm",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "sss",
+            "name": "Subsurface Scattering Quality",
+            "order": 7,
+            "type": "norm",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "distshadow",
+            "name": "Distant Shadows Resolution",
+            "order": 8,
+            "type": "norm",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "textures",
+            "name": "Texture Quality",
+            "order": 9,
+            "type": "vram",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "post",
+            "name": "Motion Blur / Film Grain / Chromatic Aberration",
+            "order": 10,
+            "type": "norm",
+            "value": "Off"
+          },
+          {
+            "index": 0,
+            "key": "aniso",
+            "name": "Anisotropic Filtering",
+            "order": 11,
+            "type": "norm",
+            "value": "8x"
+          },
+          {
+            "index": 0,
+            "key": "localshadow",
+            "name": "Local Shadow Quality",
+            "order": 12,
+            "type": "norm",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "shadowrange",
+            "name": "Cascaded Shadows Range",
+            "order": 13,
+            "type": "norm",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "volclouds",
+            "name": "Volumetric Cloud Quality",
+            "order": 14,
+            "type": "norm",
+            "value": "Off"
+          },
+          {
+            "index": 0,
+            "key": "decals",
+            "name": "Max Dynamic Decals",
+            "order": 15,
+            "type": "norm",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "mirror",
+            "name": "Mirror Quality",
+            "order": 16,
+            "type": "norm",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "colorprecision",
+            "name": "Color Precision",
+            "order": 17,
+            "type": "norm",
+            "value": "Medium"
+          },
+          {
+            "index": 0,
+            "key": "contactshadows",
+            "name": "Contact Shadows",
+            "order": 18,
+            "type": "norm",
+            "value": "Off"
+          },
+          {
+            "index": 0,
+            "key": "facial",
+            "name": "Improved Facial Lighting Geometry",
+            "order": 19,
+            "type": "norm",
+            "value": "Off"
+          },
+          {
+            "index": 0,
+            "key": "dof",
+            "name": "Depth of Field",
+            "order": 20,
+            "type": "norm",
+            "value": "Off"
+          }
+        ],
+        "stateCount": "8599633920",
+        "stateId": 0
+      }
+    },
+    {
+      "id": "cyberpunk-high",
+      "label": "Cyberpunk: explicit high without RT/upscaling",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "cyberpunk-2077",
+        "resolution": "1080p",
+        "selected": {
+          "@0": 0,
+          "@1": 0,
+          "@2": 2,
+          "@3": 2,
+          "@4": 2,
+          "@5": 2,
+          "@6": 2,
+          "@7": 1,
+          "@8": 2,
+          "@9": 2,
+          "@10": 1,
+          "@11": 1,
+          "@12": 2,
+          "@13": 2,
+          "@14": 2,
+          "@15": 2,
+          "@16": 2,
+          "@17": 1,
+          "@18": 1,
+          "@19": 1,
+          "@20": 1
+        }
+      },
+      "expected": {
+        "cpu": {
+          "group": "AMD Ryzen 5000 (Zen 3)",
+          "name": "AMD Ryzen 5 5600X",
+          "slug": "amd-ryzen-5-5600x"
+        },
+        "game": {
+          "group": null,
+          "name": "Cyberpunk 2077",
+          "slug": "cyberpunk-2077"
+        },
+        "gpu": {
+          "group": "NVIDIA — RTX 30 Series",
+          "name": "NVIDIA RTX 3060 (12GB)",
+          "slug": "nvidia-rtx-3060-12gb"
+        },
+        "metrics": {
+          "beforeSettingsFps": 69,
+          "cpuBound": false,
+          "cpuCeiling": 130,
+          "gpuFps": 69,
+          "realFps": 69,
+          "settingMultiplier": 1,
+          "upscaleActive": false,
+          "upscaleTech": null
+        },
+        "resolution": "1080p",
+        "selectedSettings": [
+          {
+            "index": 0,
+            "key": "upscale",
+            "name": "Upscaling",
+            "order": 0,
+            "type": "upscale",
+            "value": "Off"
+          },
+          {
+            "index": 0,
+            "key": "rt",
+            "name": "Ray Tracing / Path Tracing",
+            "order": 1,
+            "type": "rt",
+            "value": "Off"
+          },
+          {
+            "index": 2,
+            "key": "ssr",
+            "name": "Screen Space Reflections Quality",
+            "order": 2,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "shadows",
+            "name": "Cascaded / Volumetric Shadow Quality",
+            "order": 3,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "volfog",
+            "name": "Volumetric Fog Resolution",
+            "order": 4,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "crowd",
+            "name": "Crowd Density",
+            "order": 5,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "lod",
+            "name": "Level of Detail (LOD)",
+            "order": 6,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 1,
+            "key": "sss",
+            "name": "Subsurface Scattering Quality",
+            "order": 7,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "distshadow",
+            "name": "Distant Shadows Resolution",
+            "order": 8,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "textures",
+            "name": "Texture Quality",
+            "order": 9,
+            "type": "vram",
+            "value": "High"
+          },
+          {
+            "index": 1,
+            "key": "post",
+            "name": "Motion Blur / Film Grain / Chromatic Aberration",
+            "order": 10,
+            "type": "norm",
+            "value": "Low"
+          },
+          {
+            "index": 1,
+            "key": "aniso",
+            "name": "Anisotropic Filtering",
+            "order": 11,
+            "type": "norm",
+            "value": "16x"
+          },
+          {
+            "index": 2,
+            "key": "localshadow",
+            "name": "Local Shadow Quality",
+            "order": 12,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "shadowrange",
+            "name": "Cascaded Shadows Range",
+            "order": 13,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "volclouds",
+            "name": "Volumetric Cloud Quality",
+            "order": 14,
+            "type": "norm",
+            "value": "Medium"
+          },
+          {
+            "index": 2,
+            "key": "decals",
+            "name": "Max Dynamic Decals",
+            "order": 15,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "mirror",
+            "name": "Mirror Quality",
+            "order": 16,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 1,
+            "key": "colorprecision",
+            "name": "Color Precision",
+            "order": 17,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 1,
+            "key": "contactshadows",
+            "name": "Contact Shadows",
+            "order": 18,
+            "type": "norm",
+            "value": "On"
+          },
+          {
+            "index": 1,
+            "key": "facial",
+            "name": "Improved Facial Lighting Geometry",
+            "order": 19,
+            "type": "norm",
+            "value": "On"
+          },
+          {
+            "index": 1,
+            "key": "dof",
+            "name": "Depth of Field",
+            "order": 20,
+            "type": "norm",
+            "value": "On"
+          }
+        ],
+        "stateCount": "8599633920",
+        "stateId": 8543438912
+      }
+    },
+    {
+      "id": "cyberpunk-upscale",
+      "label": "Cyberpunk: quality upscaling at 1440p",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "cyberpunk-2077",
+        "resolution": "1440p",
+        "selected": {
+          "@0": 1,
+          "@1": 0,
+          "@2": 2,
+          "@3": 2,
+          "@4": 2,
+          "@5": 2,
+          "@6": 2,
+          "@7": 1,
+          "@8": 2,
+          "@9": 2,
+          "@10": 1,
+          "@11": 1,
+          "@12": 2,
+          "@13": 2,
+          "@14": 2,
+          "@15": 2,
+          "@16": 2,
+          "@17": 1,
+          "@18": 1,
+          "@19": 1,
+          "@20": 1
+        }
+      },
+      "expected": {
+        "cpu": {
+          "group": "AMD Ryzen 5000 (Zen 3)",
+          "name": "AMD Ryzen 5 5600X",
+          "slug": "amd-ryzen-5-5600x"
+        },
+        "game": {
+          "group": null,
+          "name": "Cyberpunk 2077",
+          "slug": "cyberpunk-2077"
+        },
+        "gpu": {
+          "group": "NVIDIA — RTX 30 Series",
+          "name": "NVIDIA RTX 3060 (12GB)",
+          "slug": "nvidia-rtx-3060-12gb"
+        },
+        "metrics": {
+          "beforeSettingsFps": 41,
+          "cpuBound": false,
+          "cpuCeiling": 130,
+          "gpuFps": 56,
+          "realFps": 56,
+          "settingMultiplier": 1.35,
+          "upscaleActive": true,
+          "upscaleTech": "DLSS"
+        },
+        "resolution": "1440p",
+        "selectedSettings": [
+          {
+            "index": 1,
+            "key": "upscale",
+            "name": "Upscaling",
+            "order": 0,
+            "type": "upscale",
+            "value": "Quality"
+          },
+          {
+            "index": 0,
+            "key": "rt",
+            "name": "Ray Tracing / Path Tracing",
+            "order": 1,
+            "type": "rt",
+            "value": "Off"
+          },
+          {
+            "index": 2,
+            "key": "ssr",
+            "name": "Screen Space Reflections Quality",
+            "order": 2,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "shadows",
+            "name": "Cascaded / Volumetric Shadow Quality",
+            "order": 3,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "volfog",
+            "name": "Volumetric Fog Resolution",
+            "order": 4,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "crowd",
+            "name": "Crowd Density",
+            "order": 5,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "lod",
+            "name": "Level of Detail (LOD)",
+            "order": 6,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 1,
+            "key": "sss",
+            "name": "Subsurface Scattering Quality",
+            "order": 7,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "distshadow",
+            "name": "Distant Shadows Resolution",
+            "order": 8,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "textures",
+            "name": "Texture Quality",
+            "order": 9,
+            "type": "vram",
+            "value": "High"
+          },
+          {
+            "index": 1,
+            "key": "post",
+            "name": "Motion Blur / Film Grain / Chromatic Aberration",
+            "order": 10,
+            "type": "norm",
+            "value": "Low"
+          },
+          {
+            "index": 1,
+            "key": "aniso",
+            "name": "Anisotropic Filtering",
+            "order": 11,
+            "type": "norm",
+            "value": "16x"
+          },
+          {
+            "index": 2,
+            "key": "localshadow",
+            "name": "Local Shadow Quality",
+            "order": 12,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "shadowrange",
+            "name": "Cascaded Shadows Range",
+            "order": 13,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "volclouds",
+            "name": "Volumetric Cloud Quality",
+            "order": 14,
+            "type": "norm",
+            "value": "Medium"
+          },
+          {
+            "index": 2,
+            "key": "decals",
+            "name": "Max Dynamic Decals",
+            "order": 15,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "mirror",
+            "name": "Mirror Quality",
+            "order": 16,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 1,
+            "key": "colorprecision",
+            "name": "Color Precision",
+            "order": 17,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 1,
+            "key": "contactshadows",
+            "name": "Contact Shadows",
+            "order": 18,
+            "type": "norm",
+            "value": "On"
+          },
+          {
+            "index": 1,
+            "key": "facial",
+            "name": "Improved Facial Lighting Geometry",
+            "order": 19,
+            "type": "norm",
+            "value": "On"
+          },
+          {
+            "index": 1,
+            "key": "dof",
+            "name": "Depth of Field",
+            "order": 20,
+            "type": "norm",
+            "value": "On"
+          }
+        ],
+        "stateCount": "8599633920",
+        "stateId": 8543438913
+      }
+    },
+    {
+      "id": "cyberpunk-path-tracing",
+      "label": "Cyberpunk: path tracing with RTX 4090 at 4K",
+      "request": {
+        "cpu": "amd-ryzen-7-9800x3d",
+        "gpu": "nvidia-rtx-4090",
+        "game": "cyberpunk-2077",
+        "resolution": "2160p",
+        "selected": {
+          "@0": 0,
+          "@1": 3,
+          "@2": 2,
+          "@3": 2,
+          "@4": 2,
+          "@5": 2,
+          "@6": 2,
+          "@7": 1,
+          "@8": 2,
+          "@9": 2,
+          "@10": 1,
+          "@11": 1,
+          "@12": 2,
+          "@13": 2,
+          "@14": 2,
+          "@15": 2,
+          "@16": 2,
+          "@17": 1,
+          "@18": 1,
+          "@19": 1,
+          "@20": 1
+        }
+      },
+      "expected": {
+        "cpu": {
+          "group": "AMD Ryzen X3D (best for gaming)",
+          "name": "AMD Ryzen 7 9800X3D",
+          "slug": "amd-ryzen-7-9800x3d"
+        },
+        "game": {
+          "group": null,
+          "name": "Cyberpunk 2077",
+          "slug": "cyberpunk-2077"
+        },
+        "gpu": {
+          "group": "NVIDIA — RTX 40 Series",
+          "name": "NVIDIA RTX 4090",
+          "slug": "nvidia-rtx-4090"
+        },
+        "metrics": {
+          "beforeSettingsFps": 73,
+          "cpuBound": false,
+          "cpuCeiling": 220,
+          "gpuFps": 33,
+          "realFps": 33,
+          "settingMultiplier": 0.44999999999999996,
+          "upscaleActive": false,
+          "upscaleTech": null
+        },
+        "resolution": "2160p",
+        "selectedSettings": [
+          {
+            "index": 0,
+            "key": "upscale",
+            "name": "Upscaling",
+            "order": 0,
+            "type": "upscale",
+            "value": "Off"
+          },
+          {
+            "index": 3,
+            "key": "rt",
+            "name": "Ray Tracing / Path Tracing",
+            "order": 1,
+            "type": "rt",
+            "value": "Path Tracing"
+          },
+          {
+            "index": 2,
+            "key": "ssr",
+            "name": "Screen Space Reflections Quality",
+            "order": 2,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "shadows",
+            "name": "Cascaded / Volumetric Shadow Quality",
+            "order": 3,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "volfog",
+            "name": "Volumetric Fog Resolution",
+            "order": 4,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "crowd",
+            "name": "Crowd Density",
+            "order": 5,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "lod",
+            "name": "Level of Detail (LOD)",
+            "order": 6,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 1,
+            "key": "sss",
+            "name": "Subsurface Scattering Quality",
+            "order": 7,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "distshadow",
+            "name": "Distant Shadows Resolution",
+            "order": 8,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "textures",
+            "name": "Texture Quality",
+            "order": 9,
+            "type": "vram",
+            "value": "High"
+          },
+          {
+            "index": 1,
+            "key": "post",
+            "name": "Motion Blur / Film Grain / Chromatic Aberration",
+            "order": 10,
+            "type": "norm",
+            "value": "Low"
+          },
+          {
+            "index": 1,
+            "key": "aniso",
+            "name": "Anisotropic Filtering",
+            "order": 11,
+            "type": "norm",
+            "value": "16x"
+          },
+          {
+            "index": 2,
+            "key": "localshadow",
+            "name": "Local Shadow Quality",
+            "order": 12,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "shadowrange",
+            "name": "Cascaded Shadows Range",
+            "order": 13,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "volclouds",
+            "name": "Volumetric Cloud Quality",
+            "order": 14,
+            "type": "norm",
+            "value": "Medium"
+          },
+          {
+            "index": 2,
+            "key": "decals",
+            "name": "Max Dynamic Decals",
+            "order": 15,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "mirror",
+            "name": "Mirror Quality",
+            "order": 16,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 1,
+            "key": "colorprecision",
+            "name": "Color Precision",
+            "order": 17,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 1,
+            "key": "contactshadows",
+            "name": "Contact Shadows",
+            "order": 18,
+            "type": "norm",
+            "value": "On"
+          },
+          {
+            "index": 1,
+            "key": "facial",
+            "name": "Improved Facial Lighting Geometry",
+            "order": 19,
+            "type": "norm",
+            "value": "On"
+          },
+          {
+            "index": 1,
+            "key": "dof",
+            "name": "Depth of Field",
+            "order": 20,
+            "type": "norm",
+            "value": "On"
+          }
+        ],
+        "stateCount": "8599633920",
+        "stateId": 8543438924
+      }
+    },
+    {
+      "id": "cyberpunk-state-priority",
+      "label": "Cyberpunk: stateId takes priority over invalid selected keys",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "cyberpunk-2077",
+        "resolution": "1080p",
+        "stateId": "1",
+        "selected": {
+          "not-a-setting": 999
+        }
+      },
+      "expected": {
+        "cpu": {
+          "group": "AMD Ryzen 5000 (Zen 3)",
+          "name": "AMD Ryzen 5 5600X",
+          "slug": "amd-ryzen-5-5600x"
+        },
+        "game": {
+          "group": null,
+          "name": "Cyberpunk 2077",
+          "slug": "cyberpunk-2077"
+        },
+        "gpu": {
+          "group": "NVIDIA — RTX 30 Series",
+          "name": "NVIDIA RTX 3060 (12GB)",
+          "slug": "nvidia-rtx-3060-12gb"
+        },
+        "metrics": {
+          "beforeSettingsFps": 69,
+          "cpuBound": true,
+          "cpuCeiling": 130,
+          "gpuFps": 233,
+          "realFps": 130,
+          "settingMultiplier": 3.38134830618233,
+          "upscaleActive": true,
+          "upscaleTech": "DLSS"
+        },
+        "resolution": "1080p",
+        "selectedSettings": [
+          {
+            "index": 1,
+            "key": "upscale",
+            "name": "Upscaling",
+            "order": 0,
+            "type": "upscale",
+            "value": "Quality"
+          },
+          {
+            "index": 0,
+            "key": "rt",
+            "name": "Ray Tracing / Path Tracing",
+            "order": 1,
+            "type": "rt",
+            "value": "Off"
+          },
+          {
+            "index": 0,
+            "key": "ssr",
+            "name": "Screen Space Reflections Quality",
+            "order": 2,
+            "type": "norm",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "shadows",
+            "name": "Cascaded / Volumetric Shadow Quality",
+            "order": 3,
+            "type": "norm",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "volfog",
+            "name": "Volumetric Fog Resolution",
+            "order": 4,
+            "type": "norm",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "crowd",
+            "name": "Crowd Density",
+            "order": 5,
+            "type": "norm",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "lod",
+            "name": "Level of Detail (LOD)",
+            "order": 6,
+            "type": "norm",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "sss",
+            "name": "Subsurface Scattering Quality",
+            "order": 7,
+            "type": "norm",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "distshadow",
+            "name": "Distant Shadows Resolution",
+            "order": 8,
+            "type": "norm",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "textures",
+            "name": "Texture Quality",
+            "order": 9,
+            "type": "vram",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "post",
+            "name": "Motion Blur / Film Grain / Chromatic Aberration",
+            "order": 10,
+            "type": "norm",
+            "value": "Off"
+          },
+          {
+            "index": 0,
+            "key": "aniso",
+            "name": "Anisotropic Filtering",
+            "order": 11,
+            "type": "norm",
+            "value": "8x"
+          },
+          {
+            "index": 0,
+            "key": "localshadow",
+            "name": "Local Shadow Quality",
+            "order": 12,
+            "type": "norm",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "shadowrange",
+            "name": "Cascaded Shadows Range",
+            "order": 13,
+            "type": "norm",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "volclouds",
+            "name": "Volumetric Cloud Quality",
+            "order": 14,
+            "type": "norm",
+            "value": "Off"
+          },
+          {
+            "index": 0,
+            "key": "decals",
+            "name": "Max Dynamic Decals",
+            "order": 15,
+            "type": "norm",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "mirror",
+            "name": "Mirror Quality",
+            "order": 16,
+            "type": "norm",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "colorprecision",
+            "name": "Color Precision",
+            "order": 17,
+            "type": "norm",
+            "value": "Medium"
+          },
+          {
+            "index": 0,
+            "key": "contactshadows",
+            "name": "Contact Shadows",
+            "order": 18,
+            "type": "norm",
+            "value": "Off"
+          },
+          {
+            "index": 0,
+            "key": "facial",
+            "name": "Improved Facial Lighting Geometry",
+            "order": 19,
+            "type": "norm",
+            "value": "Off"
+          },
+          {
+            "index": 0,
+            "key": "dof",
+            "name": "Depth of Field",
+            "order": 20,
+            "type": "norm",
+            "value": "Off"
+          }
+        ],
+        "stateCount": "8599633920",
+        "stateId": 1
+      }
+    },
+    {
+      "id": "cyberpunk-ultrawide",
+      "label": "Cyberpunk: ultrawide 1440p",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "cyberpunk-2077",
+        "resolution": "uw1440",
+        "selected": {
+          "@0": 0,
+          "@1": 0,
+          "@2": 2,
+          "@3": 2,
+          "@4": 2,
+          "@5": 2,
+          "@6": 2,
+          "@7": 1,
+          "@8": 2,
+          "@9": 2,
+          "@10": 1,
+          "@11": 1,
+          "@12": 2,
+          "@13": 2,
+          "@14": 2,
+          "@15": 2,
+          "@16": 2,
+          "@17": 1,
+          "@18": 1,
+          "@19": 1,
+          "@20": 1
+        }
+      },
+      "expected": {
+        "cpu": {
+          "group": "AMD Ryzen 5000 (Zen 3)",
+          "name": "AMD Ryzen 5 5600X",
+          "slug": "amd-ryzen-5-5600x"
+        },
+        "game": {
+          "group": null,
+          "name": "Cyberpunk 2077",
+          "slug": "cyberpunk-2077"
+        },
+        "gpu": {
+          "group": "NVIDIA — RTX 30 Series",
+          "name": "NVIDIA RTX 3060 (12GB)",
+          "slug": "nvidia-rtx-3060-12gb"
+        },
+        "metrics": {
+          "beforeSettingsFps": 31,
+          "cpuBound": false,
+          "cpuCeiling": 130,
+          "gpuFps": 31,
+          "realFps": 31,
+          "settingMultiplier": 1,
+          "upscaleActive": false,
+          "upscaleTech": null
+        },
+        "resolution": "uw1440",
+        "selectedSettings": [
+          {
+            "index": 0,
+            "key": "upscale",
+            "name": "Upscaling",
+            "order": 0,
+            "type": "upscale",
+            "value": "Off"
+          },
+          {
+            "index": 0,
+            "key": "rt",
+            "name": "Ray Tracing / Path Tracing",
+            "order": 1,
+            "type": "rt",
+            "value": "Off"
+          },
+          {
+            "index": 2,
+            "key": "ssr",
+            "name": "Screen Space Reflections Quality",
+            "order": 2,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "shadows",
+            "name": "Cascaded / Volumetric Shadow Quality",
+            "order": 3,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "volfog",
+            "name": "Volumetric Fog Resolution",
+            "order": 4,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "crowd",
+            "name": "Crowd Density",
+            "order": 5,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "lod",
+            "name": "Level of Detail (LOD)",
+            "order": 6,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 1,
+            "key": "sss",
+            "name": "Subsurface Scattering Quality",
+            "order": 7,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "distshadow",
+            "name": "Distant Shadows Resolution",
+            "order": 8,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "textures",
+            "name": "Texture Quality",
+            "order": 9,
+            "type": "vram",
+            "value": "High"
+          },
+          {
+            "index": 1,
+            "key": "post",
+            "name": "Motion Blur / Film Grain / Chromatic Aberration",
+            "order": 10,
+            "type": "norm",
+            "value": "Low"
+          },
+          {
+            "index": 1,
+            "key": "aniso",
+            "name": "Anisotropic Filtering",
+            "order": 11,
+            "type": "norm",
+            "value": "16x"
+          },
+          {
+            "index": 2,
+            "key": "localshadow",
+            "name": "Local Shadow Quality",
+            "order": 12,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "shadowrange",
+            "name": "Cascaded Shadows Range",
+            "order": 13,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "volclouds",
+            "name": "Volumetric Cloud Quality",
+            "order": 14,
+            "type": "norm",
+            "value": "Medium"
+          },
+          {
+            "index": 2,
+            "key": "decals",
+            "name": "Max Dynamic Decals",
+            "order": 15,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "mirror",
+            "name": "Mirror Quality",
+            "order": 16,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 1,
+            "key": "colorprecision",
+            "name": "Color Precision",
+            "order": 17,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 1,
+            "key": "contactshadows",
+            "name": "Contact Shadows",
+            "order": 18,
+            "type": "norm",
+            "value": "On"
+          },
+          {
+            "index": 1,
+            "key": "facial",
+            "name": "Improved Facial Lighting Geometry",
+            "order": 19,
+            "type": "norm",
+            "value": "On"
+          },
+          {
+            "index": 1,
+            "key": "dof",
+            "name": "Depth of Field",
+            "order": 20,
+            "type": "norm",
+            "value": "On"
+          }
+        ],
+        "stateCount": "8599633920",
+        "stateId": 8543438912
+      }
+    },
+    {
+      "id": "fortnite-zero",
+      "label": "Fortnite: index-zero settings",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "fortnite",
+        "resolution": "1080p"
+      },
+      "expected": {
+        "cpu": {
+          "group": "AMD Ryzen 5000 (Zen 3)",
+          "name": "AMD Ryzen 5 5600X",
+          "slug": "amd-ryzen-5-5600x"
+        },
+        "game": {
+          "group": null,
+          "name": "Fortnite",
+          "slug": "fortnite"
+        },
+        "gpu": {
+          "group": "NVIDIA — RTX 30 Series",
+          "name": "NVIDIA RTX 3060 (12GB)",
+          "slug": "nvidia-rtx-3060-12gb"
+        },
+        "metrics": {
+          "beforeSettingsFps": 85,
+          "cpuBound": true,
+          "cpuCeiling": 176,
+          "gpuFps": 181,
+          "realFps": 176,
+          "settingMultiplier": 2.1260198134258053,
+          "upscaleActive": false,
+          "upscaleTech": null
+        },
+        "resolution": "1080p",
+        "selectedSettings": [
+          {
+            "index": 0,
+            "key": "upscale",
+            "name": "Upscaling",
+            "order": 0,
+            "type": "upscale",
+            "value": "Off"
+          },
+          {
+            "index": 0,
+            "key": "rt",
+            "name": "Hardware Ray Tracing (Lumen)",
+            "order": 1,
+            "type": "rt",
+            "value": "Off"
+          },
+          {
+            "index": 0,
+            "key": "gi",
+            "name": "Global Illumination (Lumen)",
+            "order": 2,
+            "type": "norm",
+            "value": "Off"
+          },
+          {
+            "index": 0,
+            "key": "shadows",
+            "name": "Shadows",
+            "order": 3,
+            "type": "norm",
+            "value": "Off"
+          },
+          {
+            "index": 0,
+            "key": "reflections",
+            "name": "Reflections (Lumen)",
+            "order": 4,
+            "type": "norm",
+            "value": "Off"
+          },
+          {
+            "index": 0,
+            "key": "nanite",
+            "name": "Nanite Virtualized Geometry",
+            "order": 5,
+            "type": "norm",
+            "value": "Off"
+          },
+          {
+            "index": 0,
+            "key": "effects",
+            "name": "Effects",
+            "order": 6,
+            "type": "norm",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "distance",
+            "name": "View Distance",
+            "order": 7,
+            "type": "norm",
+            "value": "Near"
+          },
+          {
+            "index": 0,
+            "key": "foliage",
+            "name": "Foliage",
+            "order": 8,
+            "type": "norm",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "post",
+            "name": "Post Processing",
+            "order": 9,
+            "type": "norm",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "textures",
+            "name": "Textures",
+            "order": 10,
+            "type": "vram",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "aniso",
+            "name": "Anisotropic Filtering",
+            "order": 11,
+            "type": "norm",
+            "value": "4x"
+          },
+          {
+            "index": 0,
+            "key": "vsm",
+            "name": "Virtual Shadow Maps",
+            "order": 12,
+            "type": "norm",
+            "value": "Off"
+          },
+          {
+            "index": 0,
+            "key": "motionblur",
+            "name": "Motion Blur",
+            "order": 13,
+            "type": "norm",
+            "value": "Off"
+          }
+        ],
+        "stateCount": "25165824",
+        "stateId": 0
+      }
+    },
+    {
+      "id": "fortnite-high",
+      "label": "Fortnite: explicit high settings",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "fortnite",
+        "resolution": "1080p",
+        "selected": {
+          "@0": 0,
+          "@1": 0,
+          "@2": 2,
+          "@3": 2,
+          "@4": 2,
+          "@5": 1,
+          "@6": 2,
+          "@7": 2,
+          "@8": 2,
+          "@9": 2,
+          "@10": 2,
+          "@11": 2,
+          "@12": 1,
+          "@13": 0
+        }
+      },
+      "expected": {
+        "cpu": {
+          "group": "AMD Ryzen 5000 (Zen 3)",
+          "name": "AMD Ryzen 5 5600X",
+          "slug": "amd-ryzen-5-5600x"
+        },
+        "game": {
+          "group": null,
+          "name": "Fortnite",
+          "slug": "fortnite"
+        },
+        "gpu": {
+          "group": "NVIDIA — RTX 30 Series",
+          "name": "NVIDIA RTX 3060 (12GB)",
+          "slug": "nvidia-rtx-3060-12gb"
+        },
+        "metrics": {
+          "beforeSettingsFps": 85,
+          "cpuBound": false,
+          "cpuCeiling": 176,
+          "gpuFps": 85,
+          "realFps": 85,
+          "settingMultiplier": 1,
+          "upscaleActive": false,
+          "upscaleTech": null
+        },
+        "resolution": "1080p",
+        "selectedSettings": [
+          {
+            "index": 0,
+            "key": "upscale",
+            "name": "Upscaling",
+            "order": 0,
+            "type": "upscale",
+            "value": "Off"
+          },
+          {
+            "index": 0,
+            "key": "rt",
+            "name": "Hardware Ray Tracing (Lumen)",
+            "order": 1,
+            "type": "rt",
+            "value": "Off"
+          },
+          {
+            "index": 2,
+            "key": "gi",
+            "name": "Global Illumination (Lumen)",
+            "order": 2,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "shadows",
+            "name": "Shadows",
+            "order": 3,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "reflections",
+            "name": "Reflections (Lumen)",
+            "order": 4,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 1,
+            "key": "nanite",
+            "name": "Nanite Virtualized Geometry",
+            "order": 5,
+            "type": "norm",
+            "value": "On"
+          },
+          {
+            "index": 2,
+            "key": "effects",
+            "name": "Effects",
+            "order": 6,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "distance",
+            "name": "View Distance",
+            "order": 7,
+            "type": "norm",
+            "value": "Far"
+          },
+          {
+            "index": 2,
+            "key": "foliage",
+            "name": "Foliage",
+            "order": 8,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "post",
+            "name": "Post Processing",
+            "order": 9,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "textures",
+            "name": "Textures",
+            "order": 10,
+            "type": "vram",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "aniso",
+            "name": "Anisotropic Filtering",
+            "order": 11,
+            "type": "norm",
+            "value": "16x"
+          },
+          {
+            "index": 1,
+            "key": "vsm",
+            "name": "Virtual Shadow Maps",
+            "order": 12,
+            "type": "norm",
+            "value": "On"
+          },
+          {
+            "index": 0,
+            "key": "motionblur",
+            "name": "Motion Blur",
+            "order": 13,
+            "type": "norm",
+            "value": "Off"
+          }
+        ],
+        "stateCount": "25165824",
+        "stateId": 11884192
+      }
+    },
+    {
+      "id": "fortnite-rt",
+      "label": "Fortnite: Epic RT with quality upscaling",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-4090",
+        "game": "fortnite",
+        "resolution": "1440p",
+        "selected": {
+          "@0": 1,
+          "@1": 3,
+          "@2": 2,
+          "@3": 2,
+          "@4": 2,
+          "@5": 1,
+          "@6": 2,
+          "@7": 2,
+          "@8": 2,
+          "@9": 2,
+          "@10": 2,
+          "@11": 2,
+          "@12": 1,
+          "@13": 0
+        }
+      },
+      "expected": {
+        "cpu": {
+          "group": "AMD Ryzen 5000 (Zen 3)",
+          "name": "AMD Ryzen 5 5600X",
+          "slug": "amd-ryzen-5-5600x"
+        },
+        "game": {
+          "group": null,
+          "name": "Fortnite",
+          "slug": "fortnite"
+        },
+        "gpu": {
+          "group": "NVIDIA — RTX 40 Series",
+          "name": "NVIDIA RTX 4090",
+          "slug": "nvidia-rtx-4090"
+        },
+        "metrics": {
+          "beforeSettingsFps": 159,
+          "cpuBound": false,
+          "cpuCeiling": 176,
+          "gpuFps": 129,
+          "realFps": 129,
+          "settingMultiplier": 0.81,
+          "upscaleActive": true,
+          "upscaleTech": "DLSS"
+        },
+        "resolution": "1440p",
+        "selectedSettings": [
+          {
+            "index": 1,
+            "key": "upscale",
+            "name": "Upscaling",
+            "order": 0,
+            "type": "upscale",
+            "value": "Quality"
+          },
+          {
+            "index": 3,
+            "key": "rt",
+            "name": "Hardware Ray Tracing (Lumen)",
+            "order": 1,
+            "type": "rt",
+            "value": "Epic"
+          },
+          {
+            "index": 2,
+            "key": "gi",
+            "name": "Global Illumination (Lumen)",
+            "order": 2,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "shadows",
+            "name": "Shadows",
+            "order": 3,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "reflections",
+            "name": "Reflections (Lumen)",
+            "order": 4,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 1,
+            "key": "nanite",
+            "name": "Nanite Virtualized Geometry",
+            "order": 5,
+            "type": "norm",
+            "value": "On"
+          },
+          {
+            "index": 2,
+            "key": "effects",
+            "name": "Effects",
+            "order": 6,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "distance",
+            "name": "View Distance",
+            "order": 7,
+            "type": "norm",
+            "value": "Far"
+          },
+          {
+            "index": 2,
+            "key": "foliage",
+            "name": "Foliage",
+            "order": 8,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "post",
+            "name": "Post Processing",
+            "order": 9,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "textures",
+            "name": "Textures",
+            "order": 10,
+            "type": "vram",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "aniso",
+            "name": "Anisotropic Filtering",
+            "order": 11,
+            "type": "norm",
+            "value": "16x"
+          },
+          {
+            "index": 1,
+            "key": "vsm",
+            "name": "Virtual Shadow Maps",
+            "order": 12,
+            "type": "norm",
+            "value": "On"
+          },
+          {
+            "index": 0,
+            "key": "motionblur",
+            "name": "Motion Blur",
+            "order": 13,
+            "type": "norm",
+            "value": "Off"
+          }
+        ],
+        "stateCount": "25165824",
+        "stateId": 11884205
+      }
+    },
+    {
+      "id": "elden-ring-cap",
+      "label": "Elden Ring: 60 FPS cap",
+      "request": {
+        "cpu": "amd-ryzen-7-9800x3d",
+        "gpu": "nvidia-rtx-4090",
+        "game": "elden-ring",
+        "resolution": "1080p",
+        "selected": {
+          "@0": 0,
+          "@1": 2,
+          "@2": 2,
+          "@3": 2,
+          "@4": 2,
+          "@5": 2,
+          "@6": 2,
+          "@7": 2,
+          "@8": 2,
+          "@9": 2,
+          "@10": 2,
+          "@11": 2,
+          "@12": 2,
+          "@13": 1,
+          "@14": 0
+        }
+      },
+      "expected": {
+        "cpu": {
+          "group": "AMD Ryzen X3D (best for gaming)",
+          "name": "AMD Ryzen 7 9800X3D",
+          "slug": "amd-ryzen-7-9800x3d"
+        },
+        "game": {
+          "group": null,
+          "name": "Elden Ring",
+          "slug": "elden-ring"
+        },
+        "gpu": {
+          "group": "NVIDIA — RTX 40 Series",
+          "name": "NVIDIA RTX 4090",
+          "slug": "nvidia-rtx-4090"
+        },
+        "metrics": {
+          "beforeSettingsFps": 60,
+          "cpuBound": true,
+          "cpuCeiling": 297,
+          "gpuFps": 321,
+          "realFps": 60,
+          "settingMultiplier": 1,
+          "upscaleActive": false,
+          "upscaleTech": null
+        },
+        "resolution": "1080p",
+        "selectedSettings": [
+          {
+            "index": 0,
+            "key": "rt",
+            "name": "Ray Tracing",
+            "order": 0,
+            "type": "rt",
+            "value": "Off"
+          },
+          {
+            "index": 2,
+            "key": "shadows",
+            "name": "Shadow Quality",
+            "order": 1,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "gi",
+            "name": "Global Illumination Quality",
+            "order": 2,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "lighting",
+            "name": "Lighting Quality",
+            "order": 3,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "ssr",
+            "name": "Reflection Quality",
+            "order": 4,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "effects",
+            "name": "Effects Quality",
+            "order": 5,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "grass",
+            "name": "Grass Quality",
+            "order": 6,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "aa",
+            "name": "Anti-Aliasing Quality",
+            "order": 7,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "textures",
+            "name": "Texture Quality",
+            "order": 8,
+            "type": "vram",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "volumetric",
+            "name": "Volumetric Lighting Quality",
+            "order": 9,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "ssao",
+            "name": "SSAO",
+            "order": 10,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "shader",
+            "name": "Shader Quality",
+            "order": 11,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "water",
+            "name": "Water Surface Quality",
+            "order": 12,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 1,
+            "key": "dof",
+            "name": "Depth of Field",
+            "order": 13,
+            "type": "norm",
+            "value": "On"
+          },
+          {
+            "index": 0,
+            "key": "motionblur",
+            "name": "Motion Blur",
+            "order": 14,
+            "type": "norm",
+            "value": "Off"
+          }
+        ],
+        "stateCount": "150994944",
+        "stateId": 63449768
+      }
+    },
+    {
+      "id": "elden-ring-gpu-limit",
+      "label": "Elden Ring: GTX 1060 at 4K",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-gtx-1060-6gb",
+        "game": "elden-ring",
+        "resolution": "2160p",
+        "selected": {
+          "@0": 0,
+          "@1": 2,
+          "@2": 2,
+          "@3": 2,
+          "@4": 2,
+          "@5": 2,
+          "@6": 2,
+          "@7": 2,
+          "@8": 2,
+          "@9": 2,
+          "@10": 2,
+          "@11": 2,
+          "@12": 2,
+          "@13": 1,
+          "@14": 0
+        }
+      },
+      "expected": {
+        "cpu": {
+          "group": "AMD Ryzen 5000 (Zen 3)",
+          "name": "AMD Ryzen 5 5600X",
+          "slug": "amd-ryzen-5-5600x"
+        },
+        "game": {
+          "group": null,
+          "name": "Elden Ring",
+          "slug": "elden-ring"
+        },
+        "gpu": {
+          "group": "NVIDIA — GTX 16 / 10 Series",
+          "name": "NVIDIA GTX 1060 (6GB)",
+          "slug": "nvidia-gtx-1060-6gb"
+        },
+        "metrics": {
+          "beforeSettingsFps": 15,
+          "cpuBound": false,
+          "cpuCeiling": 176,
+          "gpuFps": 15,
+          "realFps": 15,
+          "settingMultiplier": 1,
+          "upscaleActive": false,
+          "upscaleTech": null
+        },
+        "resolution": "2160p",
+        "selectedSettings": [
+          {
+            "index": 0,
+            "key": "rt",
+            "name": "Ray Tracing",
+            "order": 0,
+            "type": "rt",
+            "value": "Off"
+          },
+          {
+            "index": 2,
+            "key": "shadows",
+            "name": "Shadow Quality",
+            "order": 1,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "gi",
+            "name": "Global Illumination Quality",
+            "order": 2,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "lighting",
+            "name": "Lighting Quality",
+            "order": 3,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "ssr",
+            "name": "Reflection Quality",
+            "order": 4,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "effects",
+            "name": "Effects Quality",
+            "order": 5,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "grass",
+            "name": "Grass Quality",
+            "order": 6,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "aa",
+            "name": "Anti-Aliasing Quality",
+            "order": 7,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "textures",
+            "name": "Texture Quality",
+            "order": 8,
+            "type": "vram",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "volumetric",
+            "name": "Volumetric Lighting Quality",
+            "order": 9,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "ssao",
+            "name": "SSAO",
+            "order": 10,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "shader",
+            "name": "Shader Quality",
+            "order": 11,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "water",
+            "name": "Water Surface Quality",
+            "order": 12,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 1,
+            "key": "dof",
+            "name": "Depth of Field",
+            "order": 13,
+            "type": "norm",
+            "value": "On"
+          },
+          {
+            "index": 0,
+            "key": "motionblur",
+            "name": "Motion Blur",
+            "order": 14,
+            "type": "norm",
+            "value": "Off"
+          }
+        ],
+        "stateCount": "150994944",
+        "stateId": 63449768
+      }
+    },
+    {
+      "id": "cs2-state-zero",
+      "label": "CS2: explicit stateId zero",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "counter-strike-2",
+        "resolution": "1080p",
+        "stateId": 0
+      },
+      "expected": {
+        "cpu": {
+          "group": "AMD Ryzen 5000 (Zen 3)",
+          "name": "AMD Ryzen 5 5600X",
+          "slug": "amd-ryzen-5-5600x"
+        },
+        "game": {
+          "group": null,
+          "name": "Counter-Strike 2",
+          "slug": "counter-strike-2"
+        },
+        "gpu": {
+          "group": "NVIDIA — RTX 30 Series",
+          "name": "NVIDIA RTX 3060 (12GB)",
+          "slug": "nvidia-rtx-3060-12gb"
+        },
+        "metrics": {
+          "beforeSettingsFps": 237,
+          "cpuBound": false,
+          "cpuCeiling": 390,
+          "gpuFps": 390,
+          "realFps": 390,
+          "settingMultiplier": 1.64685321941108,
+          "upscaleActive": false,
+          "upscaleTech": null
+        },
+        "resolution": "1080p",
+        "selectedSettings": [
+          {
+            "index": 0,
+            "key": "upscale",
+            "name": "Upscaling",
+            "order": 0,
+            "type": "upscale",
+            "value": "Off"
+          },
+          {
+            "index": 0,
+            "key": "msaa",
+            "name": "Anti-Aliasing Mode",
+            "order": 1,
+            "type": "norm",
+            "value": "CMAA2"
+          },
+          {
+            "index": 0,
+            "key": "shadows",
+            "name": "Global Shadow Quality",
+            "order": 2,
+            "type": "norm",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "contrast",
+            "name": "Boost Player Contrast",
+            "order": 3,
+            "type": "norm",
+            "value": "Disabled"
+          },
+          {
+            "index": 0,
+            "key": "ao",
+            "name": "Ambient Occlusion",
+            "order": 4,
+            "type": "norm",
+            "value": "Disabled"
+          },
+          {
+            "index": 0,
+            "key": "shader",
+            "name": "Shader Detail",
+            "order": 5,
+            "type": "norm",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "particle",
+            "name": "Particle Detail",
+            "order": 6,
+            "type": "norm",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "textures",
+            "name": "Model / Texture Detail",
+            "order": 7,
+            "type": "vram",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "aniso",
+            "name": "Texture Filtering Mode",
+            "order": 8,
+            "type": "norm",
+            "value": "Bilinear"
+          },
+          {
+            "index": 0,
+            "key": "dynshadows",
+            "name": "Dynamic Shadows",
+            "order": 9,
+            "type": "norm",
+            "value": "None"
+          },
+          {
+            "index": 0,
+            "key": "hdr",
+            "name": "High Dynamic Range",
+            "order": 10,
+            "type": "norm",
+            "value": "Performance"
+          }
+        ],
+        "stateCount": "248832",
+        "stateId": 0
+      }
+    },
+    {
+      "id": "007-calibrated-scenario",
+      "label": "007 First Light: exact site calibration differs from educational baseline",
+      "request": {
+        "cpu": "amd-ryzen-7-9800x3d",
+        "gpu": "nvidia-rtx-5090",
+        "game": "007-first-light",
+        "resolution": "1440p",
+        "selected": {
+          "@0": 0,
+          "@1": 0,
+          "@2": 3,
+          "@3": 3,
+          "@4": 2,
+          "@5": 2,
+          "@6": 2,
+          "@7": 3,
+          "@8": 2,
+          "@9": 3,
+          "@10": 3
+        }
+      },
+      "expected": {
+        "cpu": {
+          "group": "AMD Ryzen X3D (best for gaming)",
+          "name": "AMD Ryzen 7 9800X3D",
+          "slug": "amd-ryzen-7-9800x3d"
+        },
+        "game": {
+          "group": null,
+          "name": "007 First Light",
+          "slug": "007-first-light"
+        },
+        "gpu": {
+          "group": "NVIDIA — RTX 50 Series",
+          "name": "NVIDIA RTX 5090",
+          "slug": "nvidia-rtx-5090"
+        },
+        "metrics": {
+          "beforeSettingsFps": 221,
+          "cpuBound": false,
+          "cpuCeiling": 297,
+          "gpuFps": 147,
+          "realFps": 147,
+          "settingMultiplier": 0.8470045085935713,
+          "upscaleActive": false,
+          "upscaleTech": null
+        },
+        "resolution": "1440p",
+        "selectedSettings": [
+          {
+            "index": 0,
+            "key": "upscale",
+            "name": "Upscaling (DLSS / FSR / XeSS)",
+            "order": 0,
+            "type": "upscale",
+            "value": "Off"
+          },
+          {
+            "index": 0,
+            "key": "rt",
+            "name": "Ray-Traced Reflections",
+            "order": 1,
+            "type": "rt",
+            "value": "Off"
+          },
+          {
+            "index": 3,
+            "key": "shadows",
+            "name": "Shadow Quality",
+            "order": 2,
+            "type": "norm",
+            "value": "Ultra"
+          },
+          {
+            "index": 3,
+            "key": "ssr",
+            "name": "Screen Space Reflections",
+            "order": 3,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "sim",
+            "name": "Simulation Quality",
+            "order": 4,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "volumetric",
+            "name": "Volumetric Lighting",
+            "order": 5,
+            "type": "norm",
+            "value": "High"
+          },
+          {
+            "index": 2,
+            "key": "ao",
+            "name": "Ambient Occlusion",
+            "order": 6,
+            "type": "norm",
+            "value": "HBAO+"
+          },
+          {
+            "index": 3,
+            "key": "lod",
+            "name": "Level of Detail",
+            "order": 7,
+            "type": "norm",
+            "value": "Ultra"
+          },
+          {
+            "index": 2,
+            "key": "aa",
+            "name": "Anti-Aliasing",
+            "order": 8,
+            "type": "norm",
+            "value": "TAA High"
+          },
+          {
+            "index": 3,
+            "key": "textures",
+            "name": "Texture Quality",
+            "order": 9,
+            "type": "vram",
+            "value": "Ultra"
+          },
+          {
+            "index": 3,
+            "key": "af",
+            "name": "Anisotropic Filtering",
+            "order": 10,
+            "type": "norm",
+            "value": "16x"
+          }
+        ],
+        "stateCount": "663552",
+        "stateId": 663544
+      }
+    },
+    {
+      "id": "007-calibrated-native",
+      "label": "007 First Light: native GPU calibration profile",
+      "request": {
+        "cpu": "amd-ryzen-7-9800x3d",
+        "gpu": "nvidia-rtx-5090",
+        "game": "007-first-light",
+        "resolution": "1080p"
+      },
+      "expected": {
+        "cpu": {
+          "group": "AMD Ryzen X3D (best for gaming)",
+          "name": "AMD Ryzen 7 9800X3D",
+          "slug": "amd-ryzen-7-9800x3d"
+        },
+        "game": {
+          "group": null,
+          "name": "007 First Light",
+          "slug": "007-first-light"
+        },
+        "gpu": {
+          "group": "NVIDIA — RTX 50 Series",
+          "name": "NVIDIA RTX 5090",
+          "slug": "nvidia-rtx-5090"
+        },
+        "metrics": {
+          "beforeSettingsFps": 297,
+          "cpuBound": true,
+          "cpuCeiling": 297,
+          "gpuFps": 464,
+          "realFps": 297,
+          "settingMultiplier": 1.6072247793682086,
+          "upscaleActive": false,
+          "upscaleTech": null
+        },
+        "resolution": "1080p",
+        "selectedSettings": [
+          {
+            "index": 0,
+            "key": "upscale",
+            "name": "Upscaling (DLSS / FSR / XeSS)",
+            "order": 0,
+            "type": "upscale",
+            "value": "Off"
+          },
+          {
+            "index": 0,
+            "key": "rt",
+            "name": "Ray-Traced Reflections",
+            "order": 1,
+            "type": "rt",
+            "value": "Off"
+          },
+          {
+            "index": 0,
+            "key": "shadows",
+            "name": "Shadow Quality",
+            "order": 2,
+            "type": "norm",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "ssr",
+            "name": "Screen Space Reflections",
+            "order": 3,
+            "type": "norm",
+            "value": "Off"
+          },
+          {
+            "index": 0,
+            "key": "sim",
+            "name": "Simulation Quality",
+            "order": 4,
+            "type": "norm",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "volumetric",
+            "name": "Volumetric Lighting",
+            "order": 5,
+            "type": "norm",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "ao",
+            "name": "Ambient Occlusion",
+            "order": 6,
+            "type": "norm",
+            "value": "Off"
+          },
+          {
+            "index": 0,
+            "key": "lod",
+            "name": "Level of Detail",
+            "order": 7,
+            "type": "norm",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "aa",
+            "name": "Anti-Aliasing",
+            "order": 8,
+            "type": "norm",
+            "value": "Off"
+          },
+          {
+            "index": 0,
+            "key": "textures",
+            "name": "Texture Quality",
+            "order": 9,
+            "type": "vram",
+            "value": "Low"
+          },
+          {
+            "index": 0,
+            "key": "af",
+            "name": "Anisotropic Filtering",
+            "order": 10,
+            "type": "norm",
+            "value": "Off"
+          }
+        ],
+        "stateCount": "663552",
+        "stateId": 0
+      }
+    },
+    {
+      "id": "cs2-medium",
+      "label": "CS2: Medium visual preset with RT/upscaling off",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "counter-strike-2",
+        "resolution": "1080p",
+        "selected": {
+          "@0": 0,
+          "@1": 1,
+          "@2": 1,
+          "@3": 0,
+          "@4": 1,
+          "@5": 1,
+          "@6": 1,
+          "@7": 1,
+          "@8": 2,
+          "@9": 1,
+          "@10": 0
+        }
+      },
+      "expected": {
+        "cpu": {
+          "group": "AMD Ryzen 5000 (Zen 3)",
+          "name": "AMD Ryzen 5 5600X",
+          "slug": "amd-ryzen-5-5600x"
+        },
+        "game": {
+          "group": null,
+          "name": "Counter-Strike 2",
+          "slug": "counter-strike-2"
+        },
+        "gpu": {
+          "group": "NVIDIA — RTX 30 Series",
+          "name": "NVIDIA RTX 3060 (12GB)",
+          "slug": "nvidia-rtx-3060-12gb"
+        },
+        "metrics": {
+          "beforeSettingsFps": 237,
+          "cpuBound": false,
+          "cpuCeiling": 390,
+          "gpuFps": 309,
+          "realFps": 309,
+          "settingMultiplier": 1.3047713287908569,
+          "upscaleActive": false,
+          "upscaleTech": null
+        },
+        "resolution": "1080p",
+        "selectedSettings": [
+          {
+            "index": 0,
+            "key": "upscale",
+            "name": "Upscaling",
+            "order": 0,
+            "type": "upscale",
+            "value": "Off"
+          },
+          {
+            "index": 1,
+            "key": "msaa",
+            "name": "Anti-Aliasing Mode",
+            "order": 1,
+            "type": "norm",
+            "value": "2x MSAA"
+          },
+          {
+            "index": 1,
+            "key": "shadows",
+            "name": "Global Shadow Quality",
+            "order": 2,
+            "type": "norm",
+            "value": "Medium"
+          },
+          {
+            "index": 0,
+            "key": "contrast",
+            "name": "Boost Player Contrast",
+            "order": 3,
+            "type": "norm",
+            "value": "Disabled"
+          },
+          {
+            "index": 1,
+            "key": "ao",
+            "name": "Ambient Occlusion",
+            "order": 4,
+            "type": "norm",
+            "value": "Medium"
+          },
+          {
+            "index": 1,
+            "key": "shader",
+            "name": "Shader Detail",
+            "order": 5,
+            "type": "norm",
+            "value": "Medium"
+          },
+          {
+            "index": 1,
+            "key": "particle",
+            "name": "Particle Detail",
+            "order": 6,
+            "type": "norm",
+            "value": "Medium"
+          },
+          {
+            "index": 1,
+            "key": "textures",
+            "name": "Model / Texture Detail",
+            "order": 7,
+            "type": "vram",
+            "value": "Medium"
+          },
+          {
+            "index": 2,
+            "key": "aniso",
+            "name": "Texture Filtering Mode",
+            "order": 8,
+            "type": "norm",
+            "value": "Anisotropic 4x"
+          },
+          {
+            "index": 1,
+            "key": "dynshadows",
+            "name": "Dynamic Shadows",
+            "order": 9,
+            "type": "norm",
+            "value": "Sun Only"
+          },
+          {
+            "index": 0,
+            "key": "hdr",
+            "name": "High Dynamic Range",
+            "order": 10,
+            "type": "norm",
+            "value": "Performance"
+          }
+        ],
+        "stateCount": "248832",
+        "stateId": 67348
+      }
+    },
+    {
+      "id": "cyberpunk-medium",
+      "label": "Cyberpunk: Medium includes post Off via high_index fallback",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "cyberpunk-2077",
+        "resolution": "1080p",
+        "selected": {
+          "@0": 0,
+          "@1": 0,
+          "@2": 1,
+          "@3": 1,
+          "@4": 1,
+          "@5": 1,
+          "@6": 1,
+          "@7": 0,
+          "@8": 1,
+          "@9": 1,
+          "@10": 0,
+          "@11": 0,
+          "@12": 1,
+          "@13": 1,
+          "@14": 2,
+          "@15": 1,
+          "@16": 1,
+          "@17": 0,
+          "@18": 0,
+          "@19": 0,
+          "@20": 0
+        }
+      },
+      "expected": {
+        "cpu": {
+          "group": "AMD Ryzen 5000 (Zen 3)",
+          "name": "AMD Ryzen 5 5600X",
+          "slug": "amd-ryzen-5-5600x"
+        },
+        "game": {
+          "group": null,
+          "name": "Cyberpunk 2077",
+          "slug": "cyberpunk-2077"
+        },
+        "gpu": {
+          "group": "NVIDIA — RTX 30 Series",
+          "name": "NVIDIA RTX 3060 (12GB)",
+          "slug": "nvidia-rtx-3060-12gb"
+        },
+        "metrics": {
+          "beforeSettingsFps": 69,
+          "cpuBound": false,
+          "cpuCeiling": 130,
+          "gpuFps": 117,
+          "realFps": 117,
+          "settingMultiplier": 1.6994192966263169,
+          "upscaleActive": false,
+          "upscaleTech": null
+        },
+        "resolution": "1080p",
+        "selectedSettings": [
+          {
+            "index": 0,
+            "key": "upscale",
+            "name": "Upscaling",
+            "order": 0,
+            "type": "upscale",
+            "value": "Off"
+          },
+          {
+            "index": 0,
+            "key": "rt",
+            "name": "Ray Tracing / Path Tracing",
+            "order": 1,
+            "type": "rt",
+            "value": "Off"
+          },
+          {
+            "index": 1,
+            "key": "ssr",
+            "name": "Screen Space Reflections Quality",
+            "order": 2,
+            "type": "norm",
+            "value": "Medium"
+          },
+          {
+            "index": 1,
+            "key": "shadows",
+            "name": "Cascaded / Volumetric Shadow Quality",
+            "order": 3,
+            "type": "norm",
+            "value": "Medium"
+          },
+          {
+            "index": 1,
+            "key": "volfog",
+            "name": "Volumetric Fog Resolution",
+            "order": 4,
+            "type": "norm",
+            "value": "Medium"
+          },
+          {
+            "index": 1,
+            "key": "crowd",
+            "name": "Crowd Density",
+            "order": 5,
+            "type": "norm",
+            "value": "Medium"
+          },
+          {
+            "index": 1,
+            "key": "lod",
+            "name": "Level of Detail (LOD)",
+            "order": 6,
+            "type": "norm",
+            "value": "Medium"
+          },
+          {
+            "index": 0,
+            "key": "sss",
+            "name": "Subsurface Scattering Quality",
+            "order": 7,
+            "type": "norm",
+            "value": "Low"
+          },
+          {
+            "index": 1,
+            "key": "distshadow",
+            "name": "Distant Shadows Resolution",
+            "order": 8,
+            "type": "norm",
+            "value": "Medium"
+          },
+          {
+            "index": 1,
+            "key": "textures",
+            "name": "Texture Quality",
+            "order": 9,
+            "type": "vram",
+            "value": "Medium"
+          },
+          {
+            "index": 0,
+            "key": "post",
+            "name": "Motion Blur / Film Grain / Chromatic Aberration",
+            "order": 10,
+            "type": "norm",
+            "value": "Off"
+          },
+          {
+            "index": 0,
+            "key": "aniso",
+            "name": "Anisotropic Filtering",
+            "order": 11,
+            "type": "norm",
+            "value": "8x"
+          },
+          {
+            "index": 1,
+            "key": "localshadow",
+            "name": "Local Shadow Quality",
+            "order": 12,
+            "type": "norm",
+            "value": "Medium"
+          },
+          {
+            "index": 1,
+            "key": "shadowrange",
+            "name": "Cascaded Shadows Range",
+            "order": 13,
+            "type": "norm",
+            "value": "Medium"
+          },
+          {
+            "index": 2,
+            "key": "volclouds",
+            "name": "Volumetric Cloud Quality",
+            "order": 14,
+            "type": "norm",
+            "value": "Medium"
+          },
+          {
+            "index": 1,
+            "key": "decals",
+            "name": "Max Dynamic Decals",
+            "order": 15,
+            "type": "norm",
+            "value": "Medium"
+          },
+          {
+            "index": 1,
+            "key": "mirror",
+            "name": "Mirror Quality",
+            "order": 16,
+            "type": "norm",
+            "value": "Medium"
+          },
+          {
+            "index": 0,
+            "key": "colorprecision",
+            "name": "Color Precision",
+            "order": 17,
+            "type": "norm",
+            "value": "Medium"
+          },
+          {
+            "index": 0,
+            "key": "contactshadows",
+            "name": "Contact Shadows",
+            "order": 18,
+            "type": "norm",
+            "value": "Off"
+          },
+          {
+            "index": 0,
+            "key": "facial",
+            "name": "Improved Facial Lighting Geometry",
+            "order": 19,
+            "type": "norm",
+            "value": "Off"
+          },
+          {
+            "index": 0,
+            "key": "dof",
+            "name": "Depth of Field",
+            "order": 20,
+            "type": "norm",
+            "value": "Off"
+          }
+        ],
+        "stateCount": "8599633920",
+        "stateId": 251418016
+      }
+    }
+  ],
+  "errorCases": [
+    {
+      "id": "unknown-cpu",
+      "label": "Unknown CPU slug",
+      "request": {
+        "cpu": "missing-cpu",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "counter-strike-2",
+        "resolution": "1080p"
+      },
+      "error": {
+        "statusCode": 404,
+        "code": "CPU_NOT_FOUND",
+        "message": "CPU not found: missing-cpu."
+      }
+    },
+    {
+      "id": "unknown-gpu",
+      "label": "Unknown GPU slug",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "missing-gpu",
+        "game": "counter-strike-2",
+        "resolution": "1080p"
+      },
+      "error": {
+        "statusCode": 404,
+        "code": "GPU_NOT_FOUND",
+        "message": "GPU not found: missing-gpu."
+      }
+    },
+    {
+      "id": "unknown-game",
+      "label": "Unknown game slug",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "missing-game",
+        "resolution": "1080p"
+      },
+      "error": {
+        "statusCode": 404,
+        "code": "GAME_NOT_FOUND",
+        "message": "Game not found: missing-game."
+      }
+    },
+    {
+      "id": "unknown-resolution",
+      "label": "Display label 4K is not resolution key",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "counter-strike-2",
+        "resolution": "4K"
+      },
+      "error": {
+        "statusCode": 404,
+        "code": "RESOLUTION_NOT_FOUND",
+        "message": "Resolution not found: 4K."
+      }
+    },
+    {
+      "id": "ambiguous-detail",
+      "label": "Repeated Valorant detail key requires @order",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "valorant",
+        "resolution": "1080p",
+        "selected": {
+          "detail": 2
+        }
+      },
+      "error": {
+        "statusCode": 400,
+        "code": "AMBIGUOUS_SETTING_KEY",
+        "message": "Ambiguous setting key: detail; use @setting_order."
+      }
+    },
+    {
+      "id": "option-out-of-range",
+      "label": "Option index outside radix",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "counter-strike-2",
+        "resolution": "1080p",
+        "selected": {
+          "@1": 99
+        }
+      },
+      "error": {
+        "statusCode": 400,
+        "code": "INVALID_SETTING_OPTION",
+        "message": "msaa@1 option is out of range."
+      }
+    },
+    {
+      "id": "negative-option",
+      "label": "Negative option index",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "counter-strike-2",
+        "resolution": "1080p",
+        "selected": {
+          "@1": -1
+        }
+      },
+      "error": {
+        "statusCode": 400,
+        "code": "INVALID_SETTING_OPTION",
+        "message": "msaa@1 option is out of range."
+      }
+    },
+    {
+      "id": "unknown-order",
+      "label": "Unknown setting order",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "counter-strike-2",
+        "resolution": "1080p",
+        "selected": {
+          "@99": 0
+        }
+      },
+      "error": {
+        "statusCode": 400,
+        "code": "UNKNOWN_SETTING_ORDER",
+        "message": "Unknown setting order: @99."
+      }
+    },
+    {
+      "id": "unknown-key",
+      "label": "Unknown setting key",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "counter-strike-2",
+        "resolution": "1080p",
+        "selected": {
+          "bad-setting": 0
+        }
+      },
+      "error": {
+        "statusCode": 400,
+        "code": "UNKNOWN_SETTING_KEY",
+        "message": "Unknown setting key: bad-setting."
+      }
+    },
+    {
+      "id": "state-fractional",
+      "label": "Fractional stateId",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "counter-strike-2",
+        "resolution": "1080p",
+        "stateId": 1.5
+      },
+      "error": {
+        "statusCode": 400,
+        "code": "INVALID_STATE_ID",
+        "message": "stateId must be an integer."
+      }
+    },
+    {
+      "id": "state-negative",
+      "label": "Negative stateId",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "counter-strike-2",
+        "resolution": "1080p",
+        "stateId": -1
+      },
+      "error": {
+        "statusCode": 400,
+        "code": "STATE_ID_OUT_OF_RANGE",
+        "message": "stateId must be between 0 and 248831."
+      }
+    },
+    {
+      "id": "state-too-large",
+      "label": "stateId equals state_count",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "counter-strike-2",
+        "resolution": "1080p",
+        "stateId": "248832"
+      },
+      "error": {
+        "statusCode": 400,
+        "code": "STATE_ID_OUT_OF_RANGE",
+        "message": "stateId must be between 0 and 248831."
+      }
+    },
+    {
+      "id": "rt-hardware-required",
+      "label": "Game requires hardware RT: GTX GPU rejected",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-gtx-1060-6gb",
+        "game": "indiana-jones-and-the-great-circle",
+        "resolution": "1080p"
+      },
+      "error": {
+        "statusCode": 422,
+        "code": "RAY_TRACING_UNSUPPORTED_BY_GPU",
+        "message": "This game requires a GPU with hardware ray tracing support."
+      }
+    },
+    {
+      "id": "excluded-saros",
+      "label": "Explicitly excluded game",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "saros",
+        "resolution": "1080p"
+      },
+      "error": {
+        "statusCode": 404,
+        "code": "GAME_NOT_FOUND",
+        "message": "Game not found: saros."
+      }
+    },
+    {
+      "id": "excluded-days-gone",
+      "label": "Explicitly excluded remaster",
+      "request": {
+        "cpu": "amd-ryzen-5-5600x",
+        "gpu": "nvidia-rtx-3060-12gb",
+        "game": "days-gone-remastered",
+        "resolution": "1080p"
+      },
+      "error": {
+        "statusCode": 404,
+        "code": "GAME_NOT_FOUND",
+        "message": "Game not found: days-gone-remastered."
+      }
+    }
+  ]
+}
