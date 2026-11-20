@@ -95,6 +95,8 @@ def get_calculate(cpu: str, gpu: str, game: str, resolution: str, preset: str):
                         for option_row in group:
                             if option_row[3] == target_index:
                                 m *= option_row[4]
+                    elif preset == "ultra":
+                        m *= group[-1][4]
             base_gpu_fps = base_gpu_fps * m
 
     
